@@ -1,0 +1,203 @@
+@use 'tokens' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: $paper;
+  color: $ink;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+h1 {
+  font-size: clamp(3.1rem, 7vw, 6.4rem);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+em {
+  color: $blue;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+::selection {
+  background: $blue;
+  color: $white;
+}
+
+.container {
+  width: min(calc(100% - 48px), $container);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section--soft {
+  background: $cream;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: $blue;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  content: '';
+}
+
+.eyebrow--light {
+  color: #aeb5ff;
+}
+
+.lead {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  letter-spacing: -0.025em;
+  line-height: 1.45;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border: 1px solid $blue;
+  border-radius: 999px;
+  background: $blue;
+  color: $white;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.button:hover {
+  border-color: $blue-dark;
+  background: $blue-dark;
+  transform: translateY(-2px);
+}
+
+.button--small {
+  min-height: 44px;
+  padding-inline: 20px;
+  font-size: 0.84rem;
+}
+
+.button--light {
+  border-color: $white;
+  background: $white;
+  color: $blue;
+}
+
+.button--light:hover {
+  border-color: $cream;
+  background: $cream;
+}
+
+.button--outline {
+  border-color: $ink;
+  background: transparent;
+  color: $ink;
+}
+
+.button--outline:hover {
+  border-color: $ink;
+  background: $ink;
+  color: $white;
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid $ink;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.arrow-link svg {
+  transition: transform 180ms ease;
+}
+
+.arrow-link:hover svg {
+  transform: translate(3px, -3px);
+}

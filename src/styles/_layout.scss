@@ -1,0 +1,139 @@
+@use 'tokens' as *;
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid rgba($ink, 0.1);
+  background: rgba($paper, 0.94);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+}
+
+.brand {
+  width: 175px;
+}
+
+.site-nav,
+.site-nav__links {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  gap: 40px;
+}
+
+.site-nav__links {
+  gap: 34px;
+}
+
+.site-nav__link {
+  position: relative;
+  padding: 31px 0 29px;
+  color: #454543;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-nav__link::after {
+  position: absolute;
+  right: 0;
+  bottom: 23px;
+  left: 0;
+  height: 2px;
+  background: $blue;
+  content: '';
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link--active {
+  color: $ink;
+}
+
+.site-nav__link:hover::after,
+.site-nav__link--active::after {
+  transform: scaleX(1);
+}
+
+.menu-button {
+  display: none;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+}
+
+.site-footer {
+  padding: 80px 0 30px;
+  border-top: 1px solid $line;
+  background: $cream;
+}
+
+.site-footer__top {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 70px;
+  padding-bottom: 70px;
+}
+
+.site-footer__brand img {
+  width: 190px;
+  margin-bottom: 26px;
+}
+
+.site-footer__brand p {
+  max-width: 330px;
+  color: $muted;
+}
+
+.site-footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.site-footer__column a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #41413f;
+}
+
+.site-footer__column a:hover {
+  color: $blue;
+}
+
+.site-footer__column p {
+  margin: 0;
+  color: #41413f;
+}
+
+.site-footer__label {
+  margin-bottom: 8px;
+  color: #8b8984;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  border-top: 1px solid $line;
+  color: #777570;
+  font-size: 0.78rem;
+}
