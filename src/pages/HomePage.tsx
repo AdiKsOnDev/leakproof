@@ -28,7 +28,7 @@ export function HomePage() {
           <div className="leak-visual" aria-label="Example of a broken booking flow">
             <div className="leak-visual__top">
               <span>Customer journey</span>
-              <span className="status-pill"><span /> Live check</span>
+              <span className="status-pill"><span /> Common Issue</span>
             </div>
             <div className="journey-step journey-step--complete">
               <span className="journey-step__icon"><Check size={16} /></span>
@@ -49,7 +49,7 @@ export function HomePage() {
             </div>
             <div className="leak-visual__note">
               <span>Potential issue</span>
-              <p>Booking button opens a generic contact page.</p>
+              <p>Booking page throws an error upon submission.</p>
             </div>
           </div>
         </div>
