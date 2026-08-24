@@ -1,5 +1,4 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -52,28 +51,34 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--soft values-section">
+      <section className="section limits-section">
         <div className="container">
-          <div className="values-grid">
-            <article><span>01</span><h3>The site has a job</h3><p>Design choices should help someone understand the offer, trust the business or take action.</p></article>
-            <article><span>02</span><h3>We point to a real problem</h3><p>We would rather show you one broken step on your site than send a polished list of vague promises.</p></article>
-            <article><span>03</span><h3>We label the work honestly</h3><p>Client work is shown as client work. Uncommissioned redesigns are clearly marked as concepts.</p></article>
-            <article><span>04</span><h3>The person on the call does the work</h3><p>Questions do not travel through an account manager before reaching the designer or developer.</p></article>
+          <SectionHeading
+            eyebrow="When we will not help"
+            title="Sometimes the website is not the problem."
+            text="We will say so when another part of the business needs attention first."
+          />
+          <div className="limits-grid">
+            <article>
+              <span>01</span>
+              <div><h3>The offer is the problem</h3><p>If customers reject the service, price or terms across every channel, rebuilding the website will not create demand.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h3>Reviews stop the sale</h3><p>Fewer than 20 reviews or a rating below 4.0 can put customers off before they reach the website.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h3>Enquiries sit unanswered</h3><p>If replies take hours or days, fixing WhatsApp and lead routing will probably do more than a redesign.</p></div>
+            </article>
+            <article>
+              <span>04</span>
+              <div><h3>The website already converts well</h3><p>Above roughly 4% to 5%, the offer or traffic source may have more room for improvement than the site.</p></div>
+            </article>
           </div>
-        </div>
-      </section>
-
-      <section className="section fit-section">
-        <div className="container fit-section__grid">
-          <div>
-            <span className="eyebrow">A good fit</span>
-            <h2>Best for small businesses without a web team.</h2>
-          </div>
-          <div>
-            <p>
-              We are a good fit when the website should produce bookings, quotes or orders, there is a clear problem to fix and nobody in-house has the time or skills to fix it.
-            </p>
-            <Link className="button button--outline" to="/solutions">See industry solutions <ArrowRight size={18} /></Link>
+          <div className="limits-section__closing">
+            <span>Promise</span>
+            <p>We would rather be honest and point you to the right problem than sell a website that cannot fix it.</p>
           </div>
         </div>
       </section>

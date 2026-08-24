@@ -197,7 +197,6 @@
 
 .problem-section__grid,
 .deliverables-section__grid,
-.fit-section__grid,
 .shared-needs-section__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -668,41 +667,67 @@
   font-size: 0.82rem;
 }
 
-.values-grid {
+.limits-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
+  border-top: 1px solid $line;
+  border-left: 1px solid $line;
   background: $line;
 }
 
-.values-grid article {
-  min-height: 310px;
-  padding: 38px;
-  background: $cream;
+.limits-grid article {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  min-height: 210px;
+  padding: 32px;
+  border-right: 1px solid $line;
+  border-bottom: 1px solid $line;
+  background: $paper;
 }
 
-.values-grid span {
-  display: block;
-  margin-bottom: 80px;
+.limits-grid article > span {
   color: $blue;
   font-size: 0.72rem;
   font-weight: 700;
 }
 
-.values-grid p {
-  max-width: 440px;
+.limits-grid h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.limits-grid p {
+  max-width: 470px;
   margin: 0;
   color: $muted;
+  font-size: 0.9rem;
 }
 
-.fit-section__grid > div:last-child {
-  padding-top: 38px;
+.limits-section__closing {
+  margin-top: 35px;
+  padding: 28px 32px;
+  border-left: 3px solid $blue;
+  background: $cream;
 }
 
-.fit-section__grid p {
-  margin-bottom: 30px;
-  color: $muted;
-  font-size: 1.1rem;
+.limits-section__closing span {
+  display: block;
+  margin-bottom: 8px;
+  color: $blue;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.limits-section__closing p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.0rem, 2vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
 }
 
 .contact-page {
