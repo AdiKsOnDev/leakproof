@@ -1,4 +1,3 @@
-import { useCallback, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { ScrollToTop } from './components/ScrollToTop'
 import { SiteIntro } from './components/SiteIntro'
@@ -12,12 +11,9 @@ import { ServicesPage } from './pages/ServicesPage'
 import { SolutionsPage } from './pages/SolutionsPage'
 
 export default function App() {
-  const [showIntro, setShowIntro] = useState(true)
-  const finishIntro = useCallback(() => setShowIntro(false), [])
-
   return (
     <>
-      {showIntro && <SiteIntro onComplete={finishIntro} />}
+      <SiteIntro />
       <ScrollToTop />
       <Routes>
         <Route element={<SiteLayout />}>

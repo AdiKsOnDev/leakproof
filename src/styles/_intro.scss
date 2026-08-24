@@ -1,25 +1,26 @@
 @use 'tokens' as *;
 
-body.intro-running {
-  overflow: hidden;
-}
-
 body.intro-running .site-header .brand {
   opacity: 0;
 }
 
 .site-intro {
-  --intro-duration: 2.3s;
-  --intro-logo-left: max(24px, calc((100vw - 1220px) / 2));
-  --intro-logo-top: 44px;
-  --intro-logo-width: 175px;
   position: fixed;
   z-index: 1000;
   inset: 0;
   overflow: hidden;
+  pointer-events: none;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.site-intro__backdrop {
+  position: absolute;
+  inset: 0;
   background: $paper;
   will-change: opacity;
-  animation: intro-overlay var(--intro-duration) cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .site-intro__click {
@@ -29,7 +30,6 @@ body.intro-running .site-header .brand {
   width: 84px;
   height: 84px;
   transform: translate(-50%, -50%);
-  animation: intro-click-container var(--intro-duration) ease forwards;
 }
 
 .site-intro__dot,
@@ -37,171 +37,51 @@ body.intro-running .site-header .brand {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
 .site-intro__dot {
-  width: 58px;
-  height: 58px;
   background: $blue;
   box-shadow: 0 12px 36px rgba($blue, 0.22);
-  animation: intro-dot var(--intro-duration) cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .site-intro__pulse {
-  width: 58px;
-  height: 58px;
   border: 2px solid $blue;
   opacity: 0;
-  animation: intro-pulse var(--intro-duration) ease-out forwards;
 }
 
 .site-intro__pointer {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
-  z-index: 2;
   color: $ink;
-  filter: drop-shadow(0 3px 5px rgba($ink, 0.16));
   fill: $paper;
-  animation: intro-pointer var(--intro-duration) cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  filter: drop-shadow(0 3px 5px rgba($ink, 0.16));
+  opacity: 0;
+  transform: translate(58px, 62px) rotate(-8deg);
+  will-change: transform, opacity;
 }
 
-.site-intro__logo {
-  position: absolute;
+.site-intro__lockup {
+  position: fixed;
   top: 50%;
   left: 50%;
   width: min(650px, 76vw);
-  max-width: none;
   opacity: 0;
-  clip-path: circle(0 at 10.39% 48.37%);
   transform: translate3d(-10.39%, -48.37%, 0);
-  transform-origin: 10.39% 48.37%;
   backface-visibility: hidden;
-  will-change: top, left, width, transform, clip-path;
-  animation: intro-logo var(--intro-duration) cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  will-change: transform;
 }
 
-@keyframes intro-pointer {
-  0%, 8% {
-    opacity: 0;
-    transform: translate(58px, 62px) rotate(-8deg);
-  }
-  13% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-    transform: translate(6px, 8px) rotate(-8deg);
-  }
-  30% {
-    opacity: 1;
-    transform: translate(10px, 12px) rotate(-8deg) scale(0.9);
-  }
-  38%, 100% {
-    opacity: 0;
-    transform: translate(10px, 12px) rotate(-8deg) scale(0.9);
-  }
-}
-
-@keyframes intro-dot {
-  0%, 24% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  30% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0.82);
-  }
-  36% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-  43%, 100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-}
-
-@keyframes intro-pulse {
-  0%, 29% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  32% {
-    opacity: 0.45;
-  }
-  44%, 100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2.25);
-  }
-}
-
-@keyframes intro-click-container {
-  0%, 44% {
-    opacity: 1;
-  }
-  48%, 100% {
-    opacity: 0;
-  }
-}
-
-@keyframes intro-logo {
-  0%, 31% {
-    top: 50%;
-    left: 50%;
-    width: min(650px, 76vw);
-    opacity: 0;
-    clip-path: circle(0 at 10.39% 48.37%);
-    transform: translate3d(-10.39%, -48.37%, 0);
-  }
-  34% {
-    opacity: 1;
-    clip-path: circle(4.2% at 10.39% 48.37%);
-    transform: translate3d(-10.39%, -48.37%, 0);
-  }
-  58% {
-    top: 50%;
-    left: 50%;
-    width: min(650px, 76vw);
-    opacity: 1;
-    clip-path: circle(150% at 10.39% 48.37%);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  64% {
-    top: 50%;
-    left: 50%;
-    width: min(650px, 76vw);
-    opacity: 1;
-    clip-path: circle(150% at 10.39% 48.37%);
-    transform: translate3d(-50%, -50%, 0) scale(1);
-  }
-  94%, 100% {
-    top: var(--intro-logo-top);
-    left: var(--intro-logo-left);
-    width: var(--intro-logo-width);
-    opacity: 1;
-    clip-path: circle(150% at 10.39% 48.37%);
-    transform: translate3d(0, -50%, 0) scale(1);
-  }
-}
-
-@keyframes intro-overlay {
-  0%, 94% {
-    background: $paper;
-    opacity: 1;
-  }
-  100% {
-    background: rgba($paper, 0);
-    opacity: 0;
-  }
-}
-
-@media (max-width: 800px) {
-  .site-intro {
-    --intro-logo-left: 18px;
-    --intro-logo-top: 37px;
-    --intro-logo-width: 150px;
-  }
+.site-intro__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  clip-path: circle(0 at 10.39% 48.37%);
+  will-change: clip-path;
 }
