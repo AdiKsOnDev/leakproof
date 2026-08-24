@@ -91,7 +91,6 @@
   .page-hero__grid,
   .problem-section__grid,
   .deliverables-section__grid,
-  .story-section__grid,
   .fit-section__grid,
   .shared-needs-section__grid,
   .industry-hero__grid,
@@ -114,15 +113,25 @@
   }
 
   .problem-section__grid,
-  .story-section__grid,
   .fit-section__grid,
   .shared-needs-section__grid {
     gap: 30px;
   }
 
-  .problem-section__copy,
+  .problem-section__copy {
+    padding-top: 0;
+  }
+
   .fit-section__grid > div:last-child {
     padding-top: 0;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-grid article {
+    min-height: 330px;
   }
 
   .industry-grid,
