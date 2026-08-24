@@ -38,6 +38,16 @@ export function SiteIntro() {
     document.body.style.overflow = 'hidden'
     document.body.classList.add('intro-running')
 
+    const releasePage = () => {
+      document.body.classList.remove('intro-running')
+      document.body.style.overflow = previousOverflow
+    }
+
+    const finishIntro = () => {
+      root.setAttribute('hidden', '')
+      releasePage()
+    }
+
     const play = async () => {
       try {
         await logoImage.decode()
@@ -141,18 +151,19 @@ export function SiteIntro() {
 
       if (cancelled) return
 
-      root.setAttribute('hidden', '')
-      document.body.classList.remove('intro-running')
-      document.body.style.overflow = previousOverflow
+      finishIntro()
     }
 
-    play().catch(() => {})
+    play().catch(() => {
+      if (!cancelled) {
+        finishIntro()
+      }
+    })
 
     return () => {
       cancelled = true
       root.getAnimations({ subtree: true }).forEach((animation) => animation.cancel())
-      document.body.classList.remove('intro-running')
-      document.body.style.overflow = previousOverflow
+      releasePage()
     }
   }, [])
 
@@ -170,8 +181,8 @@ export function SiteIntro() {
           ref={logoRef}
           src={logo}
           alt=""
-          width="3188"
-          height="749"
+          width="3176"
+          height="737"
           decoding="sync"
         />
       </div>
