@@ -81,7 +81,7 @@
 
   .home-hero__grid,
   .page-hero__grid,
-  .problem-section__grid,
+  .problem-section__header,
   .deliverables-section__grid,
   .shared-needs-section__grid,
   .what-we-fix__layout,
@@ -104,7 +104,7 @@
     max-width: 460px;
   }
 
-  .problem-section__grid,
+  .problem-section__header,
   .shared-needs-section__grid {
     gap: 30px;
   }
@@ -113,8 +113,23 @@
     margin-inline: 0;
   }
 
-  .problem-section__copy {
-    padding-top: 0;
+  .problem-list {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .problem-list::before {
+    top: 70px;
+    right: auto;
+    bottom: 70px;
+    left: 50%;
+    width: 2px;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, $red 0 8px, transparent 8px 16px);
+  }
+
+  .problem-list article:nth-child(2) {
+    transform: none;
   }
 
   .evidence-grid {

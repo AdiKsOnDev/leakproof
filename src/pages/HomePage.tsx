@@ -1,4 +1,4 @@
-import { ArrowRight, Check, MousePointerClick } from 'lucide-react'
+import { ArrowRight, Check, CircleHelp, MousePointerClick, Smartphone, Unlink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { IndustryGrid } from '../components/IndustryGrid'
 import { industries, processSteps, services } from '../data/siteContent'
@@ -66,21 +66,27 @@ export function HomePage() {
       </section>
 
       <section className="section problem-section">
-        <div className="container problem-section__grid">
-          <SectionHeading
-            eyebrow="Looks fine. Works badly."
-            title={<>A website can load and still <em>lose the sale.</em></>}
-          />
-          <div className="problem-section__copy">
+        <div className="container">
+          <div className="problem-section__header">
+            <SectionHeading
+              eyebrow="Looks fine. Works badly."
+              title={<>A website can load and still <em>lose the sale.</em></>}
+            />
             <p className="lead">
               The expensive problems are often easy to miss. The site is online, but the booking button goes nowhere useful or the service page never answers the question holding someone back.
             </p>
-            <div className="problem-list">
-              <div><span>01</span><p>A booking button sends people to the wrong place.</p></div>
-              <div><span>02</span><p>A slow mobile page loses an impatient buyer.</p></div>
-              <div><span>03</span><p>A service page leaves the real questions unanswered.</p></div>
+          </div>
+          <div className="problem-diagnostic">
+            <div className="problem-diagnostic__topbar">
+              <span className="problem-diagnostic__status"><span /> Site is online</span>
+              <strong>3 conversion leaks found</strong>
             </div>
-            <ArrowLink to="/about">Why Leakproof exists</ArrowLink>
+            <div className="problem-list">
+              <article><span>01</span><i><Unlink size={21} /></i><p>A booking button sends people to the wrong place.</p></article>
+              <article><span>02</span><i><Smartphone size={21} /></i><p>A slow mobile page loses an impatient buyer.</p></article>
+              <article><span>03</span><i><CircleHelp size={21} /></i><p>A service page leaves the real questions unanswered.</p></article>
+            </div>
+            <div className="problem-diagnostic__footer"><ArrowLink to="/about">Why Leakproof exists</ArrowLink></div>
           </div>
         </div>
       </section>
