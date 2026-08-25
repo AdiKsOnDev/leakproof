@@ -223,6 +223,30 @@
     margin-bottom: 40px;
   }
 
+  .limits-grid {
+    gap: 18px;
+    padding-block: 0;
+  }
+
+  .limits-grid::before,
+  .limits-grid article::after {
+    display: none;
+  }
+
+  .limits-grid article,
+  .limits-grid article:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .limits-section .section-heading {
+    display: block;
+  }
+
+  .limits-section .section-heading p {
+    padding-bottom: 0;
+  }
+
   .process-grid {
     grid-template-columns: 1fr;
   }

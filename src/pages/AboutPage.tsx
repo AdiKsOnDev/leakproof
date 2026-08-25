@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, BadgeDollarSign, Gauge, MessageCircleOff, Star } from 'lucide-react'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -56,29 +56,29 @@ export function AboutPage() {
           <SectionHeading
             eyebrow="When we will not help"
             title="Sometimes the website is not the problem."
-            text="We will say so when another part of the business needs attention first."
+            text="If your website is not the problem, we will tell you honestly."
           />
           <div className="limits-grid">
             <article>
               <span>01</span>
               <div><h3>The offer is the problem</h3><p>If customers reject the service, price or terms across every channel, rebuilding the website will not create demand.</p></div>
+              <BadgeDollarSign className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
             <article>
               <span>02</span>
               <div><h3>Reviews stop the sale</h3><p>Fewer than 20 reviews or a rating below 4.0 can put customers off before they reach the website.</p></div>
+              <Star className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
             <article>
               <span>03</span>
               <div><h3>Enquiries sit unanswered</h3><p>If replies take hours or days, fixing WhatsApp and lead routing will probably do more than a redesign.</p></div>
+              <MessageCircleOff className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
             <article>
               <span>04</span>
               <div><h3>The website already converts well</h3><p>Above roughly 4% to 5%, the offer or traffic source may have more room for improvement than the site.</p></div>
+              <Gauge className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
-          </div>
-          <div className="limits-section__closing">
-            <span>Promise</span>
-            <p>We would rather be honest and point you to the right problem than sell a website that cannot fix it.</p>
           </div>
         </div>
       </section>
