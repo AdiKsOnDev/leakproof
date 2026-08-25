@@ -26,7 +26,7 @@ export function SolutionsPage() {
         <div className="container shared-needs-section__grid">
           <div>
             <span className="eyebrow">The job is still simple</span>
-            <h2>Help people find the right service, trust you and take the next step.</h2>
+            <h2>Make choosing you easy.</h2>
           </div>
           <div className="shared-needs-list">
             <div><span>01</span><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>

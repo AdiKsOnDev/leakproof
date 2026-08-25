@@ -39,23 +39,34 @@ h1,
 h2,
 h3 {
   font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.045em;
-  line-height: 1.08;
+  text-wrap: balance;
 }
 
 h1 {
   font-size: clamp(3.1rem, 7vw, 6.4rem);
   font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
 }
 
 h2 {
   font-size: clamp(2.25rem, 4.5vw, 4rem);
   font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.04;
 }
 
 h3 {
   font-size: 1.35rem;
   font-weight: 600;
+  letter-spacing: -0.028em;
+  line-height: 1.18;
+}
+
+p,
+li,
+blockquote {
+  text-wrap: pretty;
 }
 
 em {
