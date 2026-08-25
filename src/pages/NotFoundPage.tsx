@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export function NotFoundPage() {
   return (
     <section className="not-found">
-      <div className="container">
+      <div className="container" data-reveal="scale">
         <span>404</span>
         <h1>This page has a leak.</h1>
         <p>The page you were looking for does not exist or has moved.</p>

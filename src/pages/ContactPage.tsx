@@ -14,7 +14,7 @@ export function ContactPage() {
   return (
     <section className="contact-page">
       <div className="container contact-page__grid">
-        <div className="contact-page__intro">
+        <div className="contact-page__intro" data-reveal="left">
           <span className="eyebrow">Free website leak check</span>
           <h1>Send us the site. We'll find the first leak.</h1>
           <p>
@@ -34,7 +34,7 @@ export function ContactPage() {
           </div>
         </div>
 
-        <div className="contact-form-panel">
+        <div className="contact-form-panel" data-reveal="right" data-reveal-delay="120">
           {submitted ? (
             <div className="form-success">
               <span><CheckCircle2 size={32} /></span>

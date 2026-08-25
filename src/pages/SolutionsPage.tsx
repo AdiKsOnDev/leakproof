@@ -24,14 +24,14 @@ export function SolutionsPage() {
       </section>
       <section className="section shared-needs-section">
         <div className="container shared-needs-section__grid">
-          <div>
+          <div data-reveal="left">
             <span className="eyebrow">The job is still simple</span>
             <h2>Make choosing you easy.</h2>
           </div>
           <div className="shared-needs-list">
-            <div><span>01</span><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>
-            <div><span>02</span><h3>Decide whether to trust you</h3><p>Reviews, credentials and real work shown where they help.</p></div>
-            <div><span>03</span><h3>Book or enquire</h3><p>No hunt for a phone number and no generic form when a booking tool would do.</p></div>
+            <div data-reveal="right"><span>01</span><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>
+            <div data-reveal="right" data-reveal-delay="90"><span>02</span><h3>Decide whether to trust you</h3><p>Reviews, credentials and real work shown where they help.</p></div>
+            <div data-reveal="right" data-reveal-delay="180"><span>03</span><h3>Book or enquire</h3><p>No hunt for a phone number and no generic form when a booking tool would do.</p></div>
           </div>
         </div>
       </section>

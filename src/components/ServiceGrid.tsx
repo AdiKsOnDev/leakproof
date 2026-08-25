@@ -3,11 +3,11 @@ import { services } from '../data/siteContent'
 export function ServiceGrid() {
   return (
     <div className="service-grid">
-      {services.map((service) => {
+      {services.map((service, index) => {
         const Icon = service.icon
 
         return (
-          <article className="service-card" key={service.number}>
+          <article className="service-card" key={service.number} data-reveal="clip" data-reveal-delay={String(index * 100)}>
             <div className="service-card__header">
               <span>{service.number}</span>
               <span className="service-card__icon"><Icon size={25} /></span>

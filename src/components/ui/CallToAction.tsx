@@ -15,7 +15,7 @@ export function CallToAction({
   return (
     <section className="cta-section section">
       <div className="container">
-        <div className={`cta-panel ${eyebrow ? '' : 'cta-panel--centered'}`}>
+        <div className={`cta-panel ${eyebrow ? '' : 'cta-panel--centered'}`} data-reveal="scale">
           <div>
             {eyebrow && <span className="eyebrow eyebrow--light">{eyebrow}</span>}
             <h2>{title}</h2>

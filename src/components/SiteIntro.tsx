@@ -27,9 +27,11 @@ export function SiteIntro() {
     const logoImage = logoRef.current
     const headerLogo = document.querySelector<HTMLImageElement>('.site-header .brand img')
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const notifyIntroComplete = () => window.dispatchEvent(new Event('site-intro-complete'))
 
     if (!root || !backdrop || !click || !dot || !pulse || !pointer || !lockup || !logoImage || !headerLogo || reducedMotion) {
       root?.setAttribute('hidden', '')
+      notifyIntroComplete()
       return undefined
     }
 
@@ -46,6 +48,7 @@ export function SiteIntro() {
     const finishIntro = () => {
       root.setAttribute('hidden', '')
       releasePage()
+      notifyIntroComplete()
     }
 
     const play = async () => {

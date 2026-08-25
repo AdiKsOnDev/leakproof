@@ -20,7 +20,7 @@ export function AboutPage() {
             text="Speed, form length and response time all affect whether an interested visitor becomes a lead. That is where we start."
           />
           <div className="evidence-grid">
-            <article>
+            <article data-reveal="fade">
               <strong>10.1%</strong>
               <h3>More travel conversions</h3>
               <p>A 0.1-second improvement in mobile speed produced a 10.1% increase across 7.4 million travel sessions.</p>
@@ -28,7 +28,7 @@ export function AboutPage() {
                 Google and Deloitte, 2020 <ArrowUpRight size={14} />
               </a>
             </article>
-            <article>
+            <article data-reveal="fade" data-reveal-delay="100">
               <strong>1 in 5</strong>
               <h3>Abandon a complicated checkout</h3>
               <p>Baymard found that roughly one in five checkout abandonments stem from a process that is too long or complicated.</p>
@@ -36,7 +36,7 @@ export function AboutPage() {
                 Baymard Institute <ArrowUpRight size={14} />
               </a>
             </article>
-            <article>
+            <article data-reveal="fade" data-reveal-delay="200">
               <strong>~7×</strong>
               <h3>More likely to qualify a lead</h3>
               <p>Businesses replying within an hour were nearly seven times more likely to qualify a lead than those waiting another hour.</p>
@@ -45,7 +45,7 @@ export function AboutPage() {
               </a>
             </article>
           </div>
-          <p className="evidence-section__note">
+          <p className="evidence-section__note" data-reveal="fade">
             These studies show that the problems are real. They do not guarantee the result of an individual project.
           </p>
         </div>
@@ -59,22 +59,22 @@ export function AboutPage() {
             text="If your website is not the problem, we will tell you honestly."
           />
           <div className="limits-grid">
-            <article>
+            <article data-reveal="clip">
               <span>01</span>
               <div><h3>The offer is the problem</h3><p>If customers reject the service, price or terms across every channel, rebuilding the website will not create demand.</p></div>
               <BadgeDollarSign className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
-            <article>
+            <article data-reveal="clip" data-reveal-delay="90">
               <span>02</span>
               <div><h3>Reviews stop the sale</h3><p>Fewer than 20 reviews or a rating below 4.0 can put customers off before they reach the website.</p></div>
               <Star className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
-            <article>
+            <article data-reveal="clip" data-reveal-delay="180">
               <span>03</span>
               <div><h3>Enquiries sit unanswered</h3><p>If replies take hours or days, fixing WhatsApp and lead routing will probably do more than a redesign.</p></div>
               <MessageCircleOff className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
-            <article>
+            <article data-reveal="clip" data-reveal-delay="270">
               <span>04</span>
               <div><h3>The website already converts well</h3><p>Above roughly 4% to 5%, the offer or traffic source may have more room for improvement than the site.</p></div>
               <Gauge className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />

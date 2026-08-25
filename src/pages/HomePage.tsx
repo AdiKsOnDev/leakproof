@@ -11,7 +11,7 @@ export function HomePage() {
     <>
       <section className="home-hero">
         <div className="container home-hero__grid">
-          <div className="home-hero__content">
+          <div className="home-hero__content" data-reveal="left">
             <span className="eyebrow">Web design and development · Dubai</span>
             <h1>Your website should bring in business.</h1>
             <p>
@@ -25,7 +25,7 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="leak-visual" aria-label="Example of a broken booking flow">
+          <div className="leak-visual" aria-label="Example of a broken booking flow" data-reveal="scale" data-reveal-delay="120">
             <div className="leak-visual__top">
               <span>Customer journey</span>
               <span className="status-pill"><span /> Form submission error</span>
@@ -72,11 +72,11 @@ export function HomePage() {
               eyebrow="Looks fine. Works badly."
               title={<>A website can load and still <em>lose the sale.</em></>}
             />
-            <p className="lead">
+            <p className="lead" data-reveal="right" data-reveal-delay="100">
               The expensive problems are often easy to miss. The site is online, but the booking button goes nowhere useful or the service page never answers the question holding someone back.
             </p>
           </div>
-          <div className="problem-diagnostic">
+          <div className="problem-diagnostic" data-reveal="scale">
             <div className="problem-diagnostic__topbar">
               <span className="problem-diagnostic__status"><span /> Site is online</span>
               <strong>3 conversion leaks found</strong>
@@ -102,10 +102,10 @@ export function HomePage() {
             <ArrowLink to="/services">Explore all services</ArrowLink>
           </div>
           <div className="home-services">
-            {services.map((service) => {
+            {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <article key={service.number}>
+                <article key={service.number} data-reveal="clip" data-reveal-delay={String(index * 90)}>
                   <span className="home-services__icon"><Icon size={22} /></span>
                   <span className="home-services__number">{service.number}</span>
                   <h3>{service.title}</h3>
@@ -136,10 +136,10 @@ export function HomePage() {
             align="center"
           />
           <div className="process-grid">
-            {processSteps.map((step) => {
+            {processSteps.map((step, index) => {
               const Icon = step.icon
               return (
-                <article key={step.number}>
+                <article key={step.number} data-reveal="fade" data-reveal-delay={String(index * 100)}>
                   <div className="process-grid__top"><span>{step.number}</span><Icon size={24} /></div>
                   <h3>{step.title}</h3>
                   <p>{step.text}</p>

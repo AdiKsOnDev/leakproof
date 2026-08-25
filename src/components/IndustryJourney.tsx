@@ -36,14 +36,14 @@ export function IndustryJourney({ industry }: IndustryJourneyProps) {
       <TopIcon className="industry-journey__corner-icon industry-journey__corner-icon--top" size={220} strokeWidth={0.8} aria-hidden="true" />
       <BottomIcon className="industry-journey__corner-icon industry-journey__corner-icon--bottom" size={180} strokeWidth={0.8} aria-hidden="true" />
       <div className="container">
-        <div className="industry-journey__heading">
+        <div className="industry-journey__heading" data-reveal="left">
           <div>
             <span className="eyebrow">Best-case customer path</span>
             <h2>{industry.journeyTitle}</h2>
           </div>
           <p>{industry.journeySummary}</p>
         </div>
-        <div className="industry-journey__visual">
+        <div className="industry-journey__visual" data-reveal="clip" data-reveal-delay="100">
           <JourneyRoute slug={industry.slug} />
           <ol className="industry-journey__path">
             {industry.journey.map((step, index) => (

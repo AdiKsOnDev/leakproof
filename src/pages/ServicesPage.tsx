@@ -34,8 +34,8 @@ export function ServicesPage() {
               ['Local search setup', 'Page structure, titles, metadata and local business details are set up properly.'],
               ['Tracking that answers useful questions', 'You can see which pages and routes produce bookings or enquiries.'],
               ['A clean handover', 'You know how the site works and how to handle routine updates after launch.'],
-            ].map(([title, text]) => (
-              <article key={title}>
+            ].map(([title, text], index) => (
+              <article key={title} data-reveal="right" data-reveal-delay={String(index * 70)}>
                 <CheckCircle2 size={21} />
                 <div><h3>{title}</h3><p>{text}</p></div>
               </article>
@@ -45,7 +45,7 @@ export function ServicesPage() {
       </section>
 
       <section className="section pricing-section">
-        <div className="container pricing-panel">
+        <div className="container pricing-panel" data-reveal="scale">
           <div>
             <span className="eyebrow">Pricing</span>
             <h2>One price for a clear piece of work.</h2>
