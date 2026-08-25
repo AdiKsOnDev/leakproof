@@ -84,6 +84,14 @@ button {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba($blue, 0.28);
+  outline-offset: 3px;
+}
+
 ::selection {
   background: $blue;
   color: $white;
@@ -99,7 +107,31 @@ button {
 }
 
 .section--soft {
-  background: $cream;
+  border-block: 1px solid rgba($ink, 0.04);
+  background:
+    radial-gradient(circle at 12% 18%, rgba($white, 0.72), transparent 30%),
+    radial-gradient(circle at 88% 82%, rgba($white, 0.8), transparent 32%),
+    $cream;
+}
+
+.industry-theme--clinics {
+  --industry-accent: #17685c;
+  --industry-accent-soft: #e5f3f0;
+}
+
+.industry-theme--tour-operators {
+  --industry-accent: #a75024;
+  --industry-accent-soft: #f8ece4;
+}
+
+.industry-theme--wellness {
+  --industry-accent: #76507f;
+  --industry-accent-soft: #f3eaf5;
+}
+
+.industry-theme--home-services {
+  --industry-accent: #496838;
+  --industry-accent-soft: #edf2e8;
 }
 
 .eyebrow {
@@ -149,10 +181,22 @@ button {
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
+.button svg {
+  transition: transform 180ms ease;
+}
+
 .button:hover {
   border-color: $blue-dark;
   background: $blue-dark;
   transform: translateY(-2px);
+}
+
+.button:hover svg {
+  transform: translateX(3px);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .button--small {

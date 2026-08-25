@@ -53,6 +53,7 @@
   background: $blue;
   content: '';
   transform: scaleX(0);
+  transform-origin: left;
   transition: transform 180ms ease;
 }
 

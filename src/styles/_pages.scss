@@ -3,6 +3,10 @@
 .home-hero {
   position: relative;
   padding: 90px 0 0;
+  background:
+    linear-gradient(rgba($blue, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($blue, 0.022) 1px, transparent 1px);
+  background-size: 40px 40px;
   overflow: hidden;
 }
 
@@ -434,6 +438,19 @@
   color: $muted;
   font-size: 0.82rem;
   font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.back-link svg {
+  transition: transform 180ms ease;
+}
+
+.back-link:hover {
+  color: var(--industry-accent, #{$blue});
+}
+
+.back-link:hover svg {
+  transform: translateX(-4px);
 }
 
 .industry-hero__grid {
@@ -456,10 +473,12 @@
 }
 
 .industry-hero__metric {
+  position: relative;
   padding: 30px;
   border-radius: $radius;
-  background: $blue;
+  background: var(--industry-accent, #{$blue});
   color: $white;
+  overflow: hidden;
 }
 
 .industry-hero__metric > span {
@@ -481,9 +500,31 @@
 }
 
 .industry-hero__grid .industry-hero__metric p {
+  position: relative;
+  z-index: 1;
   margin: 8px 0 0;
-  color: #cbd0ff;
+  color: rgba($white, 0.76);
   font-size: 0.82rem;
+}
+
+.industry-hero__metric > span,
+.industry-hero__metric strong {
+  position: relative;
+  z-index: 1;
+}
+
+.industry-hero__watermark {
+  position: absolute;
+  right: -38px;
+  bottom: -42px;
+  color: rgba($white, 0.12);
+  pointer-events: none;
+  transform: rotate(-8deg);
+}
+
+.industry-theme .industry-hero .eyebrow,
+.industry-theme .industry-principle .eyebrow {
+  color: var(--industry-accent, #{$blue});
 }
 
 .industry-detail-section {
@@ -512,7 +553,7 @@
 }
 
 .industry-detail-card--solution .eyebrow {
-  color: #9ca5ff;
+  color: var(--industry-accent-soft, #9ca5ff);
 }
 
 .industry-detail-card h2 {
@@ -552,8 +593,285 @@
 }
 
 .industry-detail-card--solution li span {
-  background: rgba(#9ca5ff, 0.13);
-  color: #9ca5ff;
+  background: rgba($white, 0.09);
+  color: var(--industry-accent-soft, #9ca5ff);
+}
+
+.industry-journey {
+  position: relative;
+  border-top: 1px solid $line;
+  background: linear-gradient(to bottom, var(--industry-accent-soft, #{$cream}), $paper 150px);
+  overflow: hidden;
+}
+
+.industry-journey .container {
+  position: relative;
+  z-index: 1;
+}
+
+.industry-journey__corner-icon {
+  position: absolute;
+  color: var(--industry-accent, #{$blue});
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.industry-journey__corner-icon--top {
+  top: 28px;
+  right: -42px;
+  transform: rotate(-12deg);
+}
+
+.industry-journey__corner-icon--bottom {
+  bottom: 18px;
+  left: -32px;
+  transform: rotate(14deg);
+}
+
+.industry-journey__heading {
+  display: grid;
+  grid-template-columns: 1.25fr 0.55fr;
+  align-items: end;
+  gap: 100px;
+  margin-bottom: 65px;
+}
+
+.industry-journey__heading h2 {
+  max-width: 800px;
+  margin: 20px 0 0;
+}
+
+.industry-journey__heading > p {
+  margin: 0;
+  color: $muted;
+}
+
+.industry-journey__visual {
+  position: relative;
+  height: 620px;
+}
+
+.industry-journey__route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--industry-accent, #{$blue});
+  overflow: visible;
+}
+
+.industry-journey__route path {
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.industry-journey__path {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.industry-journey__path li {
+  position: absolute;
+  z-index: 1;
+  width: 24%;
+  min-height: 230px;
+  padding: 28px;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $white;
+  box-shadow: 0 18px 45px rgba($ink, 0.055);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.industry-journey__path li:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.industry-journey__path li:nth-child(2) {
+  top: 320px;
+  left: 25.3%;
+}
+
+.industry-journey__path li:nth-child(3) {
+  top: 0;
+  left: 50.6%;
+}
+
+.industry-journey__path li:nth-child(4) {
+  top: 320px;
+  left: 76%;
+}
+
+.industry-journey__number {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 38px;
+  border-radius: 50%;
+  background: var(--industry-accent-soft, #{$soft-blue});
+  color: var(--industry-accent, #{$blue});
+  font-size: 0.72rem;
+  font-weight: 700;
+  place-items: center;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.industry-journey__path li:hover {
+  border-color: var(--industry-accent, #{$blue});
+  box-shadow: 0 22px 55px rgba($ink, 0.1);
+}
+
+.industry-journey__path li:hover .industry-journey__number {
+  background: var(--industry-accent, #{$blue});
+  color: $white;
+}
+
+.industry-journey__path h3 {
+  margin-bottom: 13px;
+  font-size: 1.2rem;
+}
+
+.industry-journey__path p {
+  margin: 0;
+  color: $muted;
+  font-size: 0.88rem;
+}
+
+.industry-theme--clinics .industry-journey__path li {
+  border-radius: 8px 24px 8px 24px;
+  border-top: 3px solid var(--industry-accent);
+}
+
+.industry-theme--tour-operators .industry-journey__route path {
+  stroke-dasharray: 8 12;
+  stroke-width: 4;
+}
+
+.industry-theme--tour-operators .industry-journey__path li {
+  border-style: dashed;
+  transform: rotate(-1deg);
+}
+
+.industry-theme--tour-operators .industry-journey__path li:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.industry-theme--wellness .industry-journey__route path {
+  opacity: 0.72;
+  stroke-width: 5;
+}
+
+.industry-theme--wellness .industry-journey__path li {
+  width: 31%;
+  border: 0;
+  border-radius: 38px 12px 38px 12px;
+  background: $white;
+}
+
+.industry-theme--wellness .industry-journey__path p {
+  color: #535350;
+  font-size: 0.92rem;
+}
+
+.industry-theme--wellness .industry-journey__path li:nth-child(2) {
+  top: 0;
+  left: 69%;
+}
+
+.industry-theme--wellness .industry-journey__path li:nth-child(3) {
+  top: 330px;
+  left: 69%;
+}
+
+.industry-theme--wellness .industry-journey__path li:nth-child(4) {
+  top: 330px;
+  left: 0;
+}
+
+.industry-theme--home-services .industry-journey__visual {
+  height: 700px;
+}
+
+.industry-theme--home-services .industry-journey__route {
+  height: 620px;
+}
+
+.industry-theme--home-services .industry-journey__path li {
+  width: 42%;
+  min-height: 0;
+  border-left: 4px solid var(--industry-accent);
+  border-radius: 4px 18px 18px 4px;
+}
+
+.industry-theme--home-services .industry-journey__path li:nth-child(odd) {
+  border-right: 4px solid var(--industry-accent);
+  border-left: 1px solid $line;
+  border-radius: 18px 4px 4px 18px;
+}
+
+.industry-theme--home-services .industry-journey__path li:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.industry-theme--home-services .industry-journey__path li:nth-child(2) {
+  top: 155px;
+  right: 0;
+  left: auto;
+}
+
+.industry-theme--home-services .industry-journey__path li:nth-child(3) {
+  top: 310px;
+  left: 0;
+}
+
+.industry-theme--home-services .industry-journey__path li:nth-child(4) {
+  top: 465px;
+  right: 0;
+  left: auto;
+}
+
+.industry-theme--home-services .industry-journey__number {
+  margin-bottom: 24px;
+}
+
+.industry-theme--tour-operators .industry-detail-grid {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.industry-theme--wellness .industry-detail-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.industry-theme--wellness .industry-detail-card--solution {
+  order: -1;
+}
+
+.industry-theme--home-services .industry-detail-grid {
+  grid-template-columns: 1fr;
+}
+
+.industry-theme--home-services .industry-detail-card {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  column-gap: 80px;
+}
+
+.industry-theme--home-services .industry-detail-card h2 {
+  margin-bottom: 0;
+}
+
+.industry-theme--home-services .industry-detail-card ul {
+  grid-row: 1 / span 2;
+  grid-column: 2;
 }
 
 .industry-principle {
@@ -766,6 +1084,14 @@
   font-weight: 600;
 }
 
+.contact-details a {
+  transition: color 180ms ease;
+}
+
+.contact-details a:hover {
+  color: $blue;
+}
+
 .contact-details svg {
   color: $blue;
 }
@@ -928,12 +1254,37 @@
   border-radius: 999px;
   background: $white;
   cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.radio-group label:hover span {
+  border-color: rgba($blue, 0.45);
+}
+
+.radio-group input:focus-visible + span {
+  outline: 3px solid rgba($blue, 0.2);
+  outline-offset: 2px;
 }
 
 .radio-group input:checked + span {
   border-color: $blue;
   background: $soft-blue;
   color: $blue;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-link,
+  .back-link svg,
+  .button,
+  .button svg,
+  .industry-card,
+  .industry-card__icon,
+  .industry-card__link svg,
+  .industry-journey__path li,
+  .industry-journey__number,
+  .radio-group span {
+    transition: none;
+  }
 }
 
 .form-submit {
