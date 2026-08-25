@@ -1,6 +1,7 @@
 import { ArrowLeft, Check, X } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
+import { IndustryJourney } from '../components/IndustryJourney'
 import { industries } from '../data/siteContent'
 
 export function IndustryPage() {
@@ -14,7 +15,7 @@ export function IndustryPage() {
   const Icon = industry.icon
 
   return (
-    <>
+    <div className={`industry-theme industry-theme--${industry.slug}`}>
       <section className="industry-hero">
         <div className="container">
           <Link className="back-link" to="/solutions"><ArrowLeft size={17} /> All industries</Link>
@@ -28,10 +29,13 @@ export function IndustryPage() {
               <span><Icon size={28} /></span>
               <strong>{industry.metric}</strong>
               <p>{industry.metricLabel}</p>
+              <Icon className="industry-hero__watermark" size={150} strokeWidth={1} aria-hidden="true" />
             </div>
           </div>
         </div>
       </section>
+
+      <IndustryJourney industry={industry} />
 
       <section className="section industry-detail-section">
         <div className="container industry-detail-grid">
@@ -59,10 +63,8 @@ export function IndustryPage() {
       <section className="section industry-principle">
         <div className="container industry-principle__grid">
           <span className="eyebrow">Our rule</span>
-          <blockquote>A good {industry.shortName.toLowerCase()} website answers the next question before the customer has to ask it.</blockquote>
-          <p>
-            Give people the details they came for, show proof where doubt appears and remove dead ends before the booking or enquiry.
-          </p>
+          <blockquote>{industry.principle}</blockquote>
+          <p>{industry.principleText}</p>
         </div>
       </section>
 
@@ -70,6 +72,6 @@ export function IndustryPage() {
         eyebrow={`For ${industry.name.toLowerCase()}`}
         title="Find the page, button or form that is costing you customers."
       />
-    </>
+    </div>
   )
 }

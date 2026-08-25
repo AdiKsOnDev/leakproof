@@ -20,4 +20,12 @@ export interface Industry {
   metric: string
   metricLabel: string
   icon: LucideIcon
+  journeyTitle: string
+  journeySummary: string
+  journey: Array<{
+    title: string
+    text: string
+  }>
+  principle: string
+  principleText: string
 }
