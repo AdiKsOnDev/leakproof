@@ -86,12 +86,15 @@ export function HomePage() {
       </section>
 
       <section className="section section--soft">
-        <div className="container">
-          <SectionHeading
-            eyebrow="What we fix"
-            title="Fix what is broken. Rebuild when it makes sense."
-            text="Some sites need replacing. Others need a faster booking flow, clearer service pages or a form that reaches the right inbox."
-          />
+        <div className="container what-we-fix__layout">
+          <div className="what-we-fix__intro">
+            <SectionHeading
+              eyebrow="What we fix"
+              title="Fix what is broken. Rebuild when it makes sense."
+              text="Some sites need replacing. Others need a faster booking flow, clearer service pages or a form that reaches the right inbox."
+            />
+            <ArrowLink to="/services">Explore all services</ArrowLink>
+          </div>
           <div className="home-services">
             {services.map((service) => {
               const Icon = service.icon
@@ -105,7 +108,6 @@ export function HomePage() {
               )
             })}
           </div>
-          <div className="section-link"><ArrowLink to="/services">Explore all services</ArrowLink></div>
         </div>
       </section>
 

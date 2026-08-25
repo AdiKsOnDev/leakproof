@@ -12,16 +12,8 @@
     grid-template-columns: 1.15fr 0.85fr;
   }
 
-  .home-services {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-services article:nth-child(2) {
-    border-right: 0;
-  }
-
-  .home-services article:nth-child(-n + 2) {
-    border-bottom: 1px solid $line;
+  .what-we-fix__layout {
+    gap: 55px;
   }
 
   .site-footer__top {
@@ -92,6 +84,7 @@
   .problem-section__grid,
   .deliverables-section__grid,
   .shared-needs-section__grid,
+  .what-we-fix__layout,
   .industry-hero__grid,
   .industry-principle__grid,
   .contact-page__grid,
@@ -114,6 +107,10 @@
   .problem-section__grid,
   .shared-needs-section__grid {
     gap: 30px;
+  }
+
+  .home-services article:nth-child(n) {
+    margin-inline: 0;
   }
 
   .problem-section__copy {
@@ -328,26 +325,17 @@
     gap: 42px;
   }
 
-  .home-services {
-    grid-template-columns: 1fr;
-  }
-
   .limits-grid {
     grid-template-columns: 1fr;
   }
 
   .home-services article {
     min-height: auto;
-    border-right: 0;
-    border-bottom: 1px solid $line;
-  }
-
-  .home-services article:last-child {
-    border-bottom: 0;
+    margin-inline: 0;
   }
 
   .home-services__icon {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .industry-card {
