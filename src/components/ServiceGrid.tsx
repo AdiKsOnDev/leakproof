@@ -10,13 +10,14 @@ export function ServiceGrid() {
           <article className="service-card" key={service.number}>
             <div className="service-card__header">
               <span>{service.number}</span>
-              <Icon size={24} />
+              <span className="service-card__icon"><Icon size={25} /></span>
             </div>
             <h3>{service.title}</h3>
             <p>{service.summary}</p>
             <ul>
               {service.details.map((detail) => <li key={detail}>{detail}</li>)}
             </ul>
+            <Icon className="service-card__watermark" size={190} strokeWidth={0.7} aria-hidden="true" />
           </article>
         )
       })}

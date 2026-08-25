@@ -134,6 +134,12 @@
     grid-template-columns: 1fr;
   }
 
+  .service-card:nth-child(n) {
+    grid-column: 1;
+    margin-top: 0;
+    transform: none;
+  }
+
   .industry-journey__heading {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -332,6 +338,10 @@
 
   .service-card__header {
     margin-bottom: 50px;
+  }
+
+  .service-card h3 {
+    margin-top: 0;
   }
 
   .cta-panel {
