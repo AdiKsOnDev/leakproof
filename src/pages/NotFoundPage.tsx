@@ -5,7 +5,9 @@ export function NotFoundPage() {
   return (
     <section className="not-found">
       <div className="container" data-reveal="scale">
-        <span>404</span>
+        <div className="not-found__identifier">
+          <strong>404</strong>
+        </div>
         <h1>This page has a leak.</h1>
         <p>The page you were looking for does not exist or has moved.</p>
         <Link className="button" to="/"><ArrowLeft size={18} /> Back to home</Link>

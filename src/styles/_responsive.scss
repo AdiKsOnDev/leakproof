@@ -326,6 +326,15 @@
     width: min(calc(100% - 28px), $container);
   }
 
+  .not-found {
+    min-height: calc(100vh - 74px);
+    padding-top: 65px;
+  }
+
+  .not-found__identifier {
+    margin-bottom: 38px;
+  }
+
   .home-hero__actions {
     align-items: flex-start;
     flex-direction: column;
