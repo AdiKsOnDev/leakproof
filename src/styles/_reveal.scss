@@ -35,8 +35,11 @@
 
 .reveal-ready [data-reveal].is-revealed {
   opacity: 1;
-  clip-path: inset(0 0 0 0 round 18px);
   will-change: auto;
+}
+
+.reveal-ready [data-reveal='clip'].is-revealed {
+  clip-path: inset(0 0 0 0 round 18px);
 }
 
 .reveal-ready [data-reveal='rise'].is-revealed,

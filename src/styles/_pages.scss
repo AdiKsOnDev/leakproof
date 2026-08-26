@@ -486,15 +486,18 @@
 
 .deliverables-list {
   display: grid;
-  gap: 1px;
-  background: $line;
 }
 
 .deliverables-list article {
   display: flex;
   gap: 17px;
   padding: 22px 0;
+  border-bottom: 1px solid $line;
   background: $paper;
+}
+
+.deliverables-list article:last-child {
+  border-bottom: 0;
 }
 
 .deliverables-list svg {
