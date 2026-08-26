@@ -16,6 +16,7 @@ export function Footer() {
             <span className="site-footer__label">Explore</span>
             <Link to="/services">Services</Link>
             <Link to="/solutions">Solutions</Link>
+            <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </div>

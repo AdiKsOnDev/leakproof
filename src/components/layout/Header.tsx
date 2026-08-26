@@ -6,6 +6,7 @@ import logo from '../../../assets/logo.svg'
 const navigation = [
   { label: 'Services', path: '/services' },
   { label: 'Solutions', path: '/solutions' },
+  { label: 'Blog', path: '/blog' },
   { label: 'About', path: '/about' },
 ]
 

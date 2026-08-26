@@ -29,3 +29,26 @@ export interface Industry {
   principle: string
   principleText: string
 }
+
+export type BlogThumbnailVariant = 'diagnostic' | 'local-seo' | 'checklist'
+
+export interface BlogPostSection {
+  heading: string
+  paragraphs: string[]
+  points?: string[]
+}
+
+export interface BlogPost {
+  slug: string
+  title: string
+  category: string
+  excerpt: string
+  seoDescription: string
+  publishedAt: string
+  publishedLabel: string
+  readTime: string
+  thumbnail: BlogThumbnailVariant
+  intro: string[]
+  sections: BlogPostSection[]
+  relatedSlugs: string[]
+}

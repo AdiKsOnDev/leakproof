@@ -20,6 +20,11 @@
     grid-template-columns: 1.5fr repeat(3, 1fr);
     gap: 35px;
   }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -91,6 +96,32 @@
   .cta-panel,
   .pricing-panel {
     grid-template-columns: 1fr;
+  }
+
+  .blog-card--featured > a,
+  .blog-article__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card--featured .blog-thumbnail,
+  .blog-card--featured .blog-card__content {
+    min-height: 420px;
+  }
+
+  .blog-article__aside {
+    position: static;
+    grid-template-columns: max-content 1fr max-content 1fr;
+    gap: 8px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $line;
+  }
+
+  .blog-article__aside time {
+    margin: 0;
+  }
+
+  .blog-article__thumbnail .blog-thumbnail {
+    min-height: 360px;
   }
 
   .home-hero__grid,
@@ -334,6 +365,73 @@
   .not-found__identifier {
     margin-bottom: 38px;
   }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card__content {
+    min-height: 300px;
+    padding: 25px;
+  }
+
+  .blog-card--featured .blog-thumbnail,
+  .blog-card--featured .blog-card__content {
+    min-height: 330px;
+  }
+
+  .blog-thumbnail {
+    min-height: 200px;
+  }
+
+  .blog-article__header {
+    padding: 65px 0 50px;
+  }
+
+  .blog-article__back {
+    margin-bottom: 50px;
+  }
+
+  .blog-article__thumbnail {
+    margin-top: 28px;
+  }
+
+  .blog-article__thumbnail .blog-thumbnail {
+    min-height: 240px;
+    border-radius: $radius;
+  }
+
+  .blog-article__layout {
+    gap: 45px;
+    padding-top: 65px;
+    padding-bottom: 85px;
+  }
+
+  .blog-article__aside {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog-article__intro {
+    margin-bottom: 55px;
+    padding-bottom: 35px;
+  }
+
+  .blog-article__body section + section {
+    margin-top: 50px;
+  }
+
+  .blog-article__body ul {
+    padding: 22px 20px 22px 40px;
+  }
+
+  .related-posts__heading {
+    display: block;
+  }
+
+  .related-posts__heading .eyebrow {
+    margin-bottom: 16px;
+  }
+
 
   .home-hero__actions {
     align-items: flex-start;
