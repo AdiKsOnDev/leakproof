@@ -9,7 +9,7 @@ export function BlogPage() {
     <>
       <PageHero
         eyebrow="Leak notes"
-        title={<>Practical advice for a website that <em>earns its keep.</em></>}
+        title={<>Websites that <em>earn.</em></>}
         description="Clear answers about website costs, conversion problems, redesigns and the details that make it easier for customers to act."
       />
 
