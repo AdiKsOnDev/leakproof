@@ -375,7 +375,7 @@
   }
 
   .blog-thumbnail {
-    min-height: 200px;
+    min-height: 0;
   }
 
   .blog-article__header {
@@ -391,7 +391,8 @@
   }
 
   .blog-article__thumbnail .blog-thumbnail {
-    min-height: 240px;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
     border-radius: $radius;
   }
 
