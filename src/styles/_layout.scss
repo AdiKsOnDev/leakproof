@@ -5,10 +5,13 @@
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 50;
   border-bottom: 1px solid rgba($ink, 0.1);
-  background: rgba($paper, 0.94);
+  background: rgba($paper, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .site-header__inner {
