@@ -93,8 +93,7 @@
   .industry-hero__grid,
   .industry-principle__grid,
   .contact-page__grid,
-  .cta-panel,
-  .pricing-panel {
+  .cta-panel {
     grid-template-columns: 1fr;
   }
 
@@ -310,11 +309,6 @@
     max-width: 460px;
   }
 
-  .pricing-panel {
-    gap: 35px;
-    padding: 45px;
-  }
-
   .industry-principle__grid {
     gap: 30px;
   }
@@ -493,10 +487,6 @@
 
   .industry-detail-card h2 {
     margin-bottom: 40px;
-  }
-
-  .pricing-panel {
-    padding: 35px 25px;
   }
 
   .contact-form-panel {

@@ -517,34 +517,6 @@
   font-size: 0.9rem;
 }
 
-.pricing-section {
-  padding-top: 30px;
-}
-
-.pricing-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  padding: 65px;
-  border: 1px solid $line;
-  border-radius: $radius-large;
-  background: $cream;
-}
-
-.pricing-panel h2 {
-  margin: 17px 0 0;
-  font-size: clamp(2rem, 4vw, 3.1rem);
-}
-
-.pricing-panel__note {
-  display: block;
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid $line;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
 .solutions-grid-section .industry-card {
   background: $paper;
 }

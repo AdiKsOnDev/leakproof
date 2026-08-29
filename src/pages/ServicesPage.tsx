@@ -33,28 +33,13 @@ export function ServicesPage() {
               ['Obvious next steps', 'Each important page points to the right booking, enquiry or quote action.'],
               ['Local search setup', 'Page structure, titles, metadata and local business details are set up properly.'],
               ['Tracking that answers useful questions', 'You can see which pages and routes produce bookings or enquiries.'],
-              ['A clean handover', 'You know how the site works and how to handle routine updates after launch.'],
+              ['You own the finished website', 'We hand over the complete source code, repository, deployment access and documentation. You can manage it yourself or give it to another developer.'],
             ].map(([title, text], index) => (
               <article key={title} data-reveal="right" data-reveal-delay={String(index * 70)}>
                 <CheckCircle2 size={21} />
                 <div><h3>{title}</h3><p>{text}</p></div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section pricing-section">
-        <div className="container pricing-panel" data-reveal="scale">
-          <div>
-            <span className="eyebrow">Pricing</span>
-            <h2>One price for a clear piece of work.</h2>
-          </div>
-          <div>
-            <p>
-              A broken booking flow at a busy clinic can cost far more than the same problem on a new salon's site. We quote after we understand the work, the business and what the fix could be worth.
-            </p>
-            <span className="pricing-panel__note">You receive the scope and price before work starts. We do not run an open-ended hourly tab.</span>
           </div>
         </div>
       </section>
