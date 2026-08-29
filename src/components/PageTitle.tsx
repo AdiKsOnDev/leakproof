@@ -6,15 +6,15 @@ import { updateDocumentMetadata } from '../utils/documentMetadata'
 
 const pageMetadata: Record<string, { title: string; description: string }> = {
   '/': {
-    title: 'Leakproof | Web Design and Development Dubai',
+    title: 'Home | Leakproof',
     description: 'Leakproof fixes the website problems that cost Dubai businesses bookings, enquiries and orders.',
   },
   '/services': {
-    title: 'Website Services | Leakproof',
+    title: 'Services | Leakproof',
     description: 'Website design, development and conversion fixes for small businesses in Dubai.',
   },
   '/solutions': {
-    title: 'Industry Website Solutions | Leakproof',
+    title: 'Solutions | Leakproof',
     description: 'Website solutions built around how clinic patients, travellers and local-service customers make decisions.',
   },
   '/about': {
@@ -22,11 +22,11 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
     description: 'Learn how Leakproof finds and fixes the points where small-business websites lose customers.',
   },
   '/contact': {
-    title: 'Free Website Leak Check | Leakproof',
+    title: 'Contact | Leakproof',
     description: 'Send Leakproof your website for a free review of the route to your next booking or enquiry.',
   },
   '/blog': {
-    title: 'Website Advice for Dubai Businesses | Leakproof',
+    title: 'Blog | Leakproof',
     description: 'Practical articles about website costs, conversion problems, redesigns and direct bookings for Dubai businesses.',
   },
 }
@@ -63,7 +63,7 @@ export function PageTitle() {
 
     if (industry) {
       updateDocumentMetadata({
-        title: `${industry.name} Website Design | Leakproof`,
+        title: `${industry.name} | Leakproof`,
         description: industry.summary,
         path: pathname,
       })
