@@ -1574,6 +1574,23 @@
   margin-top: 6px;
 }
 
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.form-error {
+  margin: 0;
+  color: $red;
+  font-size: 0.85rem;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
 .contact-form-panel form > small {
   color: #85827c;
   text-align: center;

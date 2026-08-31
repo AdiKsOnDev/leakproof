@@ -1,14 +1,38 @@
 import { ArrowRight, CheckCircle2, Mail, MapPin } from 'lucide-react'
 import { FormEvent, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submissionError, setSubmissionError] = useState('')
   const [contactMethod, setContactMethod] = useState<'email' | 'phone' | 'whatsapp'>('email')
   const usesPhoneNumber = contactMethod !== 'email'
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setSubmitted(true)
+    const form = event.currentTarget
+
+    setSubmitting(true)
+    setSubmissionError('')
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
+
+      setSubmitted(true)
+    } catch {
+      setSubmissionError('We could not send your request. Try again or email hello@leakproof.me.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -39,11 +63,16 @@ export function ContactPage() {
             <div className="form-success">
               <span><CheckCircle2 size={32} /></span>
               <h2>Got it.</h2>
-              <p>One last step. Email these details to hello@leakproof.me and we can start the review.</p>
-              <a className="button" href="mailto:hello@leakproof.me">Open email <ArrowRight size={18} /></a>
+              <p>We have your details and will review the website. Expect a reply from hello@leakproof.me.</p>
+              <Link className="button" to="/">Back to home <ArrowRight size={18} /></Link>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
+            <form action="https://formspree.io/f/xqpkpzbq" method="POST" onSubmit={handleSubmit}>
+              <input type="hidden" name="_subject" value="New website leak check request" />
+              <label className="form-honeypot" aria-hidden="true">
+                Leave this field empty
+                <input name="_gotcha" type="text" tabIndex={-1} autoComplete="off" />
+              </label>
               <div className="form-heading"><span>01</span><h2>Tell us about the website</h2></div>
               <div className="form-row">
                 <label>First name<input name="firstName" type="text" autoComplete="given-name" required placeholder="Your name" /></label>
@@ -72,7 +101,10 @@ export function ContactPage() {
                   <label><input type="radio" name="contactMethod" value="whatsapp" checked={contactMethod === 'whatsapp'} onChange={() => setContactMethod('whatsapp')} /><span>WhatsApp</span></label>
                 </div>
               </fieldset>
-              <button className="button form-submit" type="submit">Request a leak check <ArrowRight size={18} /></button>
+              {submissionError && <p className="form-error" role="alert">{submissionError}</p>}
+              <button className="button form-submit" type="submit" disabled={submitting}>
+                {submitting ? 'Sending request...' : 'Request a leak check'} {!submitting && <ArrowRight size={18} />}
+              </button>
               <small>No mailing list or automated audit. You will get a reply about your website.</small>
             </form>
           )}
