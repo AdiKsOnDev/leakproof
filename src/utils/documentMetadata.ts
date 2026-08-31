@@ -27,7 +27,8 @@ export function updateDocumentMetadata({
   type = 'website',
   structuredData,
 }: DocumentMetadata) {
-  const url = `${siteUrl}${path}`
+  const canonicalPath = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`
+  const url = `${siteUrl}${canonicalPath}`
 
   document.title = title
   setMetaTag('meta[name="description"]', 'name', 'description', description)
@@ -38,6 +39,16 @@ export function updateDocumentMetadata({
   setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary')
   setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', title)
   setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', description)
+
+  let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+
+  if (!canonical) {
+    canonical = document.createElement('link')
+    canonical.rel = 'canonical'
+    document.head.appendChild(canonical)
+  }
+
+  canonical.href = url
 
   const currentStructuredData = document.head.querySelector<HTMLScriptElement>('#page-structured-data')
 
