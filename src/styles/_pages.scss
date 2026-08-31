@@ -1426,7 +1426,7 @@
 }
 
 .contact-form-panel {
-  min-height: 720px;
+  align-self: start;
   padding: 48px;
   border: 1px solid $line;
   border-radius: $radius-large;
@@ -1598,7 +1598,6 @@
 
 .form-success {
   display: flex;
-  min-height: 620px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
