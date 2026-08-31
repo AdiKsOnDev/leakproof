@@ -43,7 +43,7 @@ export function IndustryJourney({ industry }: IndustryJourneyProps) {
           </div>
           <p>{industry.journeySummary}</p>
         </div>
-        <div className="industry-journey__visual" data-reveal="clip" data-reveal-delay="100">
+        <div className="industry-journey__visual">
           <JourneyRoute slug={industry.slug} />
           <ol className="industry-journey__path">
             {industry.journey.map((step, index) => (
