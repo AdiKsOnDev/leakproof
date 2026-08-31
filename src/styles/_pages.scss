@@ -517,6 +517,104 @@
   font-size: 0.9rem;
 }
 
+.ownership-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(330px, 0.8fr);
+  align-items: center;
+  gap: clamp(50px, 8vw, 120px);
+  overflow: hidden;
+  margin-top: 75px;
+  padding: clamp(48px, 6vw, 80px);
+  border-radius: $radius-large;
+  background:
+    linear-gradient(rgba($white, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($white, 0.045) 1px, transparent 1px),
+    $ink;
+  background-size: 36px 36px;
+  color: $white;
+}
+
+.ownership-panel__number {
+  position: absolute;
+  top: -0.22em;
+  right: -0.02em;
+  color: transparent;
+  font-size: clamp(10rem, 23vw, 20rem);
+  font-weight: 900;
+  line-height: 1;
+  -webkit-text-stroke: 1px rgba($white, 0.075);
+}
+
+.ownership-panel__copy,
+.ownership-panel__handover {
+  position: relative;
+  z-index: 1;
+}
+
+.ownership-panel h2 {
+  max-width: 720px;
+  margin: 24px 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.ownership-panel h2 em {
+  color: #aeb5ff;
+}
+
+.ownership-panel__copy p {
+  max-width: 700px;
+  margin: 0;
+  color: #c2c2be;
+  font-size: 1rem;
+}
+
+.ownership-panel__handover {
+  display: grid;
+  gap: 12px;
+}
+
+.ownership-panel__handover > div {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba($white, 0.16);
+  border-radius: $radius-small;
+  background: rgba($white, 0.09);
+  backdrop-filter: blur(8px);
+}
+
+.ownership-panel__handover > div:nth-child(1) {
+  transform: translateX(-18px) rotate(-1.2deg);
+}
+
+.ownership-panel__handover > div:nth-child(2) {
+  transform: translateX(14px) rotate(0.8deg);
+}
+
+.ownership-panel__handover > div:nth-child(3) {
+  transform: translateX(-6px) rotate(-0.4deg);
+}
+
+.ownership-panel__handover svg {
+  width: 24px;
+  color: #8991ff;
+}
+
+.ownership-panel__handover span {
+  color: #d6d6d2;
+  font-size: 0.82rem;
+}
+
+.ownership-panel__handover strong {
+  color: $white;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .solutions-grid-section .industry-card {
   background: $paper;
 }
