@@ -140,7 +140,7 @@
   }
 
   .leak-visual {
-    max-width: 460px;
+    width: min(100%, 520px);
   }
 
   .problem-section__header,
@@ -440,6 +440,36 @@
   .home-hero__actions {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .leak-visual__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .journey-funnel {
+    padding-inline: 18px;
+  }
+
+  .journey-funnel__step {
+    grid-template-columns: 1fr 32px;
+    gap: 8px 14px;
+  }
+
+  .journey-funnel__bar {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+
+  .leak-visual__recommendation {
+    grid-template-columns: 36px 1fr;
+    margin-inline: 12px;
+    padding: 14px;
+  }
+
+  .leak-visual__recommendation-icon {
+    width: 36px;
+    height: 36px;
   }
 
   .industry-marquee__group {

@@ -2,30 +2,33 @@
 
 .home-hero {
   position: relative;
-  padding: 90px 0 0;
+  padding: 105px 0 0;
   background:
+    radial-gradient(circle at 76% 18%, rgba($blue, 0.09), transparent 25%),
+    radial-gradient(circle at 8% 76%, rgba($white, 0.95), transparent 24%),
     linear-gradient(rgba($blue, 0.022) 1px, transparent 1px),
     linear-gradient(90deg, rgba($blue, 0.022) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-size: auto, auto, 40px 40px, 40px 40px;
   overflow: hidden;
 }
 
 .home-hero__grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(440px, 0.95fr);
   align-items: center;
-  gap: 80px;
+  gap: clamp(55px, 7vw, 105px);
 }
 
 .home-hero h1 {
-  max-width: 920px;
+  max-width: 760px;
   margin: 24px 0 30px;
 }
 
 .home-hero__content > p {
-  max-width: 690px;
+  max-width: 620px;
+  margin-bottom: 0;
   color: $muted;
-  font-size: 1.2rem;
+  font-size: $font-size-content;
   line-height: 1.72;
 }
 
@@ -38,11 +41,12 @@
 
 .leak-visual {
   position: relative;
-  padding: 24px;
+  z-index: 0;
   border: 1px solid $line;
   border-radius: $radius-large;
   background: $white;
   box-shadow: $shadow;
+  isolation: isolate;
   transform: rotate(1.2deg);
 }
 
@@ -50,11 +54,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 17px;
-  border-bottom: 1px solid $line;
-  font-size: 0.78rem;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: $radius-large $radius-large 0 0;
+  background: $ink;
+  color: $white;
+  font-size: $font-size-caption;
   font-weight: 700;
+}
+
+.leak-visual__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .status-pill {
@@ -63,89 +75,116 @@
   gap: 6px;
   padding: 5px 9px;
   border-radius: 999px;
-  background: #e7f4ed;
-  color: $green;
-  font-size: 0.65rem;
+  background: rgba($red, 0.16);
+  color: #ff9a90;
+  font-size: $font-size-caption;
 }
 
 .status-pill span {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: $green;
+  background: #ff776b;
+  box-shadow: 0 0 0 4px rgba($red, 0.18);
 }
 
-.journey-step {
+.journey-funnel {
   display: grid;
-  grid-template-columns: 34px 1fr auto;
+  gap: 19px;
+  padding: 28px 24px 22px;
+}
+
+.journey-funnel__step {
+  display: grid;
+  grid-template-columns: minmax(125px, 1.15fr) minmax(90px, 1fr) 32px;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-.journey-step__icon {
+.journey-funnel__step > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.journey-funnel__step span {
+  color: #98958f;
+  font-size: $font-size-caption;
+  font-weight: 700;
+}
+
+.journey-funnel__step strong,
+.journey-funnel__step b {
+  font-size: $font-size-caption;
+}
+
+.journey-funnel__step b {
+  text-align: right;
+}
+
+.journey-funnel__bar {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7e5df;
+}
+
+.journey-funnel__bar i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: $blue;
+}
+
+.journey-funnel__step--service .journey-funnel__bar i {
+  width: 68%;
+}
+
+.journey-funnel__step--booking .journey-funnel__bar i {
+  width: 24%;
+}
+
+.journey-funnel__step--complete .journey-funnel__bar i {
+  width: 6%;
+  min-width: 8px;
+  background: $red;
+}
+
+.leak-visual__recommendation {
   display: grid;
-  width: 34px;
-  height: 34px;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  gap: 14px;
+  margin: 0 18px 18px;
+  padding: 17px;
+  border-radius: $radius;
+  background: $soft-blue;
+  box-shadow: inset 0 0 0 1px rgba($blue, 0.1);
+}
+
+.leak-visual__recommendation-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  background: $blue;
+  color: $white;
   place-items: center;
 }
 
-.journey-step--complete .journey-step__icon {
-  background: #e7f4ed;
-  color: $green;
-}
-
-.journey-step--alert .journey-step__icon {
-  background: #fce9e6;
-  color: $red;
-}
-
-.journey-step div span,
-.journey-step small {
-  color: #94918b;
-  font-size: 0.63rem;
-}
-
-.journey-step div span,
-.journey-step strong {
-  display: block;
-}
-
-.journey-step strong {
-  font-size: 0.79rem;
-}
-
-.journey-line {
-  width: 1px;
-  height: 32px;
-  margin-left: 17px;
-  background: $line;
-}
-
-.journey-line--leak {
-  position: relative;
-  height: 44px;
-  background: repeating-linear-gradient(to bottom, $red 0, $red 4px, transparent 4px, transparent 8px);
-}
-
-.leak-visual__note {
-  margin-top: 26px;
-  padding: 14px;
-  border: 1px solid #f0c9c3;
-  border-radius: $radius-small;
-  background: #fff8f7;
-}
-
-.leak-visual__note span {
-  color: $red;
-  font-size: 0.62rem;
+.leak-visual__recommendation div > span {
+  color: $blue;
+  font-size: $font-size-caption;
   font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.leak-visual__note p {
+.leak-visual__recommendation p {
   margin: 3px 0 0;
-  font-size: 0.72rem;
+  font-size: $font-size-caption;
+  line-height: 1.45;
 }
 
 .industry-marquee {
@@ -643,7 +682,7 @@
 }
 
 .shared-needs-list h3 {
-  font-size: $font-size-content;
+  font-size: $font-size-subtitle;
 }
 
 .shared-needs-list p {
@@ -695,7 +734,7 @@
   max-width: 730px;
   margin: 0;
   color: $muted;
-  font-size: $font-size-subtitle;
+  font-size: $font-size-content;
   line-height: 1.72;
 }
 

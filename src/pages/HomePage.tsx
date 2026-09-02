@@ -1,4 +1,4 @@
-import { ArrowRight, Check, CircleHelp, MousePointerClick, Smartphone, Unlink } from 'lucide-react'
+import { ArrowRight, Check, CircleHelp, Search, Smartphone, Unlink, Wrench } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { IndustryGrid } from '../components/IndustryGrid'
 import { industries, processSteps, services } from '../data/siteContent'
@@ -13,7 +13,8 @@ export function HomePage() {
         <div className="container home-hero__grid">
           <div className="home-hero__content" data-reveal="left">
             <span className="eyebrow">Web design and development · Dubai</span>
-            <h1>Your website should bring in business.</h1>
+            <h1>Your website is leaking customers</h1>
+            <p>We review your website like a customer, find the biggest obstacle to booking or enquiring, and fix the part causing it.</p>
             <div className="home-hero__actions">
               <Link className="button" to="/contact">
                 Get a free leak check <ArrowRight size={18} />
@@ -22,31 +23,41 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="leak-visual" aria-label="Example of a broken booking flow" data-reveal="scale" data-reveal-delay="120">
+          <div className="leak-visual" role="img" aria-label="Example analysis showing customers lost during a booking flow" data-reveal="scale" data-reveal-delay="120">
             <div className="leak-visual__top">
-              <span>Customer journey</span>
-              <span className="status-pill"><span /> Form submission error</span>
+              <span className="leak-visual__title"><Search size={15} /> Customer journey</span>
+              <span className="status-pill"><span /> Leak detected</span>
             </div>
-            <div className="journey-step journey-step--complete">
-              <span className="journey-step__icon"><Check size={16} /></span>
-              <div><span>01</span><strong>Visitor lands on site</strong></div>
-              <small>100%</small>
+
+            <div className="journey-funnel">
+              <div className="journey-funnel__step journey-funnel__step--visitors">
+                <div><span>01</span><strong>Visitors</strong></div>
+                <div className="journey-funnel__bar"><i /></div>
+                <b>128</b>
+              </div>
+              <div className="journey-funnel__step journey-funnel__step--service">
+                <div><span>02</span><strong>Viewed a service</strong></div>
+                <div className="journey-funnel__bar"><i /></div>
+                <b>87</b>
+              </div>
+              <div className="journey-funnel__step journey-funnel__step--booking">
+                <div><span>03</span><strong>Started booking</strong></div>
+                <div className="journey-funnel__bar"><i /></div>
+                <b>31</b>
+              </div>
+              <div className="journey-funnel__step journey-funnel__step--complete">
+                <div><span>04</span><strong>Completed</strong></div>
+                <div className="journey-funnel__bar"><i /></div>
+                <b>8</b>
+              </div>
             </div>
-            <div className="journey-line" />
-            <div className="journey-step journey-step--complete">
-              <span className="journey-step__icon"><Check size={16} /></span>
-              <div><span>02</span><strong>Finds the right service</strong></div>
-              <small>68%</small>
-            </div>
-            <div className="journey-line journey-line--leak" />
-            <div className="journey-step journey-step--alert">
-              <span className="journey-step__icon"><MousePointerClick size={16} /></span>
-              <div><span>03</span><strong>Clicks "Book now"</strong></div>
-              <small>19%</small>
-            </div>
-            <div className="leak-visual__note">
-              <span>Where it leaks</span>
-              <p>The customer completes the booking form, but an error blocks confirmation.</p>
+
+            <div className="leak-visual__recommendation">
+              <span className="leak-visual__recommendation-icon"><Wrench size={18} /></span>
+              <div>
+                <span>Recommended fix</span>
+                <p>Repair confirmation, shorten the form, and preserve the selected service.</p>
+              </div>
             </div>
           </div>
         </div>
