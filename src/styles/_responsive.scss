@@ -248,7 +248,7 @@
     background: $paper;
     color: var(--industry-accent, #{$blue});
     content: '↓';
-    font-size: 0.9rem;
+    font-size: $font-size-content;
     place-items: center;
     transform: translateX(50%);
   }
@@ -349,11 +349,11 @@
 
 @media (max-width: 560px) {
   h1 {
-    font-size: clamp(2.7rem, 14vw, 4rem);
+    font-size: $font-size-title;
   }
 
   h2 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: $font-size-heading;
   }
 
   .container {

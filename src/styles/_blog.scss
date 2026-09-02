@@ -45,14 +45,14 @@
 
 .blog-card h2 {
   margin: 20px 0 14px;
-  font-size: clamp(1.45rem, 2vw, 1.9rem);
+  font-size: $font-size-subtitle;
   letter-spacing: -0.04em;
 }
 
 .blog-card p {
   margin-bottom: 28px;
   color: $muted;
-  font-size: 0.94rem;
+  font-size: $font-size-content;
 }
 
 .blog-card__link {
@@ -62,7 +62,7 @@
   margin-top: auto;
   margin-bottom: 10px;
   color: $blue;
-  font-size: 0.82rem;
+  font-size: $font-size-content;
   font-weight: 700;
 }
 
@@ -91,12 +91,8 @@
   padding: clamp(38px, 5vw, 70px);
 }
 
-.blog-card--featured h2 {
-  font-size: clamp(2rem, 3.5vw, 3.6rem);
-}
-
 .blog-card--featured p {
-  font-size: 1rem;
+  font-size: $font-size-content;
 }
 
 .blog-meta {
@@ -105,7 +101,7 @@
   align-items: center;
   gap: 8px 12px;
   color: #7a7873;
-  font-size: 0.7rem;
+  font-size: $font-size-caption;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -148,7 +144,7 @@
   padding: 7px 11px;
   border: 1px solid currentColor;
   border-radius: 999px;
-  font-size: 0.62rem;
+  font-size: $font-size-caption;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1;
@@ -192,14 +188,14 @@
 
 .blog-thumbnail__metric span {
   color: rgba($white, 0.65);
-  font-size: clamp(0.55rem, 1vw, 0.78rem);
+  font-size: $font-size-caption;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .blog-thumbnail__metric strong {
-  font-size: clamp(2.5rem, 6vw, 6.8rem);
+  font-size: $font-size-title;
   line-height: 0.92;
   letter-spacing: -0.08em;
 }
@@ -241,7 +237,7 @@
   border-radius: 999px;
   background: $ink;
   color: #ff8b80;
-  font-size: clamp(0.48rem, 0.8vw, 0.65rem);
+  font-size: $font-size-caption;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -268,7 +264,7 @@
   border-radius: 999px;
   background: rgba($white, 0.85);
   box-shadow: 0 12px 35px rgba($blue, 0.08);
-  font-size: 0.72rem;
+  font-size: $font-size-caption;
   font-weight: 700;
 }
 
@@ -392,7 +388,7 @@
   gap: 8px;
   margin-bottom: 70px;
   color: $muted;
-  font-size: 0.78rem;
+  font-size: $font-size-caption;
   font-weight: 700;
 }
 
@@ -403,14 +399,14 @@
 .blog-article__header h1 {
   max-width: 920px;
   margin: 28px 0 30px;
-  font-size: clamp(3rem, 6.5vw, 6.2rem);
+  font-size: $font-size-title;
 }
 
 .blog-article__excerpt {
   max-width: 760px;
   margin: 0;
   color: $muted;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: $font-size-content;
 }
 
 .blog-article__thumbnail {
@@ -439,13 +435,13 @@
   display: grid;
   padding-top: 9px;
   color: $muted;
-  font-size: 0.74rem;
+  font-size: $font-size-caption;
 }
 
 .blog-article__aside span {
   margin-bottom: 3px;
   color: #999791;
-  font-size: 0.62rem;
+  font-size: $font-size-caption;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -465,7 +461,7 @@
 
 .blog-article__body p,
 .blog-article__body li {
-  font-size: 1.04rem;
+  font-size: $font-size-content;
   line-height: 1.82;
 }
 
@@ -476,7 +472,7 @@
 }
 
 .blog-article__intro p {
-  font-size: clamp(1.18rem, 2vw, 1.4rem);
+  font-size: $font-size-content;
   line-height: 1.65;
 }
 
@@ -487,7 +483,7 @@
 .blog-article__body h2 {
   margin-bottom: 25px;
   color: $ink;
-  font-size: clamp(1.85rem, 3vw, 2.7rem);
+  font-size: $font-size-heading;
 }
 
 .blog-article__body ul {
