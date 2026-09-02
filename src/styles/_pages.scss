@@ -263,12 +263,12 @@
 .home-hero--horizon .home-hero__intro,
 .home-hero--horizon .home-hero__content {
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .home-hero--horizon h1 {
   max-width: 1050px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .home-hero--horizon h1 span {
@@ -290,7 +290,7 @@
 .home-hero--horizon .home-hero__actions {
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 0;
 }
 
