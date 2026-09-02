@@ -14,9 +14,6 @@ export function HomePage() {
           <div className="home-hero__content" data-reveal="left">
             <span className="eyebrow">Web design and development · Dubai</span>
             <h1>Your website should bring in business.</h1>
-            <p>
-              We optimize your website to ensure customers that want to pay, can.
-            </p>
             <div className="home-hero__actions">
               <Link className="button" to="/contact">
                 Get a free leak check <ArrowRight size={18} />
