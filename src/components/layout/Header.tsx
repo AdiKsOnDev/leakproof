@@ -61,9 +61,6 @@ export function Header() {
               </NavLink>
             ))}
           </div>
-          <Link className="button button--small" to="/contact" onClick={closeMenu}>
-            Get a free leak check
-          </Link>
         </nav>
       </div>
     </header>
