@@ -239,6 +239,78 @@
   }
 }
 
+.home-hero--horizon {
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  padding-top: 88px;
+  background:
+    linear-gradient(rgba($ink, 0.28), rgba($ink, 0.5)),
+    url('/pedestrians.png') 58% top / cover no-repeat;
+}
+
+.home-hero--horizon .home-hero__grid {
+  grid-template-columns: 1fr;
+  gap: 30px;
+  justify-items: center;
+}
+
+.home-hero--horizon .home-hero__intro,
+.home-hero--horizon .home-hero__content {
+  grid-column: 1;
+}
+
+.home-hero--horizon .home-hero__intro,
+.home-hero--horizon .home-hero__content {
+  width: 100%;
+  text-align: center;
+}
+
+.home-hero--horizon h1 {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.home-hero--horizon h1 span {
+  color: $white;
+}
+
+.home-hero--horizon h1 em {
+  display: inline;
+  margin-left: 0;
+  color: #aeb5ff;
+}
+
+.home-hero--horizon .home-hero__content > p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #c2c2be;
+}
+
+.home-hero--horizon .home-hero__actions {
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.home-hero--horizon .home-hero__location {
+  display: block;
+  margin-top: 28px;
+  color: #aeb5ff;
+}
+
+.home-hero--horizon .button {
+  border-color: $white;
+  background: $white;
+  color: $blue;
+}
+
+.home-hero--horizon .arrow-link {
+  border-color: $white;
+  color: $white;
+}
+
 .deliverables-section__grid,
 .shared-needs-section__grid {
   display: grid;

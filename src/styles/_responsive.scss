@@ -84,6 +84,12 @@
     padding-top: 70px;
   }
 
+  .home-hero--horizon {
+    min-height: 100svh;
+    padding-top: 74px;
+    background-position: 0 0, 72% top;
+  }
+
   .home-hero__grid,
   .page-hero__grid,
   .problem-section__header,
@@ -440,6 +446,14 @@
   .home-hero__actions {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .home-hero--horizon .home-hero__actions {
+    align-items: center;
+  }
+
+  .home-hero--horizon .home-hero__actions .button {
+    width: min(100%, 310px);
   }
 
   .leak-visual__top {
