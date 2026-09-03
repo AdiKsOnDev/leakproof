@@ -249,6 +249,12 @@
     url('/pedestrians.png') 58% top / cover no-repeat;
 }
 
+@media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
+  .home-hero--horizon {
+    background-attachment: scroll, fixed;
+  }
+}
+
 .home-hero--horizon .home-hero__grid {
   grid-template-columns: 1fr;
   gap: 30px;
