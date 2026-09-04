@@ -24,10 +24,6 @@
   transform: scale(0.96);
 }
 
-.reveal-ready .leak-visual[data-reveal='scale'] {
-  transform: rotate(1.2deg) scale(0.96);
-}
-
 .reveal-ready [data-reveal='clip'] {
   transform: translateY(28px);
 }
@@ -43,10 +39,6 @@
 .reveal-ready [data-reveal='scale'].is-revealed,
 .reveal-ready [data-reveal='clip'].is-revealed {
   transform: none;
-}
-
-.reveal-ready .leak-visual[data-reveal='scale'].is-revealed {
-  transform: rotate(1.2deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
