@@ -458,10 +458,18 @@
 
   .home-hero--horizon .home-hero__actions {
     align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
   }
 
   .home-hero--horizon .home-hero__actions .button {
-    width: min(100%, 310px);
+    width: auto;
+    max-width: 100%;
+  }
+
+  .home-hero--horizon .home-hero__actions .arrow-link {
+    min-height: 44px;
   }
 
   .leak-visual__top {
