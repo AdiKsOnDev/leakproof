@@ -46,6 +46,8 @@
 
   .menu-button {
     display: block;
+    width: 44px;
+    height: 44px;
   }
 
   .site-nav {
@@ -72,6 +74,9 @@
   }
 
   .site-nav__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     padding: 14px 3px;
     border-bottom: 1px solid $line;
   }
