@@ -88,6 +88,9 @@
     min-height: 100svh;
     padding-top: 74px;
     background-position: 0 0, 72% top;
+    background-image:
+      linear-gradient(rgba($ink, 0.28), rgba($ink, 0.5)),
+      url('/pedestrians-900.webp');
   }
 
   .home-hero__grid,
