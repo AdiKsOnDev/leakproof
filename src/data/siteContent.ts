@@ -14,6 +14,7 @@ import type { Industry, Service } from '../types/content'
 
 export const services: Service[] = [
   {
+    slug: 'website-leak-check',
     number: '01',
     title: 'Website leak check',
     summary: 'We use the site like a customer and find the pages, buttons and forms that get in the way.',
@@ -21,6 +22,7 @@ export const services: Service[] = [
     icon: Search,
   },
   {
+    slug: 'website-rebuild',
     number: '02',
     title: 'Website rebuild',
     summary: 'A new site for businesses whose current one is too slow, hard to use or costly to repair.',
@@ -28,6 +30,7 @@ export const services: Service[] = [
     icon: Hammer,
   },
   {
+    slug: 'website-improvements',
     number: '03',
     title: 'Website improvements',
     summary: 'Specific repairs for a site that does not need replacing from top to bottom.',
@@ -35,6 +38,7 @@ export const services: Service[] = [
     icon: Wrench,
   },
   {
+    slug: 'local-search-setup',
     number: '04',
     title: 'Local search setup',
     summary: 'The page structure and business information Google needs to understand where you work and what you offer.',

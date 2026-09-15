@@ -1,6 +1,7 @@
 import type { LucideIcon } from 'lucide-react'
 
 export interface Service {
+  slug: string
   number: string
   title: string
   summary: string
