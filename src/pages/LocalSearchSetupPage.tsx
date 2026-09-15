@@ -3,19 +3,15 @@ import {
   ArrowRight,
   BarChart3,
   Check,
-  Globe2,
-  MapPin,
   MapPinned,
-  Navigation,
-  Phone,
   Plus,
-  Search,
   Store,
   Tags,
 } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
+import { LocalSearchPreview } from '../components/LocalSearchPreview'
 
 const setupGroups = [
   {
@@ -88,47 +84,7 @@ export function LocalSearchSetupPage() {
             <h2 id="search-example-title">The same business. A much more useful result.</h2>
           </div>
 
-          <div className="search-comparison" data-reveal="clip">
-            <div className="search-comparison__topbar">
-              <div className="search-comparison__query"><Search size={19} aria-hidden="true" /><span>AC repair JLT</span></div>
-            </div>
-
-            <div className="search-comparison__results">
-              <article className="search-result search-result--before">
-                <header><span>Before</span><small>Unclear local relevance</small></header>
-                <div className="search-result__browser">
-                  <span className="search-result__url"><Globe2 size={15} /> northline.example</span>
-                  <h3>Home | Northline Services</h3>
-                  <p>Welcome to our website. We provide quality air-conditioning services and professional customer care.</p>
-                </div>
-                <ul>
-                  <li>Location is difficult to confirm</li>
-                  <li>Generic page title and description</li>
-                  <li>No direct local action</li>
-                </ul>
-              </article>
-
-              <div className="search-comparison__change" aria-hidden="true"><ArrowRight size={24} /></div>
-
-              <article className="search-result search-result--after">
-                <header><span>After</span><small>Clear service and area</small></header>
-                <div className="search-result__profile">
-                  <div className="search-result__business-mark"><span>N</span></div>
-                  <div><small>Local business profile</small><h3>Northline AC Repair</h3><p><MapPin size={14} /> Serves Jumeirah Lake Towers</p></div>
-                </div>
-                <div className="search-result__actions" aria-label="Example actions">
-                  <span><Globe2 size={16} /> Website</span>
-                  <span><Phone size={16} /> Call</span>
-                  <span><Navigation size={16} /> Directions</span>
-                </div>
-                <div className="search-result__browser">
-                  <span className="search-result__url"><Globe2 size={15} /> northline.example / jlt</span>
-                  <h3>AC Repair in JLT | Northline</h3>
-                  <p>AC diagnostics, repair and maintenance across Jumeirah Lake Towers. Check coverage and request a visit.</p>
-                </div>
-              </article>
-            </div>
-          </div>
+          <LocalSearchPreview />
         </div>
       </section>
 

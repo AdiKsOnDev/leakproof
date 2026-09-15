@@ -420,20 +420,6 @@
 }
 
 @media (max-width: 1024px) {
-  .search-comparison__results {
-    grid-template-columns: minmax(0, 1fr) 46px minmax(0, 1.08fr);
-    padding: 22px;
-  }
-
-  .search-result {
-    padding: 22px;
-  }
-
-  .search-result__actions span {
-    gap: 4px;
-    font-size: 0.66rem;
-  }
-
   .local-search-setup-grid article {
     min-height: 500px;
     padding: 26px;
@@ -460,28 +446,6 @@
   .local-search-continuous,
   .local-search-faq {
     grid-template-columns: 1fr;
-  }
-
-  .search-comparison__query {
-    width: 100%;
-    margin: 0;
-  }
-
-  .search-comparison__results {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .search-comparison__change {
-    min-height: 70px;
-  }
-
-  .search-comparison__change svg {
-    transform: rotate(90deg);
-  }
-
-  .search-result {
-    min-height: 500px;
   }
 
   .local-search-setup-grid {
@@ -524,39 +488,6 @@
   .local-search-demo__heading,
   .local-search-section-heading {
     margin-bottom: 36px;
-  }
-
-  .search-comparison {
-    border-radius: $radius;
-  }
-
-  .search-comparison__topbar {
-    padding: 20px;
-  }
-
-  .search-comparison__results {
-    padding: 12px;
-  }
-
-  .search-result {
-    min-height: 470px;
-    padding: 20px;
-  }
-
-  .search-result > header {
-    align-items: flex-start;
-    margin-bottom: 34px;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .search-result__actions {
-    grid-template-columns: 1fr;
-  }
-
-  .search-result__actions span {
-    justify-content: flex-start;
-    padding-inline: 16px;
   }
 
   .local-search-setup-grid article {
