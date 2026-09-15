@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { blogPosts } from '../src/data/blogPosts.ts'
 import { staticPageMetadata } from '../src/data/pageMetadata.ts'
-import { industries } from '../src/data/siteContent.ts'
+import { industries, services } from '../src/data/siteContent.ts'
 
 const outputDirectory = join(process.cwd(), 'dist')
 const siteUrl = 'https://leakproof.me'
@@ -10,6 +10,11 @@ const template = await readFile(join(outputDirectory, 'index.html'), 'utf8')
 
 const routeMetadata = [
   ...staticPageMetadata,
+  ...services.map((service) => ({
+    path: `/services/${service.slug}`,
+    title: `${service.title} | Leakproof`,
+    description: service.summary,
+  })),
   ...industries.map((industry) => ({
     path: `/solutions/${industry.slug}`,
     title: `${industry.name} | Leakproof`,

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { getBlogPost } from '../data/blogPosts'
 import { staticPageMetadata } from '../data/pageMetadata'
-import { industries } from '../data/siteContent'
+import { industries, services } from '../data/siteContent'
 import { updateDocumentMetadata } from '../utils/documentMetadata'
 
 export function PageTitle() {
@@ -12,6 +12,8 @@ export function PageTitle() {
     const path = pathname === '/' ? pathname : pathname.replace(/\/+$/, '')
     const industrySlug = path.match(/^\/solutions\/([^/]+)$/)?.[1]
     const industry = industries.find(({ slug }) => slug === industrySlug)
+    const serviceSlug = path.match(/^\/services\/([^/]+)$/)?.[1]
+    const service = services.find(({ slug }) => slug === serviceSlug)
     const postSlug = path.match(/^\/blog\/([^/]+)$/)?.[1]
     const post = getBlogPost(postSlug)
 
@@ -40,6 +42,15 @@ export function PageTitle() {
       updateDocumentMetadata({
         title: `${industry.name} | Leakproof`,
         description: industry.summary,
+        path,
+      })
+      return
+    }
+
+    if (service) {
+      updateDocumentMetadata({
+        title: `${service.title} | Leakproof`,
+        description: service.summary,
         path,
       })
       return
