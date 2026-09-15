@@ -8,6 +8,7 @@ import { BlogPostPage } from './pages/BlogPostPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
 import { IndustryPage } from './pages/IndustryPage'
+import { LocalSearchSetupPage } from './pages/LocalSearchSetupPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { SolutionsPage } from './pages/SolutionsPage'
@@ -21,6 +22,8 @@ export default function App() {
         <Route element={<SiteLayout />}>
           <Route index element={<HomePage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="services/local-search-setup" element={<LocalSearchSetupPage />} />
+          <Route path="services/:serviceSlug" element={<ServicesPage />} />
           <Route path="solutions" element={<SolutionsPage />} />
           <Route path="solutions/:industrySlug" element={<IndustryPage />} />
           <Route path="about" element={<AboutPage />} />
