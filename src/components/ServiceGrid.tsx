@@ -7,7 +7,7 @@ export function ServiceGrid() {
         const Icon = service.icon
 
         return (
-          <article className="service-card" key={service.number} data-reveal="clip" data-reveal-delay={String(index * 100)}>
+          <article className="service-card" key={service.number} data-reveal="fade" data-reveal-delay={String(index * 100)}>
             <div className="service-card__header">
               <span>{service.number}</span>
               <span className="service-card__icon"><Icon size={25} /></span>
