@@ -1,0 +1,74 @@
+@use 'tokens' as *;
+
+.leak-check-hero { padding: 54px 0 100px; }
+.leak-check-hero .back-link { margin-bottom: 64px; }
+.leak-check-hero .eyebrow { display: block; }
+.leak-check-hero h1 { max-width: 960px; margin: 22px 0 26px; font-size: $font-size-title; }
+.leak-check-hero p { max-width: 660px; margin-bottom: 30px; color: $muted; }
+.leak-check-hero small { display: block; margin-top: 16px; color: $muted; font-size: 0.85rem; }
+
+.leak-report-section {
+  border-block: 1px solid $line;
+  background: $cream;
+}
+
+.leak-report-layout { display: grid; grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr); align-items: start; gap: 80px; }
+.leak-report-intro { position: sticky; top: 130px; }
+.leak-report-intro > svg { color: $blue; margin-bottom: 32px; }
+.leak-report-intro h2 { margin-bottom: 24px; }
+.leak-report-intro p { color: $muted; }
+.leak-report-intro a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 16px; color: $blue; font-weight: 600; }
+
+.leak-report {
+  padding: 44px;
+  border-top: 6px solid $blue;
+  background: $white;
+  box-shadow: 0 24px 50px rgba($ink, 0.08), 0 1px 3px rgba($ink, 0.08);
+}
+
+.leak-report__header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid $line; }
+.leak-report__header img { width: 130px; }
+.leak-report__header > span { color: $muted; font-size: 0.75rem; }
+.leak-report__title { padding-block: 32px; }
+.leak-report__title > span { color: $blue; font-size: 0.8rem; }
+.leak-report__title h3 { margin: 8px 0; font-size: clamp(1.6rem, 3vw, 2.5rem); }
+.leak-report__title p { margin: 0; color: $muted; font-size: 0.8rem; }
+.leak-report__finding { padding: 28px; background: $blue; color: $white; }
+.leak-report__finding > span { font-size: 0.75rem; color: #e9ebff; }
+.leak-report h4 { margin: 0 0 12px; font-size: 1rem; letter-spacing: -0.02em; }
+.leak-report__finding h4 { margin-top: 16px; font-size: 1.5rem; line-height: 1.25; }
+.leak-report p { font-size: 0.9rem; line-height: 1.65; }
+.leak-report__finding p { margin: 0; color: #e9ebff; }
+.leak-report__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 0; margin: 0; border-bottom: 1px solid $line; list-style: none; }
+.leak-report__steps li { font-size: 0.8rem; }
+.leak-report__steps span { display: block; margin-bottom: 8px; color: $blue; font-variant-numeric: tabular-nums; }
+.leak-report__steps li:last-child { color: $red; }
+.leak-report__detail { padding-block: 28px; }
+.leak-report__detail p, .leak-report__recommendation p { margin: 0; color: $muted; }
+.leak-report__recommendation { padding: 24px; background: $soft-blue; }
+.leak-report footer { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; border-top: 1px solid $line; font-size: 0.7rem; color: $muted; }
+
+.leak-check-request { scroll-margin-top: 100px; }
+.leak-check-request .contact-page__grid { align-items: start; }
+.leak-check-request .contact-page__grid > div:first-child > svg { margin-bottom: 28px; color: $blue; }
+.leak-check-request h2 { margin-bottom: 24px; }
+.leak-check-request .contact-page__grid > div:first-child > p { max-width: 500px; color: $muted; }
+.leak-check-request a { color: $blue; overflow-wrap: anywhere; }
+
+@media (max-width: 800px) {
+  .leak-check-hero { padding: 40px 0 70px; }
+  .leak-check-hero .back-link { margin-bottom: 44px; }
+  .leak-report-layout { grid-template-columns: 1fr; gap: 40px; }
+  .leak-report-intro { position: static; max-width: 600px; }
+  .leak-check-request .contact-page__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 560px) {
+  .leak-report { padding: 24px 20px; }
+  .leak-report__header img { width: 110px; }
+  .leak-report__finding { padding: 22px; }
+  .leak-report__steps { grid-template-columns: 1fr; gap: 12px; }
+  .leak-report__steps li { display: flex; gap: 12px; }
+  .leak-report__steps span { margin: 0; }
+  .leak-report__recommendation { padding: 20px; }
+}

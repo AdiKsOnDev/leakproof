@@ -12,6 +12,7 @@ import { LocalSearchSetupPage } from './pages/LocalSearchSetupPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { SolutionsPage } from './pages/SolutionsPage'
+import { WebsiteLeakCheckPage } from './pages/WebsiteLeakCheckPage'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/local-search-setup" element={<LocalSearchSetupPage />} />
+          <Route path="services/website-leak-check" element={<WebsiteLeakCheckPage />} />
           <Route path="services/:serviceSlug" element={<ServicesPage />} />
           <Route path="solutions" element={<SolutionsPage />} />
           <Route path="solutions/:industrySlug" element={<IndustryPage />} />
