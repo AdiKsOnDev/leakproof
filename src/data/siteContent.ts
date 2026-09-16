@@ -59,12 +59,12 @@ export const industries: Industry[] = [
     problems: [
       'Treatment pages that do not explain outcomes or next steps',
       'Booking buttons that lead to generic contact forms',
-      'Practitioner credentials and patient proof hidden away',
+      'Practitioner credentials and patient reviews hidden away',
     ],
     outcomes: [
       'A useful page for each important treatment',
       'Consultation buttons that open the right booking step',
-      'Practitioner credentials and patient proof on treatment pages',
+      'Practitioner credentials and patient reviews on treatment pages',
     ],
     metric: '24/7',
     metricLabel: 'access to treatment information',
@@ -73,12 +73,12 @@ export const industries: Industry[] = [
     journeySummary: 'Patients should be able to answer their clinical and practical questions before the booking form asks for their details.',
     journey: [
       { title: 'Find the treatment', text: 'A focused page matches the concern or outcome they are researching.' },
-      { title: 'Build confidence', text: 'Credentials, realistic outcomes, recovery details and patient proof answer the main doubts.' },
+      { title: 'Build confidence', text: 'Credentials, realistic outcomes, recovery details and patient reviews answer the main doubts.' },
       { title: 'Choose a consultation', text: 'The treatment page opens the correct practitioner or consultation type.' },
       { title: 'Receive confirmation', text: 'The patient gets the date, location and preparation details immediately.' },
     ],
     principle: 'A patient should not need to call reception just to understand whether a treatment may suit them.',
-    principleText: 'Explain the treatment clearly, place practitioner proof beside the decision and connect the page to the right consultation.',
+    principleText: 'Explain the treatment, show the practitioner’s credentials on the same page and link to the right consultation.',
   },
   {
     slug: 'tour-operators',
@@ -98,7 +98,7 @@ export const industries: Industry[] = [
     metricLabel: 'target mobile load time',
     icon: Compass,
     journeyTitle: 'From holiday planning to a paid booking.',
-    journeySummary: 'A traveller may be comparing several tabs on a phone. The route to a decision has to carry every practical detail with it.',
+    journeySummary: 'A traveller may be comparing several tabs on a phone. Keep the practical details together so they can compare tours without searching across pages.',
     journey: [
       { title: 'Discover the experience', text: 'Search and landing pages make the location and type of tour clear.' },
       { title: 'Check the details', text: 'Timings, meeting point, inclusions, age limits and cancellation terms sit together.' },
@@ -106,7 +106,7 @@ export const industries: Industry[] = [
       { title: 'Book and prepare', text: 'Payment confirmation includes directions and what to bring.' },
     ],
     principle: 'A traveller should know exactly what they are booking before leaving the experience page.',
-    principleText: 'Keep the itinerary, logistics, availability and booking action in one continuous mobile journey.',
+    principleText: 'Let travellers check the itinerary, trip details and availability, then book from their phone without starting over.',
   },
   {
     slug: 'wellness',
@@ -130,7 +130,7 @@ export const industries: Industry[] = [
     journey: [
       { title: 'Start with the goal', text: 'Customers browse by need, result or body area instead of decoding a long menu.' },
       { title: 'Compare treatments', text: 'Price, duration, suitability and aftercare make similar options easier to separate.' },
-      { title: 'Open the right slot', text: 'The chosen treatment carries through to the correct booking category.' },
+      { title: 'Open the right slot', text: 'The booking tool opens with the customer’s chosen treatment already selected.' },
       { title: 'Confirm and remind', text: 'The booking message covers preparation, location and rescheduling.' },
     ],
     principle: 'A customer should never have to search for the same treatment twice.',
@@ -154,7 +154,7 @@ export const industries: Industry[] = [
     metricLabel: 'response expectation',
     icon: House,
     journeyTitle: 'From an urgent search to a useful job request.',
-    journeySummary: 'Home-service leads are time-sensitive. The site should qualify the location and problem without making the customer write an essay.',
+    journeySummary: 'Home-service customers often need help quickly. Ask where they are and what needs fixing without making them write a long explanation.',
     journey: [
       { title: 'Confirm service coverage', text: 'The page immediately states the areas served and the type of work accepted.' },
       { title: 'Show relevant proof', text: 'Recent local jobs, reviews and licences reduce the risk of contacting an unknown contractor.' },
@@ -176,7 +176,7 @@ export const processSteps = [
   {
     number: '02',
     title: 'Set the priorities',
-    text: 'We rank the problems by how many customers they affect and what those customers are worth.',
+    text: 'We prioritise problems by how many customers they affect and the value of the bookings or enquiries involved.',
     icon: CalendarCheck,
   },
   {

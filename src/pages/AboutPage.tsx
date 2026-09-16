@@ -71,7 +71,7 @@ export function AboutPage() {
             </article>
             <article data-reveal="clip" data-reveal-delay="180">
               <span>03</span>
-              <div><h3>Enquiries sit unanswered</h3><p>If replies take hours or days, fixing WhatsApp and lead routing will probably do more than a redesign.</p></div>
+              <div><h3>Enquiries sit unanswered</h3><p>If replies take hours or days, improving how WhatsApp messages and enquiries reach the right person will probably help more than a redesign.</p></div>
               <MessageCircleOff className="limits-grid__icon" size={150} strokeWidth={0.75} aria-hidden="true" />
             </article>
             <article data-reveal="clip" data-reveal-delay="270">

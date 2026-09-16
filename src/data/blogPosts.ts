@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Trust needs to appear beside the decision',
+        heading: 'Show relevant examples and testimonials near the enquiry form',
         paragraphs: [
           'A testimonials page hidden in the navigation does little for someone deciding whether to submit a form. Put relevant proof near the point of doubt. A contractor page needs project examples, service areas and what happens after the request.',
           'Avoid a wall of logos with no explanation. One short case example that names the problem and result can do more work than ten anonymous five-star quotes.',
@@ -135,7 +135,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'Measure leads from local search',
         paragraphs: [
-          'Track calls, form submissions, direction clicks and WhatsApp clicks from organic landing pages. Rankings are useful diagnostics, but the business result is a qualified local enquiry.',
+          'Track calls, form submissions, direction clicks and WhatsApp clicks from organic landing pages. Rankings help you assess search visibility, but also check whether local people are enquiring about services you offer.',
           'Review Search Console by page and query. If a page appears for the right searches but receives few clicks, check its title and description. If it receives visits but no enquiries, inspect the offer and contact route before publishing more pages.',
         ],
       },
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Prepare real content before approving layouts',
         paragraphs: [
           'Placeholder copy hides design problems. A neat three-card row may fall apart when one service needs twice as much explanation. A hero can look balanced with six invented words and become unusable with the real offer.',
-          'You do not need final punctuation before design starts, but you do need the real hierarchy, claims, proof and calls to action. Design should shape the content you have, not force it into the nearest template.',
+          'The wording does not need to be final before design starts, but you need to know what each page will say, which information matters most, what supports your claims and what visitors should do next. Design should shape the content you have, not force it into the nearest template.',
         ],
       },
       {

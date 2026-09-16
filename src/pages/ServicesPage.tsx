@@ -10,7 +10,7 @@ export function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title={<>Fix the leak. <em>Skip the sales pitch.</em></>}
-        description="We work on the parts of your website that decide whether someone books, enquires or leaves. What we recommend depends on what is broken, not which package costs more."
+        description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
       />
 
       <section className="section section--soft services-list-section">

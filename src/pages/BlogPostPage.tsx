@@ -64,7 +64,7 @@ export function BlogPostPage() {
       <RelatedBlogPosts post={post} />
       <CallToAction
         eyebrow="See the problem on your own site"
-        title="We will trace the route to your next enquiry."
+        title="We’ll check how a customer makes an enquiry on your site."
         text="Send us your website. We will show you the first place a serious customer is likely to get stuck."
       />
     </>

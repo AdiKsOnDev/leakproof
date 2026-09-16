@@ -8,7 +8,7 @@ export function SolutionsPage() {
       <PageHero
         eyebrow="Solutions by industry"
         title={<>Customers do not <em>buy the same way.</em></>}
-        description="We plan the pages, proof and booking route around the questions people ask in your industry. That makes the site easier to use and harder to abandon."
+        description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
         aside={
           <div className="hero-stat">
             <strong>4</strong>
