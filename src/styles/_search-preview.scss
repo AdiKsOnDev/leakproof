@@ -13,15 +13,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 28px 40px;
+  padding: 18px 28px;
   border-bottom: 1px solid $line;
 }
 
 .search-preview__query {
   display: flex;
   align-items: center;
-  gap: 18px;
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  gap: 12px;
+  font-size: 1rem;
 }
 
 .search-preview__query svg { color: $blue; }
@@ -157,7 +157,7 @@
 
 @media (max-width: 560px) {
   .search-preview { border-radius: $radius; }
-  .search-preview__toolbar { align-items: flex-start; flex-direction: column; gap: 12px; padding: 24px; }
+  .search-preview__toolbar { align-items: flex-start; flex-direction: column; gap: 10px; padding: 16px 20px; }
   .search-preview__result { padding: 84px 24px 40px; }
   .search-preview__state { left: 24px; }
   .search-preview__result--after .search-preview__state { right: 24px; }

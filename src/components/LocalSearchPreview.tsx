@@ -28,7 +28,7 @@ export function LocalSearchPreview() {
   return (
     <div className="search-preview">
       <div className="search-preview__toolbar">
-        <div className="search-preview__query"><Search size={21} aria-hidden="true" />AC repair JLT</div>
+        <div className="search-preview__query"><Search size={18} aria-hidden="true" />AC repair JLT</div>
         <span id="search-preview-hint">Drag to compare</span>
       </div>
 
