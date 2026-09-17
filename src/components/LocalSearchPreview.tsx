@@ -1,5 +1,5 @@
-import { Globe2, MoveHorizontal, Search } from 'lucide-react'
-import { useRef } from 'react'
+import { Globe2, Search } from 'lucide-react'
+import { ComparisonReveal } from './ui/ComparisonReveal'
 
 const results = [
   {
@@ -23,8 +23,6 @@ const results = [
 ]
 
 export function LocalSearchPreview() {
-  const revealRef = useRef<HTMLDivElement>(null)
-
   return (
     <div className="search-preview">
       <div className="search-preview__toolbar">
@@ -32,7 +30,7 @@ export function LocalSearchPreview() {
         <span id="search-preview-hint">Drag to compare</span>
       </div>
 
-      <div className="search-preview__reveal" ref={revealRef}>
+      <ComparisonReveal describedBy="search-preview-hint">
         {results.map((result) => (
           <article className={`search-preview__result search-preview__result--${result.state}`} key={result.state} aria-label={`${result.label} optimization`}>
             <span className="search-preview__state">{result.label}</span>
@@ -50,23 +48,7 @@ export function LocalSearchPreview() {
           </article>
         ))}
 
-        <div className="search-preview__divider" aria-hidden="true"><span><MoveHorizontal size={22} /></span></div>
-        <input
-          className="search-preview__slider"
-          type="range"
-          min="0"
-          max="100"
-          defaultValue="50"
-          aria-label="Before and after reveal position"
-          aria-describedby="search-preview-hint"
-          aria-valuetext="50% before, 50% after"
-          onChange={(event) => {
-            const position = Number(event.currentTarget.value)
-            revealRef.current?.style.setProperty('--reveal-position', `${position}%`)
-            event.currentTarget.setAttribute('aria-valuetext', `${position}% before, ${100 - position}% after`)
-          }}
-        />
-      </div>
+      </ComparisonReveal>
       <p className="search-preview__ranking-note">Nobody can promise rankings. We focus on relevance to the searches your customers make.</p>
     </div>
   )
