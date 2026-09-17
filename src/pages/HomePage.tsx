@@ -29,7 +29,7 @@ export function HomePage() {
         <div className="container">
           <div className="problem-section__header">
             <SectionHeading
-              title={<>A website can load and still <em>lose the sale.</em></>}
+              title="Common website problems"
             />
             <p className="lead" data-reveal="right" data-reveal-delay="100">
               The expensive problems are often easy to miss. The site is online, but the booking button goes nowhere useful or the service page never answers the question holding someone back.
@@ -54,7 +54,7 @@ export function HomePage() {
         <div className="container what-we-fix__layout">
           <div className="what-we-fix__intro">
             <SectionHeading
-              title="Fix what is broken. Rebuild when it makes sense."
+              title="Services"
               text="Some sites need replacing. Others need a faster booking flow, clearer service pages or a form that reaches the right inbox."
             />
             <ArrowLink to="/services">Explore all services</ArrowLink>
@@ -78,7 +78,7 @@ export function HomePage() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            title="A clinic and a tour operator should not have the same website."
+            title="Industries"
             text="A patient needs treatment details and reassurance. A tourist needs timings, inclusions and a quick way to book. We build for the decision your customer is actually making."
           />
           <IndustryGrid />
@@ -88,7 +88,7 @@ export function HomePage() {
       <section className="section process-section">
         <div className="container">
           <SectionHeading
-            title="First we find the problem. Then we fix it."
+            title="Our process"
             align="center"
           />
           <div className="process-grid">

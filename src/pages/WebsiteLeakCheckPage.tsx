@@ -22,7 +22,7 @@ export function WebsiteLeakCheckPage() {
       <section className="leak-check-hero">
         <div className="container" data-reveal="rise">
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <h1>Find what’s getting in the way of your next enquiry.</h1>
+          <h1>Website leak check</h1>
           <p>Send us your website. Within 1–2 days, we’ll email a PDF report on the biggest issues we find, with an invitation to meet and discuss them.</p>
           <LeakCheckButton to="#request-leak-check" />
           <small>No obligation to book a meeting.</small>
@@ -33,7 +33,7 @@ export function WebsiteLeakCheckPage() {
         <div className="container leak-report-layout">
           <div className="leak-report-intro" data-reveal="left">
             <FileText size={28} aria-hidden="true" />
-            <h2 id="leak-report-title">Here’s what lands in your inbox.</h2>
+            <h2 id="leak-report-title">Sample report</h2>
             <p>A report you can read, share and act on. We focus on the problems worth fixing first, not a long list of minor faults.</p>
             <p>This sample uses a fictional salon whose services and booking details are buried under long blocks of text.</p>
             <a href="#request-leak-check">Have us check your site <ArrowRight size={17} aria-hidden="true" /></a>
@@ -90,7 +90,7 @@ export function WebsiteLeakCheckPage() {
 
       <section className="section local-search-faq-section" aria-labelledby="leak-check-faq-title">
         <div className="container local-search-faq">
-          <h2 id="leak-check-faq-title" data-reveal="left">Before you send it.</h2>
+          <h2 id="leak-check-faq-title" data-reveal="left">Frequently asked questions</h2>
           <div data-reveal="right">
             {questions.map(([question, answer], index) => (
               <div className="local-search-faq__item" key={question}>

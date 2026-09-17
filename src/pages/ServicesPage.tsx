@@ -8,7 +8,7 @@ export function ServicesPage() {
   return (
     <>
       <PageHero
-        title={<>Fix the leak. <em>Skip the sales pitch.</em></>}
+        title="What we can leakproof"
         description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
       />
 
@@ -22,7 +22,7 @@ export function ServicesPage() {
         <div className="container">
           <div className="deliverables-section__grid">
             <SectionHeading
-              title="You should not have to pay extra for the basics."
+              title="What’s included"
               text="A new website must work on a phone, load quickly and tell you whether it produces enquiries. We treat those as requirements."
             />
             <div className="deliverables-list">
@@ -44,7 +44,7 @@ export function ServicesPage() {
           <article className="ownership-panel" data-reveal="clip">
             <span className="ownership-panel__number" aria-hidden="true">06</span>
             <div className="ownership-panel__copy">
-              <h2>The website is yours. <em>So is everything behind it.</em></h2>
+              <h2>Ownership and handover</h2>
               <p>We hand over the complete source code, repository, deployment access, credentials and documentation. Manage it yourself, keep working with us or give it to another developer.</p>
             </div>
             <div className="ownership-panel__handover" aria-label="Items included in the handover">

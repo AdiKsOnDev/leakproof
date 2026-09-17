@@ -8,7 +8,7 @@ export function BlogPage() {
   return (
     <>
       <PageHero
-        title={<>Practical advice for <em>improving your website.</em></>}
+        title="Blog"
         description="Clear answers about website costs, conversion problems, redesigns and the details that make it easier for customers to act."
       />
 

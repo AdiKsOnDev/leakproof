@@ -53,7 +53,7 @@ export const industries: Industry[] = [
     name: 'Dental and aesthetic clinics',
     shortName: 'Clinics',
     eyebrow: 'Dental and aesthetic clinics',
-    headline: 'Turn patient research into booked consultations.',
+    headline: 'Websites for dental and aesthetic clinics',
     summary:
       'Patients compare treatments, prices, practitioners and recovery details before they call. Your site should answer those questions and lead straight to the right consultation.',
     problems: [
@@ -69,7 +69,7 @@ export const industries: Industry[] = [
     metric: '24/7',
     metricLabel: 'access to treatment information',
     icon: HeartPulse,
-    journeyTitle: 'From treatment research to a confirmed consultation.',
+    journeyTitle: 'Patient booking process',
     journeySummary: 'Patients should be able to answer their clinical and practical questions before the booking form asks for their details.',
     journey: [
       { title: 'Find the treatment', text: 'A focused page matches the concern or outcome they are researching.' },
@@ -77,7 +77,7 @@ export const industries: Industry[] = [
       { title: 'Choose a consultation', text: 'The treatment page opens the correct practitioner or consultation type.' },
       { title: 'Receive confirmation', text: 'The patient gets the date, location and preparation details immediately.' },
     ],
-    principle: 'A patient should not need to call reception just to understand whether a treatment may suit them.',
+    principle: 'Treatment information',
     principleText: 'Explain the treatment, show the practitioner’s credentials on the same page and link to the right consultation.',
   },
   {
@@ -85,7 +85,7 @@ export const industries: Industry[] = [
     name: 'Tours and experiences',
     shortName: 'Tour operators',
     eyebrow: 'Tours and experiences',
-    headline: 'Help travellers choose and book before they land.',
+    headline: 'Websites for tours and experiences',
     summary:
       'Tourists often choose from a phone before they reach Dubai. They need to know the timings, meeting point, inclusions and cancellation terms without digging through the site.',
     problems: [
@@ -97,7 +97,7 @@ export const industries: Industry[] = [
     metric: '<2s',
     metricLabel: 'target mobile load time',
     icon: Compass,
-    journeyTitle: 'From holiday planning to a paid booking.',
+    journeyTitle: 'Tour booking process',
     journeySummary: 'A traveller may be comparing several tabs on a phone. Keep the practical details together so they can compare tours without searching across pages.',
     journey: [
       { title: 'Discover the experience', text: 'Search and landing pages make the location and type of tour clear.' },
@@ -105,7 +105,7 @@ export const industries: Industry[] = [
       { title: 'Pick a date', text: 'Live availability appears without sending the traveller through another search.' },
       { title: 'Book and prepare', text: 'Payment confirmation includes directions and what to bring.' },
     ],
-    principle: 'A traveller should know exactly what they are booking before leaving the experience page.',
+    principle: 'Tour information',
     principleText: 'Let travellers check the itinerary, trip details and availability, then book from their phone without starting over.',
   },
   {
@@ -113,7 +113,7 @@ export const industries: Industry[] = [
     name: 'Salons, spas and med spas',
     shortName: 'Spa & Wellness',
     eyebrow: 'Salons, spas and med spas',
-    headline: 'Make every treatment easy to understand and book.',
+    headline: 'Websites for salons and spas',
     summary:
       'A long treatment menu is hard to use when names sound similar and prices or durations are missing. We organise the services around what customers need and connect each one to the right booking step.',
     problems: [
@@ -125,7 +125,7 @@ export const industries: Industry[] = [
     metric: '1 tap',
     metricLabel: 'from service to booking',
     icon: Sparkles,
-    journeyTitle: 'From a treatment goal to the right appointment.',
+    journeyTitle: 'Treatment booking process',
     journeySummary: 'Customers often know the result they want, not the internal name used in a salon menu. The website should translate between the two.',
     journey: [
       { title: 'Start with the goal', text: 'Customers browse by need, result or body area instead of decoding a long menu.' },
@@ -133,7 +133,7 @@ export const industries: Industry[] = [
       { title: 'Open the right slot', text: 'The booking tool opens with the customer’s chosen treatment already selected.' },
       { title: 'Confirm and remind', text: 'The booking message covers preparation, location and rescheduling.' },
     ],
-    principle: 'A customer should never have to search for the same treatment twice.',
+    principle: 'Treatment selection',
     principleText: 'Organise the menu around customer goals and preserve their selection when the booking tool opens.',
   },
   {
@@ -141,7 +141,7 @@ export const industries: Industry[] = [
     name: 'Home-service businesses',
     shortName: 'Home services',
     eyebrow: 'Home-service businesses',
-    headline: 'Turn urgent searches into useful quote requests.',
+    headline: 'Websites for home-service businesses',
     summary:
       'Someone with a leak, broken AC or damaged roof wants to know whether you cover their area, when you can come and whether your work can be trusted. The site should answer all three quickly.',
     problems: [
@@ -153,7 +153,7 @@ export const industries: Industry[] = [
     metric: '30m',
     metricLabel: 'response expectation',
     icon: House,
-    journeyTitle: 'From an urgent search to a useful job request.',
+    journeyTitle: 'Quote request process',
     journeySummary: 'Home-service customers often need help quickly. Ask where they are and what needs fixing without making them write a long explanation.',
     journey: [
       { title: 'Confirm service coverage', text: 'The page immediately states the areas served and the type of work accepted.' },
@@ -161,7 +161,7 @@ export const industries: Industry[] = [
       { title: 'Capture the problem', text: 'A short quote form collects the address area, urgency, job details and photos.' },
       { title: 'Set the next step', text: 'The confirmation states when and how the business will respond.' },
     ],
-    principle: 'An urgent customer should know whether you can help before they spend time filling in a form.',
+    principle: 'Service coverage and availability',
     principleText: 'Confirm coverage and availability early, then collect enough detail for a useful first response.',
   },
 ]

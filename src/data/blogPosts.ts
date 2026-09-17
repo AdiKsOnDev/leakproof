@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'Start with the search that brought them in',
+        heading: 'Search intent',
         paragraphs: [
           'A visitor searching for an emergency AC repair has a different job to do than someone comparing annual maintenance contracts. If both land on a general services page, one of them has to hunt for an answer. Most will not.',
           'Open your highest-traffic landing pages in Search Console and compare the search terms with the first screen of each page. The page should answer the reason for the search before it introduces the company history, awards or every service you offer.',
@@ -29,21 +29,21 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'The offer may be clear to you and vague to everyone else',
+        heading: 'Offer clarity',
         paragraphs: [
           'Businesses live with their own terminology every day. Customers do not. Phrases such as tailored solutions, premium service and end-to-end support sound polished, but they do not tell a buyer what happens next.',
           'Replace broad claims with the facts a customer uses to decide. Name the service, location, typical turnaround, starting condition or booking process. Specific copy makes a smaller promise, which is exactly why it is easier to trust.',
         ],
       },
       {
-        heading: 'Show relevant examples and testimonials near the enquiry form',
+        heading: 'Examples and testimonials',
         paragraphs: [
           'A testimonials page hidden in the navigation does little for someone deciding whether to submit a form. Put relevant proof near the point of doubt. A contractor page needs project examples, service areas and what happens after the request.',
           'Avoid a wall of logos with no explanation. One short case example that names the problem and result can do more work than ten anonymous five-star quotes.',
         ],
       },
       {
-        heading: 'Test the enquiry route on an ordinary phone',
+        heading: 'Mobile testing',
         paragraphs: [
           'Do not test only on a new phone over office Wi-Fi. Use mobile data. Dismiss the cookie notice. Open the menu. Fill in the form with one hand. Then make a mistake and see whether the page explains it.',
           'Common losses are mundane: a phone number that is not clickable, a WhatsApp button covering the submit button, an address field that rejects a common format, or a success message that appears off-screen. These are small defects with a direct commercial cost.',
@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Measure each step before the form submission',
+        heading: 'Enquiry tracking',
         paragraphs: [
           'A single conversion number tells you that something went wrong, not where. Track visits to the service page, clicks on the main action, form starts, validation errors and successful submissions. For phone and WhatsApp enquiries, track those clicks too.',
           'Once you can see the drop-off, fix the narrowest point first. That is usually cheaper than redesigning the entire site, and it gives the redesign a real brief if one is needed.',
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'Choose a real search intent for each page',
+        heading: 'Search intent',
         paragraphs: [
           'Start with the services people actually search for. A company may describe its offer as property care, while customers search for AC maintenance, plumbing repair or deep cleaning. The page title and main heading should use the language of the customer when that language accurately describes the service.',
           'Do not force every keyword onto the homepage. Give important services their own pages when each service has different questions, proof or booking requirements. One strong page about a specific service in Dubai is more useful than a homepage trying to rank for twenty unrelated phrases.',
@@ -92,35 +92,35 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Put complete business details on the site',
+        heading: 'Business details',
         paragraphs: [
           'Use the same business name, address and phone number shown on the Google Business Profile. Small formatting differences are rarely a disaster, but old phone numbers and conflicting addresses create genuine confusion for customers and search engines.',
           'A business with a public location should have a contact page with the full address, opening hours, directions and a map or map link. A service-area business should state the areas it serves without pretending to have an office in each one.',
         ],
       },
       {
-        heading: 'Write location pages only when the content changes',
+        heading: 'Location pages',
         paragraphs: [
           'A copied page for every neighbourhood is not a local SEO strategy. Search engines and customers can see when only the place name changed. Create a location page when the business has a branch there, the service differs there or you can add useful local information.',
           'A good location page can include the services available at that branch, local contact details, opening hours, directions, nearby landmarks, staff, original photographs and reviews tied to that location. If none of those details exist, improve the main service page instead.',
         ],
       },
       {
-        heading: 'Connect the Google Business Profile to the right page',
+        heading: 'Google Business Profile links',
         paragraphs: [
           'The website link on the profile should usually point to the page that best represents that location. For a single-location business, that may be the homepage. For a business with several branches, each profile should link to its corresponding location page.',
           'Keep the profile categories, services, opening hours and contact details current. The website cannot compensate for a profile that says the business is closed or points to a dead page.',
         ],
       },
       {
-        heading: 'Add local proof where customers need it',
+        heading: 'Local examples and reviews',
         paragraphs: [
           'A bare claim that you serve Dubai is weak evidence. Show completed work, customer questions, delivery terms or service details that are specific to the area. For a home-service company, that may include the communities covered and expected arrival process. For a retailer, it may include collection and delivery options.',
           'Use original images when possible. A labelled project photograph or storefront image says more about a real local business than a stock skyline placed behind a heading.',
         ],
       },
       {
-        heading: 'Make the page easy to crawl and understand',
+        heading: 'Technical SEO',
         paragraphs: [
           'Every important service and location page should be reachable through normal links. Do not leave pages accessible only through a search box or a JavaScript filter. Link from the homepage, service overview, footer or another relevant page.',
           'Give each page a unique title and description. Use one descriptive main heading, sensible subheadings and plain link text. Add LocalBusiness structured data with accurate details, but do not expect schema markup to rescue thin content or a poor business profile.',
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Measure leads from local search',
+        heading: 'Enquiry tracking',
         paragraphs: [
           'Track calls, form submissions, direction clicks and WhatsApp clicks from organic landing pages. Rankings help you assess search visibility, but also check whether local people are enquiring about services you offer.',
           'Review Search Console by page and query. If a page appears for the right searches but receives few clicks, check its title and description. If it receives visits but no enquiries, inspect the offer and contact route before publishing more pages.',
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        heading: 'Record the current site before replacing it',
+        heading: 'Current website review',
         paragraphs: [
           'Export the pages that receive organic traffic, the search terms attached to them and the actions visitors take. Save the current title tags, descriptions and URLs. If a service page ranks and brings qualified enquiries, deleting it because the new navigation looks cleaner is not progress.',
           'Talk to the people who answer calls and messages. They know which questions customers ask before buying, what customers misunderstand and which enquiries are a poor fit. That information belongs in the site structure.',
@@ -172,21 +172,21 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Give every page one clear job',
+        heading: 'Page objectives',
         paragraphs: [
           'A homepage may need to route several types of visitor. A service page should explain one service and lead to an enquiry. A contact page should make contact easy. When every page tries to tell the full company story, the useful answer gets buried.',
           'Write the job of each page in one sentence. If the team cannot agree on that sentence, the page is not ready for design.',
         ],
       },
       {
-        heading: 'Prepare real content before approving layouts',
+        heading: 'Content preparation',
         paragraphs: [
           'Placeholder copy hides design problems. A neat three-card row may fall apart when one service needs twice as much explanation. A hero can look balanced with six invented words and become unusable with the real offer.',
           'The wording does not need to be final before design starts, but you need to know what each page will say, which information matters most, what supports your claims and what visitors should do next. Design should shape the content you have, not force it into the nearest template.',
         ],
       },
       {
-        heading: 'Plan the launch as carefully as the homepage',
+        heading: 'Launch checklist',
         paragraphs: [
           'Every changed URL needs a redirect to the closest relevant new page. Forms need real submissions, not a green success message in a preview. Analytics, consent settings, phone links and email notifications need checks on the live domain.',
           'Keep the old site available privately for a short period. It is much easier to recover a missing policy page or piece of copy when the previous version still exists.',
@@ -200,7 +200,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Judge the redesign against the original problem',
+        heading: 'Results review',
         paragraphs: [
           'A redesign is not successful because stakeholders like the reveal meeting. Check whether more suitable visitors reach the right service, whether form completion improves and whether the sales team receives better information.',
           'Visual quality matters. It signals care and affects trust. It simply cannot be the only thing the project is asked to improve.',

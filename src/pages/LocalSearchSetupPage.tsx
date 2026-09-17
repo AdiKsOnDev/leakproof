@@ -64,7 +64,7 @@ export function LocalSearchSetupPage() {
       <section className="rebuild-hero">
         <div className="container" data-reveal="rise">
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <h1>Help nearby customers find your business.</h1>
+          <h1>Local search setup</h1>
           <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
           <div className="rebuild-hero__actions">
             <LeakCheckButton />
@@ -104,7 +104,7 @@ export function LocalSearchSetupPage() {
       <section className="section local-search-process-section" aria-labelledby="local-search-process-title">
         <div className="container">
           <div className="local-search-section-heading" data-reveal="left">
-            <h2 id="local-search-process-title">How we get it set up.</h2>
+            <h2 id="local-search-process-title">Setup process</h2>
           </div>
           <ol className="local-search-process">
             {processSteps.map(([number, title, text], index) => (
@@ -120,7 +120,7 @@ export function LocalSearchSetupPage() {
         <div className="container local-search-measure">
           <div data-reveal="left">
             <BarChart3 size={28} aria-hidden="true" />
-            <h2>Know where your enquiries come from.</h2>
+            <h2>Enquiry tracking</h2>
             <p>Track search visits, calls and enquiry forms—not just where a keyword ranks.</p>
           </div>
           <ul data-reveal="right">
@@ -132,7 +132,7 @@ export function LocalSearchSetupPage() {
       <section className="section local-search-continuous-section">
         <div className="container local-search-continuous">
           <div data-reveal="left">
-            <h2>Keep improving after the initial setup.</h2>
+            <h2>Ongoing support</h2>
           </div>
           <div data-reveal="right">
             <p>If you want ongoing support, we review performance and improve the pages that need attention. You don’t need a subscription to keep the initial setup.</p>
@@ -147,7 +147,7 @@ export function LocalSearchSetupPage() {
 
       <section className="section local-search-faq-section" aria-labelledby="local-search-faq-title">
         <div className="container local-search-faq">
-          <h2 id="local-search-faq-title" data-reveal="left">Questions before we start.</h2>
+          <h2 id="local-search-faq-title" data-reveal="left">Frequently asked questions</h2>
           <div data-reveal="right">
             {frequentlyAskedQuestions.map(([question, answer], index) => (
               <div className="local-search-faq__item" key={question}>

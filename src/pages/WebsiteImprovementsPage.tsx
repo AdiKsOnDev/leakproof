@@ -15,7 +15,7 @@ function ImprovementsIntro() {
     <section className="rebuild-hero">
       <div className="container" data-reveal="rise">
         <Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>
-        <h1>Your website might not need a rebuild.</h1>
+        <h1>Small Patches</h1>
         <p>If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again.</p>
         <div className="rebuild-hero__actions"><LeakCheckButton to="/services/website-leak-check" /></div>
       </div>
@@ -30,7 +30,7 @@ export function WebsiteImprovementsPage() {
 
       <section className="improvements-process" aria-labelledby="improvements-process-title">
         <div className="container">
-          <h2 id="improvements-process-title" data-reveal="left">Agree the fix.<br />Then check it works.</h2>
+          <h2 id="improvements-process-title" data-reveal="left">Our process</h2>
           <ol>{process.map(([title, text], index) => <li key={title} data-reveal="fade" data-reveal-delay={String(index * 70)}><h3>{title}</h3><p>{text}</p></li>)}</ol>
         </div>
       </section>

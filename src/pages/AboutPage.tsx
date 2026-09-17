@@ -7,14 +7,14 @@ export function AboutPage() {
   return (
     <>
       <PageHero
-        title={<>We fix problems that cost you <em>customers.</em></>}
+        title="About Leakproof"
         description="Leakproof is a web agency in Dubai. Clients speak directly to the person who reviews, designs and builds their website."
       />
 
       <section className="section evidence-section">
         <div className="container">
           <SectionHeading
-            title="We focus on problems with evidence behind them."
+            title="Research behind our approach"
             text="Speed, form length and response time all affect whether an interested visitor becomes a lead. That is where we start."
           />
           <div className="evidence-grid">

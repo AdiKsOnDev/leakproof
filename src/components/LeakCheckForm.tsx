@@ -75,7 +75,7 @@ export function LeakCheckForm({ emailOnly = false }: { emailOnly?: boolean }) {
             <input type="hidden" name="contactMethod" value="email" />
           ) : (
             <fieldset>
-              <legend>How would you prefer to hear back?</legend>
+              <legend>Preferred contact method</legend>
               <div className="radio-group">
                 <label><input type="radio" name="contactMethod" value="email" checked={contactMethod === 'email'} onChange={() => setContactMethod('email')} /><span>Email</span></label>
                 <label><input type="radio" name="contactMethod" value="phone" checked={contactMethod === 'phone'} onChange={() => setContactMethod('phone')} /><span>Phone call</span></label>

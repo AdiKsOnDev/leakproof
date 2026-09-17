@@ -7,7 +7,7 @@ export function ContactPage() {
     <section className="contact-page">
       <div className="container contact-page__grid">
         <div className="contact-page__intro" data-reveal="left">
-          <h1>Send us the site. We'll find the first leak.</h1>
+          <h1>Contact us</h1>
           <p>
             Tell us what the website should be doing for the business. We will use it like a customer and reply with the first problem we think is worth fixing.
           </p>

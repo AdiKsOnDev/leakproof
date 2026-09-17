@@ -39,7 +39,7 @@ export function IndustryPage() {
       <section className="section industry-detail-section">
         <div className="container industry-detail-grid">
           <article className="industry-detail-card industry-detail-card--problem" data-reveal="left">
-            <h2>What makes people give up.</h2>
+            <h2>Common website problems</h2>
             <ul>
               {industry.problems.map((problem) => (
                 <li key={problem}><span><X size={16} /></span>{problem}</li>
@@ -47,7 +47,7 @@ export function IndustryPage() {
             </ul>
           </article>
           <article className="industry-detail-card industry-detail-card--solution" data-reveal="right" data-reveal-delay="100">
-            <h2>What we would put in its place.</h2>
+            <h2>What we improve</h2>
             <ul>
               {industry.outcomes.map((outcome) => (
                 <li key={outcome}><span><Check size={16} /></span>{outcome}</li>

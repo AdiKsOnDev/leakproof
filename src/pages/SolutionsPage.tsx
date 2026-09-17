@@ -6,7 +6,7 @@ export function SolutionsPage() {
   return (
     <>
       <PageHero
-        title={<>Customers do not <em>buy the same way.</em></>}
+        title="Industries we know well"
         description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
         aside={
           <div className="hero-stat">
@@ -24,7 +24,7 @@ export function SolutionsPage() {
       <section className="section shared-needs-section">
         <div className="container shared-needs-section__grid">
           <div data-reveal="left">
-            <h2>Make choosing you easy.</h2>
+            <h2>What customers need</h2>
           </div>
           <div className="shared-needs-list">
             <div data-reveal="right"><span>01</span><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>
