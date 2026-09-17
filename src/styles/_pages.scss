@@ -1549,45 +1549,6 @@
   background: $paper;
 }
 
-.local-search-hero {
-  position: relative;
-  display: grid;
-  min-height: 720px;
-  padding: 54px 0 100px;
-  border-bottom: 1px solid $line;
-  background:
-    linear-gradient(rgba($blue, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($blue, 0.035) 1px, transparent 1px),
-    $paper;
-  background-size: 42px 42px;
-  place-items: center;
-}
-
-.local-search-hero .back-link {
-  margin-bottom: 72px;
-}
-
-.local-search-hero__layout {
-  display: block;
-}
-
-.local-search-hero__copy {
-  max-width: 830px;
-}
-
-.local-search-hero__copy h1 {
-  max-width: 800px;
-  margin: 22px 0 26px;
-  font-size: $font-size-title;
-}
-
-.local-search-hero__copy > p {
-  max-width: 650px;
-  margin: 0 0 34px;
-  color: $muted;
-  font-size: $font-size-content;
-}
-
 .local-search-demo-section {
   background: $cream;
 }

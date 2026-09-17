@@ -61,15 +61,13 @@ export function LocalSearchSetupPage() {
 
   return (
     <main className="local-search-page">
-      <section className="local-search-hero">
+      <section className="rebuild-hero">
         <div className="container">
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <div className="local-search-hero__layout">
-            <div className="local-search-hero__copy" data-reveal="left">
-              <h1>Help nearby customers find your business.</h1>
-              <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
-              <LeakCheckButton />
-            </div>
+          <h1>Help nearby customers find your business.</h1>
+          <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
+          <div className="rebuild-hero__actions">
+            <LeakCheckButton />
           </div>
         </div>
       </section>
