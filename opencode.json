@@ -7,7 +7,6 @@
     "build": {
       "disable": true
     }
-  },
-  "plugin": ["opencode-claude-auth"],
+  }
 }
 

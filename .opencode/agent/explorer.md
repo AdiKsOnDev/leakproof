@@ -1,7 +1,7 @@
 ---
 description: Search the codebase for a specific query — find files, trace flows, locate definitions
 mode: primary
-model: openai/gpt-5.6-terra
+model: openai/gpt-5.6-luna
 temperature: 0.1
 permission:
   bash: allow

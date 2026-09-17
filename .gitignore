@@ -15,3 +15,8 @@ Thumbs.db
 .vscode/
 
 *.tsbuildinfo
+
+DESIGN.md
+PRODUCT.md
+.impeccable/
+tmp/

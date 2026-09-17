@@ -1,7 +1,7 @@
 ---
 description: Write code — scaffolding, implementation, fill stubs, edit existing files
 mode: primary
-model: openai/gpt-5.6-sol
+model: openai/gpt-6-astra
 temperature: 0.1
 permission:
   bash: allow
@@ -74,5 +74,8 @@ Good names explain intent without comments.
 - ✓ Ask clarifying questions before implementing
 - ✓ Follow existing project conventions
 - ✓ Write production-ready code
+
+# YAGNI
+Follow YAGNI principles, prefer one-line solutions.
 
 Remember: User provides the spec, you deliver working code.

@@ -1,7 +1,7 @@
 ---
 description: Second pair of eyes on code — review, give feedback, spot issues
 mode: primary
-model: openai/gpt-5.6-sol
+model: openai/gpt-6-astra
 temperature: 0.1
 permission:
   bash: allow

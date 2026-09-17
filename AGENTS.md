@@ -60,7 +60,6 @@ it doesn't have to be forced. Meaning there's no need to make abstractions that 
 Use names that clearly indicate what the variable is used for.
 
 ## Comments
-
 Write a comment only when the code will surprise a competent reader. Before
 writing one, ask: if I delete this, what does the next person get wrong?
 If the answer is "nothing", delete it.
@@ -72,3 +71,5 @@ the source.
 
 - Bad:  // Quiet rather than hidden — it used to appear only on hover
 
+# YAGNI
+Follow YAGNI principles, prefer one-line solutions.
