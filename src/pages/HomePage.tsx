@@ -1,5 +1,5 @@
-import { ArrowRight, Check, CircleHelp, Smartphone, Unlink } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Check, CircleHelp, Smartphone, Unlink } from 'lucide-react'
+import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { IndustryGrid } from '../components/IndustryGrid'
 import { processSteps, services } from '../data/siteContent'
 import { ArrowLink } from '../components/ui/ArrowLink'
@@ -17,9 +17,7 @@ export function HomePage() {
 
           <div className="home-hero__content" data-reveal="rise" data-reveal-delay="80">
             <div className="home-hero__actions">
-              <Link className="button" to="/contact">
-                Get a free leak check <ArrowRight size={18} />
-              </Link>
+              <LeakCheckButton light />
               <ArrowLink to="/services">See what we fix</ArrowLink>
             </div>
           </div>

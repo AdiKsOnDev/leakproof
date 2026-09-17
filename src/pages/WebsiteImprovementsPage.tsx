@@ -1,4 +1,5 @@
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
+import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { Link } from 'react-router-dom'
 import { ArrowLink } from '../components/ui/ArrowLink'
 import { CallToAction } from '../components/ui/CallToAction'
@@ -16,7 +17,7 @@ function ImprovementsIntro() {
         <Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>
         <h1>Your website might not need a rebuild.</h1>
         <p>If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again.</p>
-        <div className="rebuild-hero__actions"><Link className="button" to="/services/website-leak-check">Get a free leak check <ArrowRight size={18} aria-hidden="true" /></Link></div>
+        <div className="rebuild-hero__actions"><LeakCheckButton to="/services/website-leak-check" /></div>
       </div>
     </section>
   )

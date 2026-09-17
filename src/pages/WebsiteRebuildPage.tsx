@@ -1,7 +1,8 @@
-import { ArrowDown, ArrowLeft, ArrowRight, Check } from 'lucide-react'
+import { ArrowDown, ArrowLeft, Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { WebsiteRebuildPreview } from '../components/WebsiteRebuildPreview'
 import { CallToAction } from '../components/ui/CallToAction'
+import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 
 const deliverables = [
   ['Pages customers can understand', 'We put your services, location and contact options where people expect to find them. Longer background information gets its own space.'],
@@ -18,7 +19,7 @@ export function WebsiteRebuildPage() {
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
           <h1>Make your website easier to understand. And easier to use.</h1>
           <p>If your current site is hard to update, slow or confusing, we can rebuild it around what customers need to know and do.</p>
-          <div className="rebuild-hero__actions"><Link className="button" to="/contact">Get a free leak check <ArrowRight size={18} aria-hidden="true" /></Link><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></div>
+          <div className="rebuild-hero__actions"><LeakCheckButton /><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></div>
         </div>
       </section>
 

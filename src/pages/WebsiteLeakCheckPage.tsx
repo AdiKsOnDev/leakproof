@@ -1,4 +1,5 @@
-import { ArrowDown, ArrowLeft, ArrowRight, FileText, Mail, Plus } from 'lucide-react'
+import { ArrowLeft, ArrowRight, FileText, Mail, Plus } from 'lucide-react'
+import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
@@ -23,7 +24,7 @@ export function WebsiteLeakCheckPage() {
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
           <h1>Find what’s getting in the way of your next enquiry.</h1>
           <p>Send us your website. Within 1–2 days, we’ll email a PDF report on the biggest issues we find, with an invitation to meet and discuss them.</p>
-          <a className="button button--primary" href="#request-leak-check">Get a free leak check <ArrowDown size={18} aria-hidden="true" /></a>
+          <LeakCheckButton to="#request-leak-check" />
           <small>No obligation to book a meeting.</small>
         </div>
       </section>

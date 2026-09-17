@@ -1,5 +1,4 @@
-import { ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { LeakCheckButton } from './LeakCheckButton'
 
 interface CallToActionProps {
   centered?: boolean
@@ -23,9 +22,7 @@ export function CallToAction({
           </div>
           <div className="cta-panel__action">
             <p>{text}</p>
-            <Link className="button button--light" to={to}>
-              Get a free leak check <ArrowRight size={18} />
-            </Link>
+            <LeakCheckButton to={to} light />
           </div>
         </div>
       </div>

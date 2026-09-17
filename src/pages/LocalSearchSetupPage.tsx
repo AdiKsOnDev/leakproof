@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  ArrowRight,
   BarChart3,
   Check,
   MapPinned,
@@ -12,6 +11,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
 import { LocalSearchPreview } from '../components/LocalSearchPreview'
+import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 
 const setupGroups = [
   {
@@ -68,9 +68,7 @@ export function LocalSearchSetupPage() {
             <div className="local-search-hero__copy" data-reveal="left">
               <h1>Help nearby customers find your business.</h1>
               <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
-              <Link className="button button--primary" to="/contact">
-                Get a free leak check <ArrowRight size={18} />
-              </Link>
+              <LeakCheckButton />
             </div>
           </div>
         </div>
