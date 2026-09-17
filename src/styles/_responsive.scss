@@ -88,60 +88,58 @@
   }
 
   .mobile-nav__section {
+    padding-bottom: 20px;
     border-bottom: 1px solid $line;
   }
 
-  .mobile-nav__trigger {
+  .mobile-nav__section + .mobile-nav__section { padding-top: 16px; }
+  .mobile-nav__section h2 { margin: 0; }
+
+  .mobile-nav__heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     min-height: 52px;
     padding: 14px 3px;
-    border: 0;
-    background: transparent;
     color: $ink;
     font-family: inherit;
-    font-size: $font-size-button;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     text-align: left;
-  }
-
-  .mobile-nav__trigger svg {
-    transition: transform 240ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  .mobile-nav__trigger[aria-expanded='true'] svg {
-    transform: rotate(180deg);
   }
 
   .mobile-nav__submenu {
     display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 360ms cubic-bezier(0.25, 1, 0.12, 1);
+    gap: 4px;
+    margin: 0;
+    padding: 0 0 0 8px;
+    list-style: none;
   }
 
-  .mobile-nav__submenu--open {
-    grid-template-rows: 1fr;
-    transition-timing-function: cubic-bezier(0.15, 0.75, 0.25, 1);
+  .mobile-nav__submenu a,
+  .mobile-nav__secondary a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 10px 12px;
+    border-radius: $radius-small;
+    color: #454543;
+    font-size: 0.9rem;
   }
 
-  .mobile-nav__submenu > div {
-    display: grid;
-    overflow: hidden;
-  }
+  .mobile-nav__submenu svg,
+  .mobile-nav__secondary svg { flex: none; color: $blue; }
 
-  .mobile-nav__submenu a {
-    min-height: 44px;
-    padding: 11px 16px;
-    color: $muted;
-    font-size: $font-size-content;
-  }
-
-  .mobile-nav__submenu a:first-child {
+  .site-nav__mobile a:hover,
+  .site-nav__mobile a[aria-current='page'] {
+    background: $soft-blue;
     color: $blue;
-    font-weight: 700;
   }
+
+  .mobile-nav__secondary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-top: 20px; }
 
   .site-nav__link {
     display: flex;

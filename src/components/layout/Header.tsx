@@ -1,12 +1,12 @@
-import { ArrowUpRight, ChevronDown, Menu, X } from 'lucide-react'
+import { ArrowUpRight, BookOpen, ChevronDown, Menu, Users, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
 import { industries, services } from '../../data/siteContent'
 
 const navigation = [
-  { label: 'Blog', path: '/blog' },
-  { label: 'About', path: '/about' },
+  { label: 'Blog', path: '/blog', icon: BookOpen },
+  { label: 'About', path: '/about', icon: Users },
 ]
 
 const dropdowns = {
@@ -45,7 +45,6 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey | null>(null)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [dropdownDirection, setDropdownDirection] = useState<'left' | 'right'>('right')
-  const [mobileSection, setMobileSection] = useState<DropdownKey | null>(null)
   const dropdownGroupRef = useRef<HTMLDivElement>(null)
   const triggerRefs = useRef<Partial<Record<DropdownKey, HTMLAnchorElement>>>({})
   const closeTimerRef = useRef<ReturnType<typeof setTimeout>>()
@@ -65,7 +64,6 @@ export function Header() {
 
   const closeMenu = () => {
     setMenuOpen(false)
-    setMobileSection(null)
     closeDropdown()
   }
 
@@ -251,34 +249,39 @@ export function Header() {
           <div className="site-nav__mobile">
             {dropdownOrder.map((key) => {
               const dropdown = dropdowns[key]
-              const sectionOpen = mobileSection === key
               return (
-                <div className="mobile-nav__section" key={key}>
-                  <button
-                    className="mobile-nav__trigger"
-                    type="button"
-                    aria-expanded={sectionOpen}
-                    onClick={() => setMobileSection(sectionOpen ? null : key)}
-                  >
-                    {dropdown.label}
-                    <ChevronDown aria-hidden="true" size={17} />
-                  </button>
-                  <div className={`mobile-nav__submenu ${sectionOpen ? 'mobile-nav__submenu--open' : ''}`}>
-                    <div>
-                      <NavLink to={dropdown.path} onClick={closeMenu}>All {dropdown.label.toLowerCase()}</NavLink>
-                      {dropdown.items.map((item) => (
-                        <NavLink key={item.path} to={item.path} onClick={closeMenu}>{item.label}</NavLink>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <section className="mobile-nav__section" key={key} aria-labelledby={`mobile-nav-${key}`}>
+                  <h2 id={`mobile-nav-${key}`}>
+                    <NavLink className="mobile-nav__heading" to={dropdown.path} onClick={closeMenu}>
+                      {dropdown.label}<ArrowUpRight aria-hidden="true" size={18} />
+                    </NavLink>
+                  </h2>
+                  <ul className="mobile-nav__submenu">
+                    {dropdown.items.map((item) => {
+                      const Icon = item.icon
+                      return (
+                        <li key={item.path}>
+                          <NavLink to={item.path} onClick={closeMenu}>
+                            <Icon aria-hidden="true" size={20} strokeWidth={1.7} />
+                            <span>{item.label}</span>
+                          </NavLink>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </section>
               )
             })}
-            {navigation.map((item) => (
-              <NavLink className="site-nav__link" key={item.path} to={item.path} onClick={closeMenu}>
-                {item.label}
-              </NavLink>
-            ))}
+            <div className="mobile-nav__secondary">
+              {navigation.map((item) => {
+                const Icon = item.icon
+                return (
+                  <NavLink key={item.path} to={item.path} onClick={closeMenu}>
+                    <Icon aria-hidden="true" size={20} strokeWidth={1.7} />{item.label}
+                  </NavLink>
+                )
+              })}
+            </div>
           </div>
         </nav>
       </div>
