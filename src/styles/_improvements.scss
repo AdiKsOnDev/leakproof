@@ -1,0 +1,37 @@
+@use 'tokens' as *;
+
+.improvements-page {
+  h1, h2, h3 { letter-spacing: -0.04em; }
+  p { max-width: 68ch; }
+  button { cursor: pointer; }
+  :is(a, button, input, summary):focus-visible { outline: 3px solid $blue; outline-offset: 4px; }
+  [hidden] { display: none !important; }
+  ::selection { background: $soft-blue; color: $ink; }
+}
+
+
+.improvements-process {
+  padding-block: 88px; background: $cream;
+  h2 { max-width: 700px; }
+  ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; padding: 0; margin: 48px 0 0; list-style-position: inside; }
+  li { border-top: 1px solid $line; padding-top: 24px; }
+  li::marker { color: $blue; font-weight: 600; }
+  h3 { display: inline; margin-left: 10px; }
+  p { margin: 18px 0 0; color: $muted; }
+}
+.improvements-follow-up { padding-block: 100px; }
+.improvements-rebuild { max-width: 760px; }
+.improvements-rebuild p { margin-block: 24px; color: $muted; }
+.improvements-page .cta-section a:focus-visible { outline-color: $white; }
+
+@media (max-width: 800px) {
+  .improvements-process { padding-block: 64px; }
+  .improvements-process ol { grid-template-columns: 1fr; gap: 28px; }
+  .improvements-follow-up { padding-block: 64px; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .improvements-page *, .improvements-page *::before, .improvements-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .improvements-page .button:hover, .improvements-page .button:active, .improvements-page .button:hover svg, .improvements-page .arrow-link:hover svg { transform: none; }
+}

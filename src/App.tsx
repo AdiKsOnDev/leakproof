@@ -13,6 +13,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { SolutionsPage } from './pages/SolutionsPage'
 import { WebsiteLeakCheckPage } from './pages/WebsiteLeakCheckPage'
+import { WebsiteImprovementsPage } from './pages/WebsiteImprovementsPage'
 import { WebsiteRebuildPage } from './pages/WebsiteRebuildPage'
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/local-search-setup" element={<LocalSearchSetupPage />} />
           <Route path="services/website-leak-check" element={<WebsiteLeakCheckPage />} />
+          <Route path="services/website-improvements" element={<WebsiteImprovementsPage />} />
           <Route path="services/website-rebuild" element={<WebsiteRebuildPage />} />
           <Route path="services/:serviceSlug" element={<ServicesPage />} />
           <Route path="solutions" element={<SolutionsPage />} />
