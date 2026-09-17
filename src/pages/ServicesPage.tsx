@@ -8,7 +8,6 @@ export function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services"
         title={<>Fix the leak. <em>Skip the sales pitch.</em></>}
         description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
       />
@@ -23,7 +22,6 @@ export function ServicesPage() {
         <div className="container">
           <div className="deliverables-section__grid">
             <SectionHeading
-              eyebrow="Included in every full build"
               title="You should not have to pay extra for the basics."
               text="A new website must work on a phone, load quickly and tell you whether it produces enquiries. We treat those as requirements."
             />
@@ -46,7 +44,6 @@ export function ServicesPage() {
           <article className="ownership-panel" data-reveal="clip">
             <span className="ownership-panel__number" aria-hidden="true">06</span>
             <div className="ownership-panel__copy">
-              <span className="eyebrow eyebrow--light">Ownership included</span>
               <h2>The website is yours. <em>So is everything behind it.</em></h2>
               <p>We hand over the complete source code, repository, deployment access, credentials and documentation. Manage it yourself, keep working with us or give it to another developer.</p>
             </div>
@@ -59,7 +56,7 @@ export function ServicesPage() {
         </div>
       </section>
 
-      <CallToAction eyebrow="Not sure what needs fixing?" title="Send us the site. We'll tell you where we would start." />
+      <CallToAction title="Send us the site. We'll tell you where we would start." />
     </>
   )
 }

@@ -38,7 +38,6 @@ export function IndustryJourney({ industry }: IndustryJourneyProps) {
       <div className="container">
         <div className="industry-journey__heading" data-reveal="left">
           <div>
-            <span className="eyebrow">Best-case customer path</span>
             <h2>{industry.journeyTitle}</h2>
           </div>
           <p>{industry.journeySummary}</p>

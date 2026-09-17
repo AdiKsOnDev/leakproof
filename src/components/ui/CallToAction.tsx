@@ -2,22 +2,21 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 interface CallToActionProps {
-  eyebrow?: string
+  centered?: boolean
   title?: string
   text?: string
 }
 
 export function CallToAction({
-  eyebrow = 'Start with the site you have',
+  centered = false,
   title = 'Find the part of your website that is costing you customers.',
   text = 'Send us the link. We will follow the route to a booking or enquiry and tell you where it breaks down.',
 }: CallToActionProps) {
   return (
     <section className="cta-section section">
       <div className="container">
-        <div className={`cta-panel ${eyebrow ? '' : 'cta-panel--centered'}`} data-reveal="scale">
+        <div className={`cta-panel ${centered ? 'cta-panel--centered' : ''}`} data-reveal="scale">
           <div>
-            {eyebrow && <span className="eyebrow eyebrow--light">{eyebrow}</span>}
             <h2>{title}</h2>
           </div>
           <div className="cta-panel__action">

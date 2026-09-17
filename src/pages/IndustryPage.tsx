@@ -21,7 +21,6 @@ export function IndustryPage() {
           <Link className="back-link" to="/solutions"><ArrowLeft size={17} /> All industries</Link>
           <div className="industry-hero__grid">
             <div data-reveal="left">
-              <span className="eyebrow">{industry.eyebrow}</span>
               <h1>{industry.headline}</h1>
               <p>{industry.summary}</p>
             </div>
@@ -40,7 +39,6 @@ export function IndustryPage() {
       <section className="section industry-detail-section">
         <div className="container industry-detail-grid">
           <article className="industry-detail-card industry-detail-card--problem" data-reveal="left">
-            <span className="eyebrow">Common leaks</span>
             <h2>What makes people give up.</h2>
             <ul>
               {industry.problems.map((problem) => (
@@ -49,7 +47,6 @@ export function IndustryPage() {
             </ul>
           </article>
           <article className="industry-detail-card industry-detail-card--solution" data-reveal="right" data-reveal-delay="100">
-            <span className="eyebrow">What we build</span>
             <h2>What we would put in its place.</h2>
             <ul>
               {industry.outcomes.map((outcome) => (
@@ -62,14 +59,12 @@ export function IndustryPage() {
 
       <section className="section industry-principle">
         <div className="container industry-principle__grid">
-          <span className="eyebrow" data-reveal="fade">Our rule</span>
           <blockquote data-reveal="left">{industry.principle}</blockquote>
           <p data-reveal="right" data-reveal-delay="100">{industry.principleText}</p>
         </div>
       </section>
 
       <CallToAction
-        eyebrow={`For ${industry.name.toLowerCase()}`}
         title="Find the page, button or form that is costing you customers."
       />
     </div>

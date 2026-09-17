@@ -13,7 +13,6 @@ export function RelatedBlogPosts({ post }: RelatedBlogPostsProps) {
     <section className="related-posts section section--soft">
       <div className="container">
         <div className="related-posts__heading" data-reveal="left">
-          <span className="eyebrow">Keep reading</span>
           <h2>Related articles</h2>
         </div>
         <div className="blog-grid">

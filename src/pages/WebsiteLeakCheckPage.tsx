@@ -21,7 +21,6 @@ export function WebsiteLeakCheckPage() {
       <section className="leak-check-hero">
         <div className="container">
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <span className="eyebrow">Free website leak check</span>
           <h1>Find what’s getting in the way of your next enquiry.</h1>
           <p>Send us your website. Within 1–2 days, we’ll email a PDF report on the biggest issues we find, with an invitation to meet and discuss them.</p>
           <a className="button button--primary" href="#request-leak-check">Get a free leak check <ArrowDown size={18} aria-hidden="true" /></a>

@@ -7,7 +7,6 @@ export function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Leakproof"
         title={<>We fix problems that cost you <em>customers.</em></>}
         description="Leakproof is a web agency in Dubai. Clients speak directly to the person who reviews, designs and builds their website."
       />
@@ -15,7 +14,6 @@ export function AboutPage() {
       <section className="section evidence-section">
         <div className="container">
           <SectionHeading
-            eyebrow="Why Leakproof exists"
             title="We focus on problems with evidence behind them."
             text="Speed, form length and response time all affect whether an interested visitor becomes a lead. That is where we start."
           />
@@ -54,7 +52,6 @@ export function AboutPage() {
       <section className="section limits-section">
         <div className="container">
           <SectionHeading
-            eyebrow="When we will not help"
             title="Sometimes the website is not the problem."
             text="If your website is not the problem, we will tell you honestly."
           />
@@ -83,7 +80,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <CallToAction eyebrow="" title="Send the website. We'll start with one specific problem." />
+      <CallToAction centered title="Send the website. We'll start with one specific problem." />
     </>
   )
 }

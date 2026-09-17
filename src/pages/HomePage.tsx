@@ -22,7 +22,6 @@ export function HomePage() {
               </Link>
               <ArrowLink to="/services">See what we fix</ArrowLink>
             </div>
-            <span className="eyebrow home-hero__location">Web design and development · Dubai</span>
           </div>
 
         </div>
@@ -32,7 +31,6 @@ export function HomePage() {
         <div className="container">
           <div className="problem-section__header">
             <SectionHeading
-              eyebrow="Looks fine. Works badly."
               title={<>A website can load and still <em>lose the sale.</em></>}
             />
             <p className="lead" data-reveal="right" data-reveal-delay="100">
@@ -58,7 +56,6 @@ export function HomePage() {
         <div className="container what-we-fix__layout">
           <div className="what-we-fix__intro">
             <SectionHeading
-              eyebrow="What we fix"
               title="Fix what is broken. Rebuild when it makes sense."
               text="Some sites need replacing. Others need a faster booking flow, clearer service pages or a form that reaches the right inbox."
             />
@@ -83,7 +80,6 @@ export function HomePage() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            eyebrow="Solutions by industry"
             title="A clinic and a tour operator should not have the same website."
             text="A patient needs treatment details and reassurance. A tourist needs timings, inclusions and a quick way to book. We build for the decision your customer is actually making."
           />
@@ -94,7 +90,6 @@ export function HomePage() {
       <section className="section process-section">
         <div className="container">
           <SectionHeading
-            eyebrow="How it works"
             title="First we find the problem. Then we fix it."
             align="center"
           />
@@ -113,7 +108,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <CallToAction />
+      <CallToAction centered />
     </>
   )
 }

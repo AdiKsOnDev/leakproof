@@ -8,7 +8,6 @@ export function BlogPage() {
   return (
     <>
       <PageHero
-        eyebrow="Leak notes"
         title={<>Practical advice for <em>improving your website.</em></>}
         description="Clear answers about website costs, conversion problems, redesigns and the details that make it easier for customers to act."
       />

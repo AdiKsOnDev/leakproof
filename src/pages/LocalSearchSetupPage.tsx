@@ -66,7 +66,6 @@ export function LocalSearchSetupPage() {
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
           <div className="local-search-hero__layout">
             <div className="local-search-hero__copy" data-reveal="left">
-              <span className="eyebrow">Local search setup</span>
               <h1>Help nearby customers find your business.</h1>
               <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
               <Link className="button button--primary" to="/contact">
@@ -137,7 +136,6 @@ export function LocalSearchSetupPage() {
       <section className="section local-search-continuous-section">
         <div className="container local-search-continuous">
           <div data-reveal="left">
-            <span>Optional continuous optimization</span>
             <h2>Keep improving after the initial setup.</h2>
           </div>
           <div data-reveal="right">
@@ -178,7 +176,6 @@ export function LocalSearchSetupPage() {
       </section>
 
       <CallToAction
-        eyebrow="Start with the site you have"
         title="Find the first thing limiting your local visibility."
         text="Send us the link. Within one day, we will reply with one specific issue and where we would start. A call is optional."
       />

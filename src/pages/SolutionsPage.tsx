@@ -6,7 +6,6 @@ export function SolutionsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Solutions by industry"
         title={<>Customers do not <em>buy the same way.</em></>}
         description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
         aside={
@@ -25,7 +24,6 @@ export function SolutionsPage() {
       <section className="section shared-needs-section">
         <div className="container shared-needs-section__grid">
           <div data-reveal="left">
-            <span className="eyebrow">The job is still simple</span>
             <h2>Make choosing you easy.</h2>
           </div>
           <div className="shared-needs-list">
