@@ -345,17 +345,21 @@
 }
 
 .cta-section {
-  padding-top: 40px;
+  padding-block: 80px;
+  background: $blue;
+  color: $white;
+}
+
+.cta-section a:focus-visible {
+  outline: 3px solid $white;
+  outline-offset: 4px;
 }
 
 .cta-panel {
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 80px;
-  padding: 70px;
-  border-radius: $radius-large;
-  background: $blue;
-  color: $white;
 }
 
 .cta-panel h2 {
@@ -365,7 +369,7 @@
 }
 
 .cta-panel__action {
-  align-self: end;
+  align-self: start;
 }
 
 .cta-panel--centered {
@@ -382,4 +386,5 @@
 
 .cta-panel__action p {
   color: #d3d6ff;
+  margin-bottom: 28px;
 }

@@ -28,6 +28,14 @@
 }
 
 @media (max-width: 800px) {
+  .cta-section {
+    padding-block: 64px;
+  }
+
+  .cta-panel {
+    gap: 32px;
+  }
+
   .container {
     width: min(calc(100% - 36px), $container);
   }
@@ -679,7 +687,6 @@
 
   .cta-panel {
     gap: 35px;
-    padding: 40px 28px;
   }
 
   .cta-panel .button {
