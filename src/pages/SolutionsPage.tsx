@@ -8,13 +8,6 @@ export function SolutionsPage() {
       <PageHero
         title="Industries we know well"
         description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
-        aside={
-          <div className="hero-stat">
-            <strong>4</strong>
-            <span>industries we know well</span>
-            <p>Each has different questions to answer before a customer will book or enquire.</p>
-          </div>
-        }
       />
       <section className="section section--soft solutions-grid-section">
         <div className="container">
