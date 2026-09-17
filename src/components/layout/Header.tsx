@@ -46,6 +46,7 @@ export function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [dropdownDirection, setDropdownDirection] = useState<'left' | 'right'>('right')
   const dropdownGroupRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   const triggerRefs = useRef<Partial<Record<DropdownKey, HTMLAnchorElement>>>({})
   const closeTimerRef = useRef<ReturnType<typeof setTimeout>>()
   const exitTimerRef = useRef<ReturnType<typeof setTimeout>>()
@@ -119,8 +120,21 @@ export function Header() {
     }
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    const dismissOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      setMenuOpen(false)
+      menuButtonRef.current?.focus()
+    }
+    const desktop = window.matchMedia('(min-width: 801px)')
+    const closeOnDesktop = () => {
+      if (desktop.matches) setMenuOpen(false)
+    }
+    document.addEventListener('keydown', dismissOnEscape)
+    desktop.addEventListener('change', closeOnDesktop)
     return () => {
       document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', dismissOnEscape)
+      desktop.removeEventListener('change', closeOnDesktop)
     }
   }, [menuOpen])
 
@@ -141,16 +155,18 @@ export function Header() {
         </Link>
 
         <button
+          ref={menuButtonRef}
           className="menu-button"
           type="button"
           aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
           aria-expanded={menuOpen}
+          aria-controls="site-navigation"
           onClick={() => setMenuOpen((current) => !current)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <nav className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`} aria-label="Main navigation">
+        <nav id="site-navigation" className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`} aria-label="Main navigation">
           <div className="site-nav__links site-nav__links--desktop">
             <div
               className="site-nav__dropdown-group"
@@ -262,8 +278,9 @@ export function Header() {
                       return (
                         <li key={item.path}>
                           <NavLink to={item.path} onClick={closeMenu}>
-                            <Icon aria-hidden="true" size={20} strokeWidth={1.7} />
+                            <span className="mobile-nav__icon"><Icon aria-hidden="true" size={20} strokeWidth={1.7} /></span>
                             <span>{item.label}</span>
+                            <ArrowUpRight className="mobile-nav__link-arrow" aria-hidden="true" size={16} />
                           </NavLink>
                         </li>
                       )
