@@ -24,7 +24,7 @@ const results = [
 
 export function LocalSearchPreview() {
   return (
-    <div className="search-preview">
+    <div className="search-preview" data-reveal="fade" data-reveal-delay="120">
       <div className="search-preview__toolbar">
         <div className="search-preview__query"><Search size={18} aria-hidden="true" />AC repair JLT</div>
         <span id="search-preview-hint">Drag to compare</span>

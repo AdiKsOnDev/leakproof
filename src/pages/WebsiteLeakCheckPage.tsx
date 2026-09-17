@@ -20,7 +20,7 @@ export function WebsiteLeakCheckPage() {
   return (
     <div className="leak-check-page">
       <section className="leak-check-hero">
-        <div className="container">
+        <div className="container" data-reveal="rise">
           <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
           <h1>Find what’s getting in the way of your next enquiry.</h1>
           <p>Send us your website. Within 1–2 days, we’ll email a PDF report on the biggest issues we find, with an invitation to meet and discuss them.</p>
@@ -31,7 +31,7 @@ export function WebsiteLeakCheckPage() {
 
       <section className="leak-report-section section" aria-labelledby="leak-report-title">
         <div className="container leak-report-layout">
-          <div className="leak-report-intro">
+          <div className="leak-report-intro" data-reveal="left">
             <FileText size={28} aria-hidden="true" />
             <h2 id="leak-report-title">Here’s what lands in your inbox.</h2>
             <p>A report you can read, share and act on. We focus on the problems worth fixing first, not a long list of minor faults.</p>
@@ -39,7 +39,7 @@ export function WebsiteLeakCheckPage() {
             <a href="#request-leak-check">Have us check your site <ArrowRight size={17} aria-hidden="true" /></a>
           </div>
 
-          <article className="leak-report" aria-label="Sample leak check report for a fictional salon">
+          <article className="leak-report" aria-label="Sample leak check report for a fictional salon" data-reveal="fade" data-reveal-delay="120">
             <header className="leak-report__header">
               <img src={logo} alt="Leakproof" />
               <span>Sample report</span>
@@ -78,7 +78,7 @@ export function WebsiteLeakCheckPage() {
 
       <section className="section leak-check-request" id="request-leak-check" aria-labelledby="leak-check-request-title">
         <div className="container contact-page__grid">
-          <div>
+          <div data-reveal="left">
             <Mail size={27} aria-hidden="true" />
             <h2 id="leak-check-request-title">Send us your website.</h2>
             <p>Tell us what you want it to do better. We’ll send the report and meeting invitation to the email address you provide within 1–2 days.</p>
@@ -90,8 +90,8 @@ export function WebsiteLeakCheckPage() {
 
       <section className="section local-search-faq-section" aria-labelledby="leak-check-faq-title">
         <div className="container local-search-faq">
-          <h2 id="leak-check-faq-title">Before you send it.</h2>
-          <div>
+          <h2 id="leak-check-faq-title" data-reveal="left">Before you send it.</h2>
+          <div data-reveal="right">
             {questions.map(([question, answer], index) => (
               <div className="local-search-faq__item" key={question}>
                 <button type="button" aria-expanded={openQuestion === index} aria-controls={`leak-check-answer-${index}`} onClick={() => setOpenQuestion(openQuestion === index ? null : index)}>

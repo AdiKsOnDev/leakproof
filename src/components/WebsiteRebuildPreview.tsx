@@ -3,7 +3,7 @@ import { ComparisonReveal } from './ui/ComparisonReveal'
 
 export function WebsiteRebuildPreview() {
   return (
-    <div className="rebuild-preview">
+    <div className="rebuild-preview" data-reveal="fade" data-reveal-delay="120">
       <div className="rebuild-preview__bar"><span><LockKeyhole size={14} aria-hidden="true" />willow.example</span><span id="rebuild-preview-hint">Drag to compare</span></div>
       <ComparisonReveal describedBy="rebuild-preview-hint">
         <article className="rebuild-mock rebuild-mock--before" aria-label="Before rebuild: cluttered fictional salon website">

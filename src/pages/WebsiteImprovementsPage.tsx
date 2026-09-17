@@ -13,7 +13,7 @@ const process = [
 function ImprovementsIntro() {
   return (
     <section className="rebuild-hero">
-      <div className="container">
+      <div className="container" data-reveal="rise">
         <Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>
         <h1>Your website might not need a rebuild.</h1>
         <p>If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again.</p>
@@ -30,13 +30,13 @@ export function WebsiteImprovementsPage() {
 
       <section className="improvements-process" aria-labelledby="improvements-process-title">
         <div className="container">
-          <h2 id="improvements-process-title">Agree the fix.<br />Then check it works.</h2>
-          <ol>{process.map(([title, text]) => <li key={title}><h3>{title}</h3><p>{text}</p></li>)}</ol>
+          <h2 id="improvements-process-title" data-reveal="left">Agree the fix.<br />Then check it works.</h2>
+          <ol>{process.map(([title, text], index) => <li key={title} data-reveal="fade" data-reveal-delay={String(index * 70)}><h3>{title}</h3><p>{text}</p></li>)}</ol>
         </div>
       </section>
 
       <div className="container improvements-follow-up">
-        <section className="improvements-rebuild" aria-labelledby="improvements-rebuild-title">
+        <section className="improvements-rebuild" aria-labelledby="improvements-rebuild-title" data-reveal="left">
           <h2 id="improvements-rebuild-title">Sometimes a rebuild makes more sense.</h2>
           <p>If the platform blocks necessary changes, the pages no longer reflect your business or the whole booking path needs rethinking, small repairs may not be enough.</p>
           <ArrowLink to="/services/website-rebuild">When to rebuild your website</ArrowLink>
