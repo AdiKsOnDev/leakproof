@@ -227,7 +227,6 @@
   .shared-needs-section__grid,
   .what-we-fix__layout,
   .industry-hero__grid,
-  .industry-principle__grid,
   .contact-page__grid,
   .cta-panel {
     grid-template-columns: 1fr;
@@ -448,10 +447,6 @@
 
   .page-hero__aside {
     max-width: 460px;
-  }
-
-  .industry-principle__grid {
-    gap: 30px;
   }
 
   .industry-hero {

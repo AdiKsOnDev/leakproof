@@ -57,13 +57,6 @@ export function IndustryPage() {
         </div>
       </section>
 
-      <section className="section industry-principle">
-        <div className="container industry-principle__grid">
-          <blockquote data-reveal="left">{industry.principle}</blockquote>
-          <p data-reveal="right" data-reveal-delay="100">{industry.principleText}</p>
-        </div>
-      </section>
-
       <CallToAction
         title="Find the page, button or form that is costing you customers."
       />
