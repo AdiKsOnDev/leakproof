@@ -86,24 +86,23 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section process-section">
-        <div className="container">
-          <SectionHeading
-            title="Our process"
-            align="center"
-          />
-          <div className="process-grid">
-            {processSteps.map((step, index) => {
+      <section className="section process-section" aria-labelledby="process-heading">
+        <div className="container process-section__layout">
+          <h2 id="process-heading">Our process</h2>
+          <ol className="process-path" role="list">
+            {processSteps.map((step) => {
               const Icon = step.icon
               return (
-                <article key={step.number} data-reveal="fade" data-reveal-delay={String(index * 100)}>
-                  <div className="process-grid__top"><span>{step.number}</span><Icon size={24} /></div>
+                <li key={step.number}>
                   <h3>{step.title}</h3>
+                  <span className="process-path__icon">
+                    <Icon size={24} aria-hidden="true" />
+                  </span>
                   <p>{step.text}</p>
-                </article>
+                </li>
               )
             })}
-          </div>
+          </ol>
         </div>
       </section>
 

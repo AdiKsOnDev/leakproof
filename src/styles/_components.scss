@@ -106,7 +106,6 @@
 .service-card {
   position: relative;
   display: flex;
-  min-height: 500px;
   padding: 42px;
   flex-direction: column;
   border: 1px solid $line;
@@ -156,36 +155,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: auto;
-  color: $blue;
-  font-size: $font-size-caption;
-  font-weight: 700;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 
 .service-card__icon {
   display: grid;
   width: 54px;
   height: 54px;
+  flex-shrink: 0;
   border: 1px solid rgba($blue, 0.18);
   border-radius: 50%;
   background: rgba($white, 0.7);
+  color: $blue;
   place-items: center;
-}
-
-.service-card:nth-child(1) .service-card__header {
-  color: $white;
 }
 
 .service-card:nth-child(1) .service-card__icon {
   border-color: rgba($white, 0.28);
   background: rgba($white, 0.12);
+  color: $white;
 }
 
 .service-card h3 {
   position: relative;
   z-index: 1;
   max-width: 440px;
-  margin: 75px 0 14px;
+  margin: 0;
   font-size: $font-size-subtitle;
 }
 
@@ -247,6 +243,81 @@
 .service-card:nth-child(1) .service-card__watermark {
   color: $white;
   opacity: 0.1;
+}
+
+.service-card__icon svg {
+  grid-area: 1 / 1;
+}
+
+.service-card__arrow {
+  opacity: 0;
+}
+
+.service-card:is(:hover, :focus-visible) {
+  border-color: $blue;
+  box-shadow: 0 20px 42px rgba($ink, 0.1);
+
+  .service-card__icon {
+    background: $blue;
+    color: $white;
+  }
+
+  .service-card__symbol { opacity: 0; }
+  .service-card__arrow { opacity: 1; }
+}
+
+.service-card:first-child:is(:hover, :focus-visible) {
+  background: $blue-dark;
+
+  .service-card__icon {
+    background: $white;
+    color: $blue-dark;
+  }
+}
+
+.service-grid .service-card:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: -6px;
+  opacity: 1;
+}
+
+.service-card:active {
+  box-shadow: 0 6px 16px rgba($ink, 0.08);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service-grid .service-card {
+    transition:
+      opacity 650ms ease var(--reveal-delay, 0ms),
+      translate 220ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .service-card__icon {
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  .service-card__icon svg {
+    transition: opacity 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .service-card__arrow { transform: translate(-4px, 4px); }
+
+  .service-card:is(:hover, :focus-visible) {
+    .service-card__symbol { transform: translate(4px, -4px); }
+    .service-card__arrow { transform: none; }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .service-card:is(:hover, :focus-visible) { translate: 0 -4px; }
+    .service-card:active { translate: 0 -1px; }
+  }
+
+  .service-grid .service-card:focus-visible {
+    transition: none;
+  }
 }
 
 .industry-grid {
