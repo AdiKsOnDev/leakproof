@@ -1,4 +1,5 @@
-import { Check, CircleHelp, Smartphone, Unlink } from 'lucide-react'
+import { ArrowUpRight, CircleHelp, Smartphone, Unlink } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { IndustryGrid } from '../components/IndustryGrid'
 import { processSteps, services } from '../data/siteContent'
@@ -63,12 +64,12 @@ export function HomePage() {
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <article key={service.number} data-reveal="clip" data-reveal-delay={String(index * 90)}>
-                  <span className="home-services__icon"><Icon size={22} /></span>
-                  <span className="home-services__number">{service.number}</span>
-                  <h3>{service.title}</h3>
+                <Link className="home-services__card" key={service.number} to={`/services/${service.slug}`} aria-labelledby={`home-service-${service.slug}`} data-reveal="clip" data-reveal-delay={String(index * 90)}>
+                  <span className="home-services__icon"><Icon size={22} aria-hidden="true" /></span>
+                  <span className="home-services__arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
+                  <h3 id={`home-service-${service.slug}`}>{service.title}</h3>
                   <p>{service.summary}</p>
-                </article>
+                </Link>
               )
             })}
           </div>

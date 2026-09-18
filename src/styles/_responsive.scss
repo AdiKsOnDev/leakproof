@@ -279,7 +279,7 @@
     gap: 30px;
   }
 
-  .home-services article:nth-child(n) {
+  .home-services__card:nth-child(n) {
     margin-inline: 0;
   }
 
@@ -680,7 +680,7 @@
     grid-template-columns: 1fr;
   }
 
-  .home-services article {
+  .home-services__card {
     min-height: auto;
     margin-inline: 0;
   }
