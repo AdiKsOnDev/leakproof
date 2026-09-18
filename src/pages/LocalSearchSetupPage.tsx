@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  BarChart3,
   Check,
   MapPinned,
   Plus,
@@ -16,20 +15,17 @@ import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 const setupGroups = [
   {
     icon: Store,
-    title: 'Google Business Profile',
-    text: 'Set up your categories, services, photos and contact details so customers can see what you offer and how to reach you.',
+    title: 'Google Search Profile',
     items: ['Business information', 'Services and categories', 'Profile links and imagery'],
   },
   {
     icon: MapPinned,
     title: 'Service-area pages',
-    text: 'Create pages that explain which services you offer in each area and answer common questions before customers contact you.',
     items: ['Area-specific questions', 'Relevant services', 'Clear contact options'],
   },
   {
     icon: Tags,
     title: 'Miscellaneous setup',
-    text: 'Help search engines understand your business, keep listings consistent and set up tracking for calls and enquiry forms.',
     items: ['Keywords, titles and metadata', 'Schema, citations and reviews', 'Analytics and enquiry tracking'],
   },
 ]
@@ -89,11 +85,10 @@ export function LocalSearchSetupPage() {
             <p>We make your services and coverage clear on Google and your website, then set up tracking so you can see which enquiries come through.</p>
           </div>
           <div className="local-search-setup-grid">
-            {setupGroups.map(({ icon: Icon, title, text, items }, index) => (
+            {setupGroups.map(({ icon: Icon, title, items }, index) => (
               <article key={title} data-reveal="fade" data-reveal-delay={String(index * 80)}>
                 <span className="local-search-setup-card__icon"><Icon size={23} /></span>
                 <h3>{title}</h3>
-                <p>{text}</p>
                 <ul>{items.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
               </article>
             ))}
@@ -109,7 +104,7 @@ export function LocalSearchSetupPage() {
           <ol className="local-search-process">
             {processSteps.map(([number, title, text], index) => (
               <li key={number} data-reveal="fade" data-reveal-delay={String(index * 70)}>
-                <span>{number}</span><h3>{title}</h3><p>{text}</p>
+                <h3>{title}</h3><p>{text}</p>
               </li>
             ))}
           </ol>
@@ -119,7 +114,6 @@ export function LocalSearchSetupPage() {
       <section className="section local-search-measure-section">
         <div className="container local-search-measure">
           <div data-reveal="left">
-            <BarChart3 size={28} aria-hidden="true" />
             <h2>Enquiry tracking</h2>
             <p>Track search visits, calls and enquiry forms—not just where a keyword ranks.</p>
           </div>
@@ -129,19 +123,17 @@ export function LocalSearchSetupPage() {
         </div>
       </section>
 
-      <section className="section local-search-continuous-section">
+      <section className="section local-search-continuous-section" aria-labelledby="local-search-support-title">
         <div className="container local-search-continuous">
-          <div data-reveal="left">
-            <h2>Ongoing support</h2>
+          <div className="local-search-continuous__intro">
+            <h2 id="local-search-support-title">Ongoing support</h2>
+            <p>If you want ongoing support, we review performance and improve the pages that need attention.</p>
           </div>
-          <div data-reveal="right">
-            <p>If you want ongoing support, we review performance and improve the pages that need attention. You don’t need a subscription to keep the initial setup.</p>
-            <ul>
-              <li>Improve pages that attract visits but not enquiries</li>
-              <li>Add pages for new services or areas you cover</li>
-              <li>Keep business details and contact links up to date</li>
-            </ul>
-          </div>
+          <ul role="list">
+            <li><Check size={20} aria-hidden="true" /><span>Improve pages that attract visits but not enquiries</span></li>
+            <li><Check size={20} aria-hidden="true" /><span>Add pages for new services or areas you cover</span></li>
+            <li><Check size={20} aria-hidden="true" /><span>Keep business details and contact links up to date</span></li>
+          </ul>
         </div>
       </section>
 
