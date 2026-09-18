@@ -1,5 +1,7 @@
 import { ArrowUpRight, Flower2, LockKeyhole, Scissors, Sparkles } from 'lucide-react'
 import { ComparisonReveal } from './ui/ComparisonReveal'
+import { Photo } from './ui/Photo'
+import { industryPhotos } from '../data/siteContent'
 
 export function WebsiteRebuildPreview() {
   return (
@@ -23,7 +25,7 @@ export function WebsiteRebuildPreview() {
           <div className="rebuild-mock__label">After</div>
           <div className="new-site">
             <div className="new-site__nav"><strong><Flower2 size={21} aria-hidden="true" />Willow</strong><span>Services &nbsp; About &nbsp; Contact</span></div>
-            <div className="new-site__hero"><div><small>WILLOW SALON</small><h3>A good hair day<br />starts here.</h3><p>Cuts, colour and treatments.<br />Tuesday–Sunday, 10am–7pm.</p><span className="new-site__booking">Book an appointment <ArrowUpRight size={17} aria-hidden="true" /></span></div><div className="new-site__art" aria-hidden="true"><Flower2 strokeWidth={0.7} /></div></div>
+            <div className="new-site__hero"><div><small>WILLOW SALON</small><h3>A good hair day<br />starts here.</h3><p>Cuts, colour and treatments.<br />Tuesday–Sunday, 10am–7pm.</p><span className="new-site__booking">Book an appointment <ArrowUpRight size={17} aria-hidden="true" /></span></div><div className="new-site__art"><Photo photo={industryPhotos.wellness} sizes="(max-width: 560px) 100vw, (max-width: 800px) 55vw, 700px" /></div></div>
             <div className="new-site__services"><span><Scissors size={20} aria-hidden="true" />Cut &amp; finish</span><span><Sparkles size={20} aria-hidden="true" />Colour</span><span><Flower2 size={20} aria-hidden="true" />Treatments</span></div>
             <div className="new-site__footer">Your next appointment, without the search.<ArrowUpRight size={18} aria-hidden="true" /></div>
           </div>

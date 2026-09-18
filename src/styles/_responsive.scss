@@ -689,9 +689,9 @@
     margin-bottom: 0;
   }
 
-  .industry-card {
-    min-height: 390px;
-    padding: 28px;
+  .industry-card__body {
+    min-height: auto;
+    padding: 24px;
   }
 
   .service-card {

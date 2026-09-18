@@ -255,16 +255,64 @@
   gap: 22px;
 }
 
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-credit {
+  display: block;
+  color: $muted;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.photo-credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.photo-credit a:hover {
+  color: $blue;
+}
+
+.industry-grid__item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.industry-grid__item > .photo-credit {
+  padding-inline: 4px;
+}
+
 .industry-card {
   display: flex;
-  min-height: 430px;
-  padding: 34px;
+  flex: 1;
   flex-direction: column;
+  overflow: hidden;
   border: 1px solid $line;
   border-radius: $radius;
   background: $paper;
   box-shadow: inset 0 1px 0 rgba($white, 0.8), 0 12px 35px rgba($ink, 0.035);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.industry-card__photo {
+  aspect-ratio: 16 / 7;
+  background: $cream;
+  overflow: hidden;
+}
+
+.industry-card__body {
+  display: flex;
+  flex: 1;
+  min-height: 360px;
+  padding: 28px 34px 34px;
+  flex-direction: column;
 }
 
 .industry-card:hover {
@@ -277,6 +325,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .industry-card__number {

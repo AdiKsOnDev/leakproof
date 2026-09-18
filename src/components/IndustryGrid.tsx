@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { industries } from '../data/siteContent'
+import { Photo } from './ui/Photo'
 
 export function IndustryGrid() {
   return (
@@ -9,20 +10,27 @@ export function IndustryGrid() {
         const Icon = industry.icon
 
         return (
-          <Link className={`industry-card industry-theme industry-theme--${industry.slug}`} key={industry.slug} to={`/solutions/${industry.slug}`} data-reveal="rise" data-reveal-delay={String(index * 90)}>
-            <div className="industry-card__top">
-              <span className="industry-card__number">0{index + 1}</span>
-              <span className="industry-card__icon"><Icon size={24} /></span>
-            </div>
-            <div className="industry-card__content">
-              <span>{industry.eyebrow}</span>
-              <h3>{industry.name}</h3>
-              <p>{industry.summary}</p>
-            </div>
-            <span className="industry-card__link">
-              View solution <ArrowUpRight size={18} />
-            </span>
-          </Link>
+          <article className="industry-grid__item" key={industry.slug} data-reveal="rise" data-reveal-delay={String(index * 90)}>
+            <Link className={`industry-card industry-theme industry-theme--${industry.slug}`} to={`/solutions/${industry.slug}`}>
+              <div className="industry-card__photo">
+                <Photo photo={industry.photo} sizes="(max-width: 800px) 100vw, (max-width: 1268px) 50vw, 600px" decorative />
+              </div>
+              <div className="industry-card__body">
+                <div className="industry-card__top">
+                  <span className="industry-card__number">0{index + 1}</span>
+                  <span className="industry-card__icon"><Icon size={24} /></span>
+                </div>
+                <div className="industry-card__content">
+                  <span>{industry.eyebrow}</span>
+                  <h3>{industry.name}</h3>
+                  <p>{industry.summary}</p>
+                </div>
+                <span className="industry-card__link">
+                  View solution <ArrowUpRight size={18} />
+                </span>
+              </div>
+            </Link>
+          </article>
         )
       })}
     </div>

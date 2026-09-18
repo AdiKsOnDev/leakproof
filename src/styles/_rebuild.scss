@@ -40,8 +40,8 @@
 .new-site h3 { margin: 16px 0 20px; font-size: clamp(28px, 3.7vw, 48px); line-height: 1.1; letter-spacing: -0.04em; }
 .new-site p { margin: 0; color: #536559; font-size: 14px; }
 .new-site__booking { display: inline-flex; align-items: center; gap: 18px; padding: 13px 20px; margin-top: 25px; background: #294839; color: #fff; border-radius: 4px; font-size: 12px; }
-.new-site__art { display: grid; place-items: center; aspect-ratio: 0.85; border-radius: 100px 100px 4px 4px; background: #dfe9d9; }
-.new-site__art svg { width: 75%; height: auto; color: #789074; }
+.new-site__art { aspect-ratio: 0.85; overflow: hidden; border-radius: 100px 100px 4px 4px; background: #dfe9d9; }
+.rebuild-preview__credit { padding: 12px 28px; border-top: 1px solid $line; background: $paper; }
 .new-site__services { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid #dce3d8; }
 .new-site__services span { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 22px 8px; font-size: 13px; }
 .new-site__footer { display: flex; justify-content: space-between; gap: 16px; padding-top: 24px; color: #536559; font-size: 11px; }
@@ -77,7 +77,8 @@
   .new-site { padding: 20px 16px; }
   .new-site__nav { align-items: flex-start; flex-direction: column; gap: 12px; }
   .new-site__hero { grid-template-columns: 1fr; padding: 36px 0; }
-  .new-site__art { display: none; }
+  .new-site__art { aspect-ratio: 16 / 9; border-radius: 4px; }
+  .rebuild-preview__credit { padding-inline: 16px; }
   .new-site__services { grid-template-columns: 1fr; }
   .new-site__services span { justify-content: flex-start; padding-block: 16px; }
   .new-site__booking { padding-inline: 12px; gap: 8px; }

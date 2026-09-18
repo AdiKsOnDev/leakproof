@@ -10,7 +10,50 @@ import {
   Sparkles,
   Wrench,
 } from 'lucide-react'
-import type { Industry, Service } from '../types/content'
+import type { Industry, PhotoAsset, Service } from '../types/content'
+
+export const industryPhotos = {
+  clinics: {
+    id: 'Fdku_oMrDvk',
+    src: 'https://images.unsplash.com/photo-1704455306251-b4634215d98f?auto=format&fit=max&q=80',
+    alt: 'A bright dental treatment room with a reclining chair and examination equipment.',
+    width: 6147,
+    height: 4098,
+    position: '50% 55%',
+    photographer: 'Kari Bjorn Photography',
+    username: 'karibjorn',
+  },
+  tours: {
+    id: 'o9w0oygbXEc',
+    src: 'https://images.unsplash.com/photo-1624062999726-083e5268525d?auto=format&fit=max&q=80',
+    alt: 'A four-wheel-drive vehicle crossing golden sand dunes on a desert safari.',
+    width: 5184,
+    height: 3456,
+    position: '50% 60%',
+    photographer: 'Haris khan',
+    username: 'hariskhan488',
+  },
+  wellness: {
+    id: 'jsuWg7IXx1k',
+    src: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=max&q=80',
+    alt: 'Black salon chairs beneath circular mirrors against a deep green wall.',
+    width: 5761,
+    height: 4000,
+    position: '25% 55%',
+    photographer: 'Greg Trowman',
+    username: 'gregtrow',
+  },
+  homeServices: {
+    id: 'Klby0nxseY8',
+    src: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=max&q=80',
+    alt: 'Hands using a cordless drill to secure a door fitting.',
+    width: 5168,
+    height: 3448,
+    position: '50% 50%',
+    photographer: 'Theme Photos',
+    username: 'themephotos',
+  },
+} satisfies Record<string, PhotoAsset>
 
 export const services: Service[] = [
   {
@@ -54,6 +97,7 @@ export const industries: Industry[] = [
     shortName: 'Clinics',
     eyebrow: 'Dental and aesthetic clinics',
     headline: 'Websites for dental and aesthetic clinics',
+    photo: industryPhotos.clinics,
     summary:
       'Patients compare treatments, prices, practitioners and recovery details before they call. Your site should answer those questions and lead straight to the right consultation.',
     problems: [
@@ -86,6 +130,7 @@ export const industries: Industry[] = [
     shortName: 'Tour operators',
     eyebrow: 'Tours and experiences',
     headline: 'Websites for tours and experiences',
+    photo: industryPhotos.tours,
     summary:
       'Tourists often choose from a phone before they reach Dubai. They need to know the timings, meeting point, inclusions and cancellation terms without digging through the site.',
     problems: [
@@ -114,6 +159,7 @@ export const industries: Industry[] = [
     shortName: 'Spa & Wellness',
     eyebrow: 'Salons, spas and med spas',
     headline: 'Websites for salons and spas',
+    photo: industryPhotos.wellness,
     summary:
       'A long treatment menu is hard to use when names sound similar and prices or durations are missing. We organise the services around what customers need and connect each one to the right booking step.',
     problems: [
@@ -142,6 +188,7 @@ export const industries: Industry[] = [
     shortName: 'Home services',
     eyebrow: 'Home-service businesses',
     headline: 'Websites for home-service businesses',
+    photo: industryPhotos.homeServices,
     summary:
       'Someone with a leak, broken AC or damaged roof wants to know whether you cover their area, when you can come and whether your work can be trusted. The site should answer all three quickly.',
     problems: [

@@ -9,6 +9,17 @@ export interface Service {
   icon: LucideIcon
 }
 
+export interface PhotoAsset {
+  id: string
+  src: string
+  alt: string
+  width: number
+  height: number
+  position: string
+  photographer: string
+  username: string
+}
+
 export interface Industry {
   slug: string
   name: string
@@ -16,6 +27,7 @@ export interface Industry {
   eyebrow: string
   headline: string
   summary: string
+  photo: PhotoAsset
   problems: string[]
   outcomes: string[]
   metric: string
