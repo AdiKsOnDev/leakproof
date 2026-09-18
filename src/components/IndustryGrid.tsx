@@ -17,12 +17,10 @@ export function IndustryGrid() {
               </div>
               <div className="industry-card__body">
                 <div className="industry-card__top">
-                  <span className="industry-card__number">0{index + 1}</span>
+                  <h3>{industry.name}</h3>
                   <span className="industry-card__icon"><Icon size={24} /></span>
                 </div>
                 <div className="industry-card__content">
-                  <span>{industry.eyebrow}</span>
-                  <h3>{industry.name}</h3>
                   <p>{industry.summary}</p>
                 </div>
                 <span className="industry-card__link">
