@@ -56,12 +56,14 @@
 .rebuild-detail p { margin-top: 16px; color: $muted; font-size: 0.9rem; line-height: 1.7; }
 .rebuild-detail-visual { display: flex; align-items: center; justify-content: center; min-width: 0; height: 190px; border-radius: $radius-small; background: $cream; color: $ink; font-size: 10px; line-height: 1.4; pointer-events: none; user-select: none; }
 .rebuild-detail-visual svg { flex: none; }
+// Styrene's visible glyphs sit above the center of its line box.
+.rebuild-visual-label { transform: translateY(0.1em); }
 .rebuild-detail-visual--pages { border-top-right-radius: 44px; }
 .rebuild-detail-visual--mobile { background: $soft-blue; }
 .rebuild-detail-visual--booking { background: $soft-blue; }
 .rebuild-detail-visual--search { border-bottom-right-radius: 44px; }
 .rebuild-page-map { width: 132px; }
-.rebuild-page-map__root { display: inline-block; padding: 8px 10px; background: $ink; border-radius: 5px; color: $white; font-weight: 600; }
+.rebuild-page-map__root { display: inline-flex; align-items: center; padding: 8px 10px; background: $ink; border-radius: 5px; color: $white; font-weight: 600; }
 .rebuild-page-map__branches { display: grid; gap: 8px; margin: 0 0 0 12px; padding: 14px 0 0 14px; border-left: 1px solid $line; }
 .rebuild-page-map__branches > span { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; border: 1px solid $line; border-radius: 4px; background: $paper; }
 .rebuild-page-map__branches > span::before { content: ''; position: absolute; top: 50%; left: -15px; width: 14px; border-top: 1px solid $line; }

@@ -7,11 +7,11 @@ export function RebuildDeliverableVisual({ kind }: { kind: RebuildDeliverable })
     return (
       <div className="rebuild-detail-visual rebuild-detail-visual--pages" aria-hidden="true">
         <div className="rebuild-page-map">
-          <span className="rebuild-page-map__root">Your website</span>
+          <span className="rebuild-page-map__root"><span className="rebuild-visual-label">Your website</span></span>
           <div className="rebuild-page-map__branches">
-            <span>Services <ArrowUpRight size={13} /></span>
-            <span>Location <ArrowUpRight size={13} /></span>
-            <span>Contact <ArrowUpRight size={13} /></span>
+            <span><span className="rebuild-visual-label">Services</span><ArrowUpRight size={13} /></span>
+            <span><span className="rebuild-visual-label">Location</span><ArrowUpRight size={13} /></span>
+            <span><span className="rebuild-visual-label">Contact</span><ArrowUpRight size={13} /></span>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@ export function RebuildDeliverableVisual({ kind }: { kind: RebuildDeliverable })
           <div className="rebuild-phone__nav"><span>Your business</span><Menu size={13} /></div>
           <strong>Find a service.<br />Book a visit.</strong>
           <div className="rebuild-phone__lines"><span /><span /></div>
-          <span className="rebuild-visual-action">Book a visit <ArrowUpRight size={13} /></span>
+          <span className="rebuild-visual-action"><span className="rebuild-visual-label">Book a visit</span><ArrowUpRight size={13} /></span>
         </div>
       </div>
     )
@@ -35,9 +35,9 @@ export function RebuildDeliverableVisual({ kind }: { kind: RebuildDeliverable })
     return (
       <div className="rebuild-detail-visual rebuild-detail-visual--booking" aria-hidden="true">
         <div className="rebuild-booking-path">
-          <span className="rebuild-visual-action">Send enquiry <ArrowUpRight size={13} /></span>
+          <span className="rebuild-visual-action"><span className="rebuild-visual-label">Send enquiry</span><ArrowUpRight size={13} /></span>
           <ArrowDown className="rebuild-booking-path__arrow" size={23} />
-          <span className="rebuild-booking-path__confirmation"><Check size={15} /> Enquiry received</span>
+          <span className="rebuild-booking-path__confirmation"><Check size={15} /><span className="rebuild-visual-label">Enquiry received</span></span>
         </div>
       </div>
     )
