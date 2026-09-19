@@ -639,21 +639,12 @@
 }
 
 .shared-needs-list > div {
-  display: grid;
-  grid-template-columns: 44px 1fr;
   padding: 25px 0;
   border-bottom: 1px solid $line;
 }
 
 .shared-needs-list > div:first-child {
   border-top: 1px solid $line;
-}
-
-.shared-needs-list span {
-  grid-row: span 2;
-  color: $blue;
-  font-size: $font-size-caption;
-  font-weight: 700;
 }
 
 .shared-needs-list h3,
