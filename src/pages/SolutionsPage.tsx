@@ -20,9 +20,9 @@ export function SolutionsPage() {
             <h2>What customers need</h2>
           </div>
           <div className="shared-needs-list">
-            <div data-reveal="right"><span>01</span><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>
-            <div data-reveal="right" data-reveal-delay="90"><span>02</span><h3>Decide whether to trust you</h3><p>Reviews, credentials and real work shown where they help.</p></div>
-            <div data-reveal="right" data-reveal-delay="180"><span>03</span><h3>Book or enquire</h3><p>No hunt for a phone number and no generic form when a booking tool would do.</p></div>
+            <div data-reveal="right"><h3>Find the right service</h3><p>Plain navigation and enough detail to compare the options.</p></div>
+            <div data-reveal="right" data-reveal-delay="90"><h3>Decide whether to trust you</h3><p>Reviews, credentials and real work shown where they help.</p></div>
+            <div data-reveal="right" data-reveal-delay="180"><h3>Book or enquire</h3><p>No hunt for a phone number and no generic form when a booking tool would do.</p></div>
           </div>
         </div>
       </section>
