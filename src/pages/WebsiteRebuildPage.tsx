@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowLeft } from 'lucide-react'
+import { ArrowDown, ArrowLeft, BookOpen, Code2, FolderGit2, KeyRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { RebuildDeliverableVisual, type RebuildDeliverable } from '../components/RebuildDeliverableVisual'
 import { WebsiteRebuildPreview } from '../components/WebsiteRebuildPreview'
@@ -49,8 +49,24 @@ export function WebsiteRebuildPage() {
         </div>
       </section>
 
-      <section className="section rebuild-ownership">
-        <div className="container" data-reveal="left"><h2>Ownership and maintenance</h2><p>We hand over the source code, repository, access and documentation. Keep working with us or take it to another developer.</p><Link className="arrow-link" to="/services">What’s included in our work <ArrowLeft size={17} aria-hidden="true" /></Link></div>
+      <section className="section rebuild-ownership" aria-labelledby="rebuild-ownership-title">
+        <div className="container rebuild-ownership__layout">
+          <div className="rebuild-ownership__heading">
+            <h2 id="rebuild-ownership-title">Ownership and maintenance</h2>
+          </div>
+          <div className="rebuild-ownership__handover">
+            <h3 id="rebuild-handover-title">We hand over</h3>
+            <ul aria-labelledby="rebuild-handover-title">
+              <li><Code2 aria-hidden="true" /><span>Source code</span></li>
+              <li><FolderGit2 aria-hidden="true" /><span>Repository</span></li>
+              <li><KeyRound aria-hidden="true" /><span>Access</span></li>
+              <li><BookOpen aria-hidden="true" /><span>Documentation</span></li>
+            </ul>
+          </div>
+          <div className="rebuild-ownership__continuity">
+            <p>Keep working with us or take it to another developer.</p>
+          </div>
+        </div>
       </section>
 
       <CallToAction title="Not sure you need a rebuild?" text="Start with a free leak check. We’ll email a PDF report on the biggest issues within 1–2 days, with an invitation to meet. If a smaller fix makes more sense, we’ll say so." />
