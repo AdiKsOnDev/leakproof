@@ -1,14 +1,15 @@
-import { ArrowDown, ArrowLeft, Check } from 'lucide-react'
+import { ArrowDown, ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { RebuildDeliverableVisual, type RebuildDeliverable } from '../components/RebuildDeliverableVisual'
 import { WebsiteRebuildPreview } from '../components/WebsiteRebuildPreview'
 import { CallToAction } from '../components/ui/CallToAction'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 
-const deliverables = [
-  ['Pages customers can understand', 'We put your services, location and contact options where people expect to find them. Longer background information gets its own space.'],
-  ['A site that works on a phone', 'Readable text, easy-to-use menus and forms, and images that don’t make visitors wait.'],
-  ['Booking and enquiry tools connected', 'Buttons lead to the right booking step or form. We check the full process, including what happens after someone submits.'],
-  ['Search setup and tracking', 'Page titles, metadata and structured data, with tracking for the enquiries the site brings in.'],
+const deliverables: { kind: RebuildDeliverable; title: string; description: string }[] = [
+  { kind: 'pages', title: 'Pages customers can understand', description: 'We put your services, location and contact options where people expect to find them. Longer background information gets its own space.' },
+  { kind: 'mobile', title: 'A site that works on a phone', description: 'Readable text, easy-to-use menus and forms, and images that don’t make visitors wait.' },
+  { kind: 'booking', title: 'Booking and enquiry tools connected', description: 'Buttons lead to the right booking step or form. We check the full process, including what happens after someone submits.' },
+  { kind: 'search', title: 'Search setup and tracking', description: 'Page titles, metadata and structured data, with tracking for the enquiries the site brings in.' },
 ]
 
 export function WebsiteRebuildPage() {
@@ -31,10 +32,20 @@ export function WebsiteRebuildPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" aria-labelledby="rebuild-included-title">
         <div className="container rebuild-included">
-          <div data-reveal="left"><h2>What’s included</h2><p>We work on the content, structure and booking steps as well as the design.</p></div>
-          <div>{deliverables.map(([title, description], index) => <article key={title} data-reveal="fade" data-reveal-delay={String(index * 80)}><Check size={20} aria-hidden="true" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
+          <div className="rebuild-included__heading" data-reveal="left">
+            <h2 id="rebuild-included-title">What’s included</h2>
+            <p>We work on the content, structure and booking steps as well as the design.</p>
+          </div>
+          <div className="rebuild-included__grid">
+            {deliverables.map(({ kind, title, description }) => (
+              <article className="rebuild-detail" key={kind}>
+                <div className="rebuild-detail__copy"><h3>{title}</h3><p>{description}</p></div>
+                <RebuildDeliverableVisual kind={kind} />
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
