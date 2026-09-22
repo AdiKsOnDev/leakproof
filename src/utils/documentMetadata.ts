@@ -1,3 +1,5 @@
+import thumbnailUrl from '../../assets/thumbnail.png'
+
 interface DocumentMetadata {
   title: string
   description: string
@@ -7,6 +9,7 @@ interface DocumentMetadata {
 }
 
 const siteUrl = 'https://leakproof.me'
+const socialImageUrl = new URL(thumbnailUrl, siteUrl).href
 
 function setMetaTag(selector: string, attribute: 'name' | 'property', key: string, content: string) {
   let tag = document.head.querySelector<HTMLMetaElement>(selector)
@@ -36,7 +39,15 @@ export function updateDocumentMetadata({
   setMetaTag('meta[property="og:description"]', 'property', 'og:description', description)
   setMetaTag('meta[property="og:type"]', 'property', 'og:type', type)
   setMetaTag('meta[property="og:url"]', 'property', 'og:url', url)
-  setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary')
+  setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'Leakproof')
+  setMetaTag('meta[property="og:image"]', 'property', 'og:image', socialImageUrl)
+  setMetaTag('meta[property="og:image:width"]', 'property', 'og:image:width', '1200')
+  setMetaTag('meta[property="og:image:height"]', 'property', 'og:image:height', '630')
+  setMetaTag('meta[property="og:image:type"]', 'property', 'og:image:type', 'image/png')
+  setMetaTag('meta[property="og:image:alt"]', 'property', 'og:image:alt', 'Leakproof logo on an off-white background')
+  setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image')
+  setMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image', socialImageUrl)
+  setMetaTag('meta[name="twitter:image:alt"]', 'name', 'twitter:image:alt', 'Leakproof logo on an off-white background')
   setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', title)
   setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', description)
 
