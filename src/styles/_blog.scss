@@ -125,17 +125,6 @@
   isolation: isolate;
 }
 
-.blog-thumbnail::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(rgba($ink, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($ink, 0.045) 1px, transparent 1px);
-  background-size: 28px 28px;
-  content: '';
-}
-
 .blog-thumbnail__label {
   position: absolute;
   top: 22px;
@@ -154,12 +143,6 @@
 .blog-thumbnail--diagnostic {
   background: $ink;
   color: $white;
-}
-
-.blog-thumbnail--diagnostic::before {
-  background-image:
-    linear-gradient(rgba($white, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($white, 0.055) 1px, transparent 1px);
 }
 
 .blog-thumbnail__diagnostic {
@@ -371,11 +354,7 @@
 
 .blog-article__header {
   padding: 95px 0 70px;
-  background:
-    linear-gradient(rgba($blue, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($blue, 0.025) 1px, transparent 1px),
-    $paper;
-  background-size: 40px 40px;
+  background: $paper;
 }
 
 .blog-article__header .container {
