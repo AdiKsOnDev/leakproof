@@ -7,6 +7,8 @@ import { industries, services } from '../src/data/siteContent.ts'
 const outputDirectory = join(process.cwd(), 'dist')
 const siteUrl = 'https://leakproof.me'
 const template = await readFile(join(outputDirectory, 'index.html'), 'utf8')
+const manifest = JSON.parse(await readFile(join(outputDirectory, '.vite/manifest.json'), 'utf8'))
+const socialImageUrl = new URL(manifest['assets/thumbnail.png'].file, `${siteUrl}/`).href
 
 const routeMetadata = [
   ...staticPageMetadata,
@@ -72,7 +74,15 @@ function renderRouteHtml(route, options = {}) {
     `<meta property="og:description" content="${description}" />`,
     `<meta property="og:type" content="${route.type ?? 'website'}" />`,
     `<meta property="og:url" content="${canonicalUrl}" />`,
-    '<meta name="twitter:card" content="summary" />',
+    '<meta property="og:site_name" content="Leakproof" />',
+    `<meta property="og:image" content="${socialImageUrl}" />`,
+    '<meta property="og:image:width" content="1200" />',
+    '<meta property="og:image:height" content="630" />',
+    '<meta property="og:image:type" content="image/png" />',
+    '<meta property="og:image:alt" content="Leakproof logo on an off-white background" />',
+    '<meta name="twitter:card" content="summary_large_image" />',
+    `<meta name="twitter:image" content="${socialImageUrl}" />`,
+    '<meta name="twitter:image:alt" content="Leakproof logo on an off-white background" />',
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,
   ]
