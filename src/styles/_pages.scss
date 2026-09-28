@@ -112,134 +112,61 @@
   gap: 100px;
 }
 
-.problem-section__header {
+.issue-review {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  align-items: end;
-  gap: 120px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(32px, 6vw, 80px);
 }
 
-.problem-section__header .section-heading {
-  margin-bottom: 0;
+.issue-review h2 {
+  margin: 0 0 24px;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
-.problem-section__header .lead {
-  margin: 0;
-}
-
-.problem-diagnostic {
-  margin-top: 80px;
-  border: 1px solid #323230;
-  border-radius: $radius-large;
-  background: $ink;
-  color: $white;
-  overflow: hidden;
-  box-shadow: 0 28px 70px rgba($ink, 0.12);
-}
-
-.problem-diagnostic__topbar {
+.issue-review__status {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 28px;
-  border-bottom: 1px solid #323230;
-  font-size: $font-size-caption;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.problem-diagnostic__topbar > strong {
-  color: #f29a8f;
-  font-size: inherit;
-}
-
-.problem-diagnostic__status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #a8d7c2;
-}
-
-.problem-diagnostic__status > span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #55b989;
-}
-
-.problem-list {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin: 0;
-  padding: 55px 42px 90px;
-}
-
-.problem-list::before {
-  position: absolute;
-  top: 50%;
-  right: 90px;
-  left: 90px;
-  height: 2px;
-  background: repeating-linear-gradient(to right, $red 0 8px, transparent 8px 16px);
-  content: '';
-  opacity: 0.65;
-}
-
-.problem-list article {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  min-height: 205px;
-  padding: 26px;
-  border: 1px solid #373735;
-  border-radius: 18px 44px 18px 18px;
-  background: #1c1c1a;
-}
-
-.problem-list article:nth-child(2) {
-  border-radius: 44px 18px 18px 18px;
-  transform: translateY(36px);
-}
-
-.problem-list article > span {
-  color: #85837e;
-  font-size: $font-size-caption;
-  font-weight: 700;
-}
-
-.problem-list i {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba($red, 0.14);
-  color: #f29a8f;
-  font-style: normal;
-  place-items: center;
-}
-
-.problem-list p {
-  grid-column: 1 / -1;
-  align-self: end;
-  max-width: 270px;
-  margin: 45px 0 0;
-  color: #deddd8;
-  font-size: $font-size-content;
+  gap: 10px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $line;
   font-weight: 600;
 }
 
-.problem-diagnostic__footer {
-  padding: 0 28px 25px;
+.issue-review__status::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $green;
+  content: '';
 }
 
-.problem-diagnostic__footer .arrow-link {
-  border-color: #777570;
-  color: $white;
+.issue-review ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-review li {
+  display: flex;
+  align-items: start;
+  gap: 18px;
+  padding: 28px 0;
+  border-bottom: 1px solid $line;
+}
+
+.issue-review li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: $red;
+}
+
+.issue-review li p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 .what-we-fix__layout {

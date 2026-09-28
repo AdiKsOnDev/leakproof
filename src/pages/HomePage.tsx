@@ -27,26 +27,19 @@ export function HomePage() {
       </section>
 
       <section className="section problem-section">
-        <div className="container">
-          <div className="problem-section__header">
-            <SectionHeading
-              title="Common website problems"
-            />
-            <p className="lead" data-reveal="right" data-reveal-delay="100">
-              The expensive problems are often easy to miss. The site is online, but the booking button goes nowhere useful or the service page never answers the question holding someone back.
-            </p>
+
+        <div className="container issue-review">
+          <div className="issue-review__intro">
+            <h2>Common website problems</h2>
+            <ArrowLink to="/about">Why Leakproof exists</ArrowLink>
           </div>
-          <div className="problem-diagnostic" data-reveal="scale">
-            <div className="problem-diagnostic__topbar">
-              <span className="problem-diagnostic__status"><span /> Site is online</span>
-              <strong>3 conversion leaks found</strong>
-            </div>
-            <div className="problem-list">
-              <article><span>01</span><i><Unlink size={21} /></i><p>A booking button sends people to the wrong place.</p></article>
-              <article><span>02</span><i><Smartphone size={21} /></i><p>A slow mobile page loses an impatient buyer.</p></article>
-              <article><span>03</span><i><CircleHelp size={21} /></i><p>A service page leaves the real questions unanswered.</p></article>
-            </div>
-            <div className="problem-diagnostic__footer"><ArrowLink to="/about">Why Leakproof exists</ArrowLink></div>
+          <div>
+            <div className="issue-review__status">Site is online</div>
+            <ul role="list">
+              <li><Unlink size={22} aria-hidden="true" /><p>Customers click "Book now" but can't complete a booking.</p></li>
+              <li><Smartphone size={22} aria-hidden="true" /><p>Your site loads too slowly on phones. Customers give up and leave.</p></li>
+              <li><CircleHelp size={22} aria-hidden="true" /><p>People can't find prices or what's included, so they leave without booking.</p></li>
+            </ul>
           </div>
         </div>
       </section>
