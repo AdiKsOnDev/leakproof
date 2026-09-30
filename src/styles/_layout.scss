@@ -25,19 +25,6 @@
   -webkit-backdrop-filter: none;
 }
 
-.site-header--home:not(.site-header--scrolled):not(.site-header--menu-open) .brand img {
-  filter: grayscale(1) brightness(0) invert(1);
-}
-
-.site-header--home:not(.site-header--scrolled):not(.site-header--menu-open) .site-nav__link,
-.site-header--home:not(.site-header--scrolled):not(.site-header--menu-open) .menu-button {
-  color: $white;
-}
-
-.site-header--home:not(.site-header--scrolled):not(.site-header--menu-open) .site-nav__link::after {
-  background: #aeb5ff;
-}
-
 .site-header--scrolled,
 .site-header--menu-open {
   border-bottom-color: rgba($ink, 0.1);

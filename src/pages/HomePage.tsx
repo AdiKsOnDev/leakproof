@@ -12,13 +12,13 @@ export function HomePage() {
     <>
       <section className="home-hero home-hero--horizon">
         <div className="container home-hero__grid">
-          <div className="home-hero__intro" data-reveal="rise">
+          <div className="home-hero__intro">
             <h1><span>Your website is</span> <em>leaking customers.</em></h1>
           </div>
 
-          <div className="home-hero__content" data-reveal="rise" data-reveal-delay="80">
+          <div className="home-hero__content">
             <div className="home-hero__actions">
-              <LeakCheckButton light />
+              <LeakCheckButton />
               <ArrowLink to="/services">See what we fix</ArrowLink>
             </div>
           </div>

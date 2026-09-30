@@ -44,14 +44,12 @@
   align-items: center;
   min-height: 100svh;
   padding-top: 88px;
-  background:
-    linear-gradient(rgba($ink, 0.28), rgba($ink, 0.5)),
-    url('/pedestrians-1680.webp') 58% top / cover no-repeat;
+  background: $paper url('/hero-desktop.webp') 85% center / cover no-repeat;
 }
 
 @media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
   .home-hero--horizon {
-    background-attachment: scroll, fixed;
+    background-attachment: fixed;
   }
 }
 
@@ -73,24 +71,24 @@
 }
 
 .home-hero--horizon h1 {
-  max-width: 1050px;
+  max-width: min(55%, 620px);
   margin: 0;
 }
 
 .home-hero--horizon h1 span {
-  color: $white;
+  color: $ink;
 }
 
 .home-hero--horizon h1 em {
   display: inline;
   margin-left: 0;
-  color: #aeb5ff;
+  color: $blue;
 }
 
 .home-hero--horizon .home-hero__content > p {
   max-width: 720px;
   margin: 0 auto;
-  color: #c2c2be;
+  color: $muted;
 }
 
 .home-hero--horizon .home-hero__actions {
@@ -98,11 +96,6 @@
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 0;
-}
-
-.home-hero--horizon .arrow-link {
-  border-color: $white;
-  color: $white;
 }
 
 .deliverables-section__grid,

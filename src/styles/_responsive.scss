@@ -212,12 +212,52 @@
   }
 
   .home-hero--horizon {
+    --hero-image-height: clamp(240px, 46svh, 420px);
+
+    align-content: end;
+    align-items: start;
     min-height: 100svh;
-    padding-top: 74px;
-    background-position: 0 0, 72% top;
+    padding: calc(var(--hero-image-height) + 98px) 0 max(32px, env(safe-area-inset-bottom));
+    background-position: center, right 74px;
+    background-size: 100% 100%, auto var(--hero-image-height);
     background-image:
-      linear-gradient(rgba($ink, 0.28), rgba($ink, 0.5)),
-      url('/pedestrians-900.webp');
+      linear-gradient(rgba($paper, 0) calc(var(--hero-image-height) - 6px), $paper calc(var(--hero-image-height) + 74px)),
+      url('/hero-desktop.webp');
+  }
+
+  @media (orientation: portrait) {
+    .home-hero--horizon {
+      background-image: url('/hero-mobile.webp');
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+
+  .home-hero--horizon .home-hero__grid {
+    gap: 24px;
+  }
+
+  .home-hero--horizon h1 {
+    max-width: 620px;
+    font-size: clamp(2.5rem, 10.5vw, 3.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
+
+  .home-hero--horizon h1 span,
+  .home-hero--horizon h1 em {
+    display: block;
+  }
+
+  .home-hero--horizon .home-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    width: min(100%, 360px);
+  }
+
+  .home-hero--horizon .home-hero__actions .arrow-link {
+    min-height: 44px;
   }
 
   .home-hero__grid,
@@ -517,6 +557,20 @@
   }
 }
 
+@media (min-width: 801px) and (max-width: 1024px) and (max-height: 500px) {
+  .home-hero--horizon {
+    background-attachment: scroll;
+  }
+
+  .home-hero--horizon h1 {
+    font-size: clamp(2.5rem, 5.5vw, 3.25rem);
+  }
+
+  .home-hero--horizon .home-hero__actions .arrow-link {
+    min-height: 44px;
+  }
+}
+
 @media (max-width: 560px) {
   .local-search-demo__heading,
   .local-search-section-heading {
@@ -634,22 +688,6 @@
   .home-hero__actions {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .home-hero--horizon .home-hero__actions {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .home-hero--horizon .home-hero__actions .button {
-    width: auto;
-    max-width: 100%;
-  }
-
-  .home-hero--horizon .home-hero__actions .arrow-link {
-    min-height: 44px;
   }
 
   .limits-grid {
