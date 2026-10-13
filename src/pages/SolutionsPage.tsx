@@ -1,12 +1,14 @@
 import { IndustryGrid } from '../components/IndustryGrid'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
+import { editorialPhotos } from '../data/editorialPhotos'
 
 export function SolutionsPage() {
   return (
     <>
       <PageHero
-        title="Industries we know well"
+        photo={editorialPhotos.industries}
+        title="Industries"
         description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
       />
       <section className="section section--soft solutions-grid-section">

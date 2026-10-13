@@ -1,3 +1,5 @@
+import { editorialPhotos } from '../data/editorialPhotos'
+import { PageHero } from '../components/ui/PageHero'
 import { ArrowLeft } from 'lucide-react'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { Link } from 'react-router-dom'
@@ -12,14 +14,13 @@ const process = [
 
 function ImprovementsIntro() {
   return (
-    <section className="rebuild-hero">
-      <div className="container" data-reveal="rise">
-        <Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>
-        <h1>Small Patches</h1>
-        <p>If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again.</p>
-        <div className="rebuild-hero__actions"><LeakCheckButton to="/services/website-leak-check" /></div>
-      </div>
-    </section>
+    <PageHero
+      title="Small Patches"
+      description="If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again."
+      photo={editorialPhotos.mobile}
+      backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
+      actions={<LeakCheckButton to="/services/website-leak-check" light />}
+    />
   )
 }
 

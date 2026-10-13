@@ -6,6 +6,8 @@ import { processSteps, services } from '../data/siteContent'
 import { ArrowLink } from '../components/ui/ArrowLink'
 import { CallToAction } from '../components/ui/CallToAction'
 import { SectionHeading } from '../components/ui/SectionHeading'
+import { Photo } from '../components/ui/Photo'
+import { editorialPhotos } from '../data/editorialPhotos'
 
 export function HomePage() {
   return (
@@ -44,7 +46,8 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--soft">
+      <section className="section what-we-fix">
+        <Photo photo={editorialPhotos.building} sizes="100vw" className="what-we-fix__photo" decorative />
         <div className="container what-we-fix__layout">
           <div className="what-we-fix__intro">
             <SectionHeading

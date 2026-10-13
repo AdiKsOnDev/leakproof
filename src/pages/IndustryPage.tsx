@@ -2,6 +2,7 @@ import { ArrowLeft, Check, X } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
 import { IndustryJourney } from '../components/IndustryJourney'
+import { Photo } from '../components/ui/Photo'
 import { industries } from '../data/siteContent'
 
 export function IndustryPage() {
@@ -31,6 +32,7 @@ export function IndustryPage() {
               <Icon className="industry-hero__watermark" size={150} strokeWidth={1} aria-hidden="true" />
             </div>
           </div>
+          <Photo photo={industry.photo} sizes="(max-width: 1268px) 100vw, 1220px" className="industry-hero__photo" />
         </div>
       </section>
 

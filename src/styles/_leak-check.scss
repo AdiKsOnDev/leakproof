@@ -1,10 +1,5 @@
 @use 'tokens' as *;
 
-.leak-check-hero { padding: 54px 0 100px; }
-.leak-check-hero .back-link { margin-bottom: 64px; }
-.leak-check-hero h1 { max-width: 960px; margin: 22px 0 26px; font-size: $font-size-title; }
-.leak-check-hero p { max-width: 660px; margin-bottom: 30px; color: $muted; }
-.leak-check-hero small { display: block; margin-top: 16px; color: $muted; font-size: 0.85rem; }
 
 .leak-report-section {
   border-block: 1px solid $line;
@@ -55,8 +50,6 @@
 .leak-check-request a { color: $blue; overflow-wrap: anywhere; }
 
 @media (max-width: 800px) {
-  .leak-check-hero { padding: 40px 0 70px; }
-  .leak-check-hero .back-link { margin-bottom: 44px; }
   .leak-report-layout { grid-template-columns: 1fr; gap: 40px; }
   .leak-report-intro { position: static; max-width: 600px; }
   .leak-check-request .contact-page__grid { grid-template-columns: 1fr; gap: 40px; }

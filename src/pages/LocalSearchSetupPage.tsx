@@ -1,3 +1,5 @@
+import { editorialPhotos } from '../data/editorialPhotos'
+import { PageHero } from '../components/ui/PageHero'
 import {
   ArrowLeft,
   Check,
@@ -57,16 +59,13 @@ export function LocalSearchSetupPage() {
 
   return (
     <main className="local-search-page">
-      <section className="rebuild-hero">
-        <div className="container" data-reveal="rise">
-          <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <h1>Local search setup</h1>
-          <p>We set up your Google Business Profile, improve your location pages and track the enquiries they bring in.</p>
-          <div className="rebuild-hero__actions">
-            <LeakCheckButton />
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Local search setup"
+        description="We set up your Google Business Profile, improve your location pages and track the enquiries they bring in."
+        photo={editorialPhotos.neighborhood}
+        backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
+        actions={<LeakCheckButton light />}
+      />
 
       <section className="section local-search-demo-section" aria-labelledby="search-example-title">
         <div className="container">
