@@ -1,3 +1,5 @@
+import { editorialPhotos } from '../data/editorialPhotos'
+import { PageHero } from '../components/ui/PageHero'
 import { ArrowDown, ArrowLeft, BookOpen, Code2, FolderGit2, KeyRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { RebuildDeliverableVisual, type RebuildDeliverable } from '../components/RebuildDeliverableVisual'
@@ -15,14 +17,13 @@ const deliverables: { kind: RebuildDeliverable; title: string; description: stri
 export function WebsiteRebuildPage() {
   return (
     <div className="rebuild-page">
-      <section className="rebuild-hero">
-        <div className="container" data-reveal="rise">
-          <Link className="back-link" to="/services"><ArrowLeft size={17} /> All services</Link>
-          <h1>Website redesign and rebuild</h1>
-          <p>If your current site is hard to update, slow or confusing, we can rebuild it around what customers need to know and do.</p>
-          <div className="rebuild-hero__actions"><LeakCheckButton /><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></div>
-        </div>
-      </section>
+      <PageHero
+        title="Website redesign and rebuild"
+        description="If your current site is hard to update, slow or confusing, we can rebuild it around what customers need to know and do."
+        photo={editorialPhotos.building}
+        backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
+        actions={<><LeakCheckButton light /><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></>}
+      />
 
       <section className="section rebuild-comparison" id="rebuild-comparison" aria-labelledby="rebuild-comparison-title">
         <div className="container">

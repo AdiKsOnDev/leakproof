@@ -162,6 +162,35 @@
   line-height: 1.6;
 }
 
+.what-we-fix {
+  position: relative;
+  isolation: isolate;
+  background: $ink;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(90deg, rgba($ink, 0.7), rgba($ink, 0.64) 40%, rgba($ink, 0.25));
+    content: '';
+  }
+}
+
+.what-we-fix__photo {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+}
+
+@media (max-width: 800px) {
+  .what-we-fix::before { background: rgba($ink, 0.62); }
+}
+
+.what-we-fix__intro,
+.what-we-fix__intro .section-heading p {
+  color: $white;
+}
+
 .what-we-fix__layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -190,8 +219,8 @@
   padding: 30px;
   border: 1px solid $line;
   border-radius: 16px 46px 16px 16px;
-  background: $white;
-  box-shadow: 0 14px 40px rgba($ink, 0.045);
+  background: $cream;
+  color: $ink;
 }
 
 .home-services__card:nth-child(odd) {
@@ -203,31 +232,15 @@
   border-radius: 46px 16px 16px 16px;
 }
 
-.home-services__card:first-child {
-  border: 0;
-  background: $blue;
-  color: $white;
-}
-
-.home-services__card:nth-child(3) {
-  border-color: rgba($blue, 0.13);
-  background: $soft-blue;
-}
-
 .home-services__icon {
   display: grid;
   grid-row: 1 / span 3;
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: $soft-blue;
-  color: $blue;
+  background: rgba($ink, 0.06);
+  color: $ink;
   place-items: center;
-}
-
-.home-services__card:first-child .home-services__icon {
-  background: rgba($white, 0.14);
-  color: $white;
 }
 
 .home-services__arrow {
@@ -237,10 +250,6 @@
   grid-row: 1;
   margin-top: 6px;
   color: $muted;
-}
-
-.home-services__card:first-child .home-services__arrow {
-  color: #cbd0ff;
 }
 
 .home-services h3 {
@@ -259,35 +268,17 @@
   font-size: $font-size-content;
 }
 
-.home-services__card:first-child p {
-  color: rgba($white, 0.76);
-}
-
 .home-services__card:is(:hover, :focus-visible) {
-  border-color: $blue;
-  box-shadow: 0 20px 42px rgba($ink, 0.1);
+  border-color: $muted;
+  background: $paper;
 }
 
 .home-services__card:is(:hover, :focus-visible) .home-services__arrow {
-  color: $blue;
+  color: $ink;
 }
 
 .home-services__card:is(:hover, :focus-visible) .home-services__icon {
-  background: $blue;
-  color: $white;
-}
-
-.home-services__card:first-child:is(:hover, :focus-visible, :active) {
-  background: $blue-dark;
-}
-
-.home-services__card:first-child:is(:hover, :focus-visible) .home-services__arrow {
-  color: $white;
-}
-
-.home-services__card:first-child:is(:hover, :focus-visible) .home-services__icon {
-  background: $white;
-  color: $blue-dark;
+  background: rgba($ink, 0.1);
 }
 
 .home-services__card:active {
@@ -342,8 +333,8 @@
 }
 
 .what-we-fix__intro .arrow-link {
-  color: $blue;
-  border-color: $blue;
+  color: $white;
+  border-color: $white;
 }
 
 .process-section {

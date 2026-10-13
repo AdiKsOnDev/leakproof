@@ -10,14 +10,15 @@ export interface Service {
 }
 
 export interface PhotoAsset {
-  id: string
+  id?: string
   src: string
+  srcSet?: string
   alt: string
   width: number
   height: number
   position: string
-  photographer: string
-  username: string
+  photographer?: string
+  username?: string
 }
 
 export interface Industry {
