@@ -1,6 +1,14 @@
 import type { PhotoAsset } from '../types/content'
 
 export const editorialPhotos = {
+  work: {
+    src: '/images/editorial/website-showcase.webp',
+    srcSet: '/images/editorial/website-showcase-768.webp 768w, /images/editorial/website-showcase.webp 1536w',
+    alt: 'An illustrative website showcase on a desktop monitor and phone beside printed layouts in a sunlit studio.',
+    width: 1536,
+    height: 1024,
+    position: '65% 50%',
+  },
   industries: {
     src: '/images/editorial/local-business-welcome.webp',
     srcSet: '/images/editorial/local-business-welcome-768.webp 768w, /images/editorial/local-business-welcome.webp 1536w',
