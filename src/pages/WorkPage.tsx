@@ -18,8 +18,7 @@ export function WorkPage() {
                 <ProjectImage screenshot={project.screenshots[0]} eager={index === 0} />
               </Link>
               <div className="work-project__copy">
-                <p className={isConcept ? 'project-kind' : undefined}>{isConcept ? 'Concept' : project.service}</p>
-                <h2><Link to={`/work/${project.slug}`}>{project.name}<ArrowUpRight aria-hidden="true" size={30} /></Link></h2>
+                <h2><Link to={`/work/${project.slug}`}>{project.name}</Link></h2>
                 <p>{project.summary}</p>
                 <Link className="project-text-link" to={`/work/${project.slug}`}>{isConcept ? 'View design notes' : 'Read the case study'} <ArrowUpRight size={17} aria-hidden="true" /></Link>
               </div>
