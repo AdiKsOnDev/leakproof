@@ -2,8 +2,10 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { getBlogPost } from '../data/blogPosts'
 import { staticPageMetadata } from '../data/pageMetadata'
+import { getProject } from '../data/projects'
 import { industries, services } from '../data/siteContent'
 import { updateDocumentMetadata } from '../utils/documentMetadata'
+import { getProjectMetadata } from '../utils/projectMetadata'
 
 export function PageTitle() {
   const { pathname } = useLocation()
@@ -16,6 +18,12 @@ export function PageTitle() {
     const service = services.find(({ slug }) => slug === serviceSlug)
     const postSlug = path.match(/^\/blog\/([^/]+)$/)?.[1]
     const post = getBlogPost(postSlug)
+    const project = getProject(path.match(/^\/work\/([^/]+)$/)?.[1])
+
+    if (project) {
+      updateDocumentMetadata(getProjectMetadata(project))
+      return
+    }
 
     if (post) {
       updateDocumentMetadata({

@@ -1,10 +1,11 @@
-import { ArrowUpRight, BookOpen, ChevronDown, Menu, Users, X } from 'lucide-react'
+import { ArrowUpRight, BookOpen, BriefcaseBusiness, ChevronDown, Menu, Users, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
 import { industries, services } from '../../data/siteContent'
 
 const navigation = [
+  { label: 'Our work', path: '/work', icon: BriefcaseBusiness },
   { label: 'Blog', path: '/blog', icon: BookOpen },
   { label: 'About', path: '/about', icon: Users },
 ]
