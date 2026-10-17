@@ -1,14 +1,20 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
+import { PageHero } from '../components/ui/PageHero'
 import { ProjectImage, TrafficResult } from '../components/work/ProjectEvidence'
+import { editorialPhotos } from '../data/editorialPhotos'
 import { projects } from '../data/projects'
 
 export function WorkPage() {
   return (
     <>
-      <section className="container work-heading"><h1>Our work</h1><p>Websites we’ve built, with a closer look at the choices behind them.</p></section>
-      <section className="container work-grid" aria-label="Projects">
+      <PageHero
+        photo={editorialPhotos.work}
+        title="Our work"
+        description="Websites we’ve built, with a closer look at the choices behind them."
+      />
+      <section className="container section work-grid" aria-label="Projects">
         {[...projects].sort((first, second) => Number(Boolean(second.featured)) - Number(Boolean(first.featured))).map((project, index) => {
           const isConcept = project.kind === 'concept'
 

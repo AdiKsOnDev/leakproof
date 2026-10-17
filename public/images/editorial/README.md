@@ -9,8 +9,13 @@ Generated with the built-in imagegen tool. These are illustrative scenes, not ph
 | mobile-review.webp | Leak check and website improvements heroes |
 | dubai-neighborhood.webp | Local search hero and Contact |
 | local-business-welcome.webp | Industries overview hero |
+| website-showcase.webp | Our work hero |
 
-The Industries image has 1536px and 768px WebP versions; the other images have 960px and 480px versions. Original generation prompts follow.
+The Industries and Our work images have 1536px and 768px WebP versions; the other images have 960px and 480px versions. Original generation prompts follow.
+
+## work
+
+Use case: photorealistic-natural. Asset type: landscape 3:2 editorial background photograph for the 'Our work' portfolio hero of Leakproof, a Dubai web design agency. Primary request: a quiet, tactile scene presenting completed website design work, visually consistent with warm cream, limestone, linen and restrained cobalt editorial photography. Scene: a real-feeling sunlit creative studio desk in warm pale stone, an unbranded slim desktop monitor and a smartphone propped naturally beside it, showing the same polished small-business website at desktop and mobile sizes: warm ivory layout, a large interior photograph, a few soft grey copy lines and one restrained cobalt blue booking button, no readable text. A small stack of printed finished website layouts sits partly visible in the foreground, no loose planning sketches. No people necessary. Composition: wide environmental three-quarter camera angle, monitor and phone in the center-right with enough breathing room to remain meaningful in a central portrait crop; left third and lower-left are visually quiet shaded stone and plaster, reserved for a white heading that the website will render separately. Soft natural afternoon window light from the right, honest material textures, subtle photographic grain, warm cream/sand palette, natural subdued contrast, refined documentary photography matching the existing About and Services imagery. This is a fictional illustrative scene, not a real office or client project. No text overlays, no headlines, no legible words, no logos, no watermarks, no charts, no metrics, no floating interfaces, no collage, no neon, no glossy CGI, no corporate boardroom, no exaggerated orange grading. Output one finished photograph, landscape 1536x1024.
 
 ## industries
 
