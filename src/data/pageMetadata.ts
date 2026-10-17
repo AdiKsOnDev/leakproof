@@ -8,7 +8,7 @@ export const staticPageMetadata: PageMetadataEntry[] = [
   {
     path: '/work',
     title: 'Our work | Leakproof',
-    description: 'Website projects by Leakproof, including the SentimentAI case study and a floral shop concept with design notes.',
+    description: 'Website projects by Leakproof, including the SentimentAI case study and floral shop and Dubai tour concepts with design notes.',
   },
   {
     path: '/',

@@ -99,6 +99,52 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: 'tourismia',
+    name: 'Tourismia.AE',
+    kind: 'concept',
+    service: 'Tour booking website',
+    category: 'Travel and experiences',
+    summary: 'A Dubai tour concept where visitors filter experiences by place, type and budget, then send an enquiry from the tour itself.',
+    screenshots: [
+      {
+        src: '/images/projects/tourismia/home.webp',
+        alt: 'Tourismia.AE homepage with See Dubai differently over a sunrise photograph of the Dubai skyline, above a search bar for destination, experience and budget.',
+        width: 1280,
+        height: 799,
+        title: 'Hero Section',
+        description: 'Visitors arrive with a rough idea of where they want to go and what they want to spend. The search bar sits in the opening view and asks for exactly that: destination, type of experience and budget per person.',
+        details: 'Every field starts with an open default, such as Anywhere in the UAE, so someone still browsing can search without committing to a choice.',
+      },
+      {
+        src: '/images/projects/tourismia/catalogue.webp',
+        alt: 'Tourismia.AE catalogue with category filters, a sort menu and three tour cards showing location, duration, pickup and price.',
+        width: 1280,
+        height: 799,
+        title: 'Comparing experiences',
+        description: 'Each card answers the questions people ask before opening a tour: where it is, how long it takes, how they get there and what it costs per person.',
+        details: 'Category filters and sorting share one row above the results, and the result count updates as they change. The heart button lets visitors shortlist tours without leaving the page.',
+      },
+      {
+        src: '/images/projects/tourismia/tour.webp',
+        alt: 'Tourismia.AE tour panel for the Sunset desert safari, with a photograph, short description, duration, pickup, price and included items.',
+        width: 1280,
+        height: 799,
+        title: 'Tour details',
+        description: 'Tours open in a panel over the catalogue, so visitors can return to the list exactly where they left it.',
+        details: 'Duration, pickup and price repeat in a single strip under the description, followed by what is included. The essentials stay in the same order on every tour.',
+      },
+      {
+        src: '/images/projects/tourismia/enquiry.webp',
+        alt: 'Tourismia.AE enquiry form with meeting point notes, preferred date, guests, name, email, an optional message and an estimated total.',
+        width: 1280,
+        height: 799,
+        title: 'Making an enquiry',
+        description: 'The enquiry form sits at the end of the tour panel, after the meeting point and suitability notes. Visitors read those details before they share their own.',
+        details: 'The estimated total updates with the number of guests. A note underneath explains that availability and the final price are confirmed before booking.',
+      },
+    ],
+  },
 ]
 
 export function getProject(slug: string | undefined) {
