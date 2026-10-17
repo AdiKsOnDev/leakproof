@@ -18,7 +18,7 @@ DESIGN.md from the main checkout is the visual authority; its local copy remains
 
 ## Featured work and concepts
 
-Set `featured: true` on the main client project. It appears first and spans the work grid, with its supplied feedback excerpt and sourced traffic figures beneath it. Other entries stay in the responsive two-column grid. SentimentAI is the featured project.
+Set `featured: true` on the main client project. It appears first and spans the work grid, with its supplied feedback excerpt and sourced traffic figures beneath it. Other entries stay in the responsive two-column grid. Work cards show the project category above the name, or Concept for concept work. SentimentAI is the featured project.
 
 Set `kind: 'concept'` on concept work. It receives a quiet Concept label, a View design notes link, and concept-specific page metadata. The first screenshot's notes appear beside the opening image; the remaining screenshots have their own captions. A concept has no deployment link. Omit `website`, feedback and traffic when they do not apply.
 
