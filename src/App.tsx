@@ -6,6 +6,8 @@ import { AboutPage } from './pages/AboutPage'
 import { BlogPage } from './pages/BlogPage'
 import { BlogPostPage } from './pages/BlogPostPage'
 import { ContactPage } from './pages/ContactPage'
+import { CaseStudyPage } from './pages/CaseStudyPage'
+import { WorkPage } from './pages/WorkPage'
 import { HomePage } from './pages/HomePage'
 import { IndustryPage } from './pages/IndustryPage'
 import { LocalSearchSetupPage } from './pages/LocalSearchSetupPage'
@@ -33,6 +35,8 @@ export default function App() {
           <Route path="solutions" element={<SolutionsPage />} />
           <Route path="solutions/:industrySlug" element={<IndustryPage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="work" element={<WorkPage />} />
+          <Route path="work/:projectSlug" element={<CaseStudyPage />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:postSlug" element={<BlogPostPage />} />
           <Route path="contact" element={<ContactPage />} />

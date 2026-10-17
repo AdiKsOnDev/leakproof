@@ -1,0 +1,115 @@
+import type { Project } from '../types/content'
+
+export const projects: Project[] = [
+  {
+    slug: 'sentiment-ai',
+    name: 'SentimentAI',
+    featured: true,
+    website: 'https://sentiment-ai.co.uk',
+    service: 'Complete website rebuild',
+    category: 'Conversation intelligence',
+    summary: 'A complete website rebuild for a conversation intelligence company.',
+    overview: 'SentimentAI analyses customer conversations for businesses. Their business is focused on humanizing interactions, and it was crucial that their website conveys that message adequately. We rebuilt it in a way where it feels warm and welcoming, while containing all information that a potential business partner might need to refer to.',
+    screenshots: [
+      {
+        src: '/images/projects/sentiment-ai/home.webp',
+        alt: 'Rebuilt SentimentAI homepage: Every Conversation Drives Revenue, over a photograph of people looking across London.',
+        width: 2784,
+        height: 1683,
+        title: 'Homepage',
+        description: 'A brief product introduction, followed by a link to speak to the founder.',
+      },
+      {
+        src: '/images/projects/sentiment-ai/sectors.webp',
+        alt: 'SentimentAI website showing its four sectors and an example from online education.',
+        width: 2758,
+        height: 1441,
+        title: 'Who it serves',
+        description: 'It was important to let a visitor know that SentimentAI can solve their problem as soon as possible. For this reason, the first section right after the intro is a list of industries that they have experience in.',
+        details: 'Each industry is accompanied with a case study, to signal trust and transparency. We used abstract images across the website where human interactions are the center of attention.',
+      },
+      {
+        src: '/images/projects/sentiment-ai/integrations.webp',
+        alt: 'SentimentAI integrations diagram connecting conversation sources and business systems to its ontology and outputs.',
+        width: 2744,
+        height: 1660,
+        title: 'How it connects',
+        description: 'A business considering SentimentAI needs to understand how it would fit into the systems they already use. We used a diagram to make those connections easy to follow.',
+        details: 'We included familiar tools such as Zoom, Gmail, Salesforce and HubSpot so visitors can recognise their own setup. This gives them a starting point for a conversation about how SentimentAI could work within their business.',
+      },
+      {
+        src: '/images/projects/sentiment-ai/contact.webp',
+        alt: 'SentimentAI contact section and footer, with a Talk to the Founder button.',
+        width: 2784,
+        height: 1683,
+        title: 'The next conversation',
+        description: 'Starting a conversation needed to feel approachable. We chose a direct invitation to speak to the founder, keeping the next step personal and consistent with SentimentAI’s focus on human interactions.',
+        details: 'We placed that invitation on the homepage and at the end of the page, so a visitor can get in touch when they feel ready. We also included a reply time of one working day to make it clear what happens after they reach out.',
+      },
+    ],
+    feedback: {
+      heading: 'Passed on to management',
+      context: 'A lead shared the website with their management team. SentimentAI told us that the positive response helped get another meeting scheduled.',
+      quote: '[REDACTED NAME] mentioned that they referred their management to our website and observed positive feedback all around. This was the final push for them to schedule another meeting with us',
+      emphasis: 'This was the final push for them to schedule another meeting with us',
+      attribution: 'CEO of SentimentAI, relaying feedback from a lead',
+    },
+    traffic: {
+      before: '20',
+      after: '~2,000',
+      label: 'Reported daily visitors',
+      context: 'After the rebuild, SentimentAI reported an increase in daily visitors, using figures from Cloudflare.',
+      source: 'Source: SentimentAI, citing Cloudflare.',
+    },
+  },
+  {
+    slug: 'floria',
+    name: 'Floria',
+    kind: 'concept',
+    service: 'Floral shop website',
+    category: 'Flowers and gifting',
+    summary: 'A floral shop concept where visitors choose an arrangement by palette, then select its size and add a personal note.',
+    screenshots: [
+      {
+        src: '/images/projects/floria/home.webp',
+        alt: 'Floria homepage with a large pale floral arrangement on a dark background, beside three palettes and their prices.',
+        width: 1280,
+        height: 799,
+        title: 'Let the flowers lead',
+        description: 'Choosing flowers starts with how an arrangement feels. We gave the opening photograph most of the space and kept the background dark so the colours and shapes can hold the visitor’s attention.',
+        details: 'Three palettes and their starting prices appear in the opening view. That gives visitors a way into the collection as soon as something catches their eye.',
+      },
+      {
+        src: '/images/projects/floria/collection.webp',
+        alt: 'Floria collection showing apricot, ivory and burgundy arrangements, with names, prices and flower varieties.',
+        width: 1280,
+        height: 799,
+        title: 'Choosing a palette',
+        description: 'The collection puts three arrangements side by side, with the price next to each name. Visitors can compare colour and cost in one place.',
+        details: 'The photographs carry most of the detail. Flower names sit underneath for people who want to look more closely before choosing an arrangement.',
+      },
+      {
+        src: '/images/projects/floria/arrangement.webp',
+        alt: 'Floria arrangement panel with a large bouquet photograph, price, two size options, optional gift note and Add to bag button.',
+        width: 1280,
+        height: 799,
+        title: 'Keeping choices together',
+        description: 'We kept the photograph, price and size options in the same panel. Someone choosing an arrangement can compare the two scales while keeping the flowers in view.',
+        details: 'The gift note is optional and sits above the action. It makes room for a personal message while leaving the purchase choices easy to find.',
+      },
+      {
+        src: '/images/projects/floria/approach.webp',
+        alt: 'Floria approach section pairing a photograph of a florist’s hands with an explanation of choosing, composing and caring for flowers.',
+        width: 1280,
+        height: 799,
+        title: 'Showing the work by hand',
+        description: 'The photograph of a florist arranging stems makes the work behind the flowers visible. Beside it, a short explanation covers choosing a palette, making the arrangement and caring for it.',
+        details: 'We placed this after the collection so visitors can look at the flowers first, then read how they are put together.',
+      },
+    ],
+  },
+]
+
+export function getProject(slug: string | undefined) {
+  return projects.find((project) => project.slug === slug)
+}

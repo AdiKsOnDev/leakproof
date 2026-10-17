@@ -6,6 +6,11 @@ export interface PageMetadataEntry {
 
 export const staticPageMetadata: PageMetadataEntry[] = [
   {
+    path: '/work',
+    title: 'Our work | Leakproof',
+    description: 'Website projects by Leakproof, including the SentimentAI case study and a floral shop concept with design notes.',
+  },
+  {
     path: '/',
     title: 'Home | Leakproof',
     description: 'Leakproof fixes the website problems that cost Dubai businesses bookings, enquiries and orders.',

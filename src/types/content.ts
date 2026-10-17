@@ -66,3 +66,28 @@ export interface BlogPost {
   sections: BlogPostSection[]
   relatedSlugs: string[]
 }
+
+export interface ProjectScreenshot {
+  src: string
+  alt: string
+  width: number
+  height: number
+  title: string
+  description: string
+  details?: string
+}
+
+export interface Project {
+  slug: string
+  name: string
+  kind?: 'concept'
+  featured?: boolean
+  website?: string
+  service: string
+  category: string
+  summary: string
+  overview?: string
+  screenshots: [ProjectScreenshot, ...ProjectScreenshot[]]
+  feedback?: { heading: string; context: string; quote: string; emphasis?: string; attribution: string }
+  traffic?: { before: string; after: string; label: string; context: string; source: string }
+}

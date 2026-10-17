@@ -6,6 +6,7 @@ interface DocumentMetadata {
   path: string
   type?: 'website' | 'article'
   structuredData?: Record<string, unknown>
+  noIndex?: boolean
 }
 
 const siteUrl = 'https://leakproof.me'
@@ -29,11 +30,16 @@ export function updateDocumentMetadata({
   path,
   type = 'website',
   structuredData,
+  noIndex = false,
 }: DocumentMetadata) {
   const canonicalPath = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`
   const url = `${siteUrl}${canonicalPath}`
 
   document.title = title
+  if (noIndex) {
+    setMetaTag('meta[name="robots"]', 'name', 'robots', 'noindex, follow')
+  }
+  if (!noIndex) document.head.querySelector('meta[name="robots"]')?.remove()
   setMetaTag('meta[name="description"]', 'name', 'description', description)
   setMetaTag('meta[property="og:title"]', 'property', 'og:title', title)
   setMetaTag('meta[property="og:description"]', 'property', 'og:description', description)
