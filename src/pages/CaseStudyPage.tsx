@@ -25,7 +25,6 @@ export function CaseStudyPage() {
                   <Link className="project-back" to="/work"><ArrowLeft size={16} aria-hidden="true" />Our work</Link>
                   <h1>{project.name}</h1>
                   {project.kind === 'concept' && <p className="project-kind">Concept</p>}
-                  <p className="case-heading__service">{project.service}</p>
                   {project.overview && <p className="case-heading__summary">{project.overview}</p>}
                   <ProjectWebsite project={project} />
                 </header>
