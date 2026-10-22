@@ -15,7 +15,7 @@ export function HomePage() {
       <section className="home-hero home-hero--horizon">
         <div className="container home-hero__grid">
           <div className="home-hero__intro">
-            <h1><span>Your website is</span> <em>leaking customers.</em></h1>
+            <h1><span>Your website is</span> leaking customers!</h1>
           </div>
 
           <div className="home-hero__content">
