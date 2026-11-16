@@ -73,8 +73,8 @@ export const projects: Project[] = [
       {
         src: '/images/projects/floria/home.webp',
         alt: 'Floria homepage with a large pale floral arrangement on a dark background, beside three palettes and their prices.',
-        width: 1280,
-        height: 799,
+        width: 2000,
+        height: 1209,
         title: 'Hero Section',
         description: 'Choosing flowers starts with how an arrangement feels. We gave the opening photograph most of the space and kept the background dark so the colours and shapes can hold the visitor’s attention.',
         details: 'Three palettes and their starting prices appear in the opening view. That gives visitors a way into the collection as soon as something catches their eye.',
@@ -82,8 +82,8 @@ export const projects: Project[] = [
       {
         src: '/images/projects/floria/collection.webp',
         alt: 'Floria collection showing apricot, ivory and burgundy arrangements, with names, prices and flower varieties.',
-        width: 1280,
-        height: 799,
+        width: 2000,
+        height: 1075,
         title: 'Choosing a palette',
         description: 'The collection puts three arrangements side by side, with the price next to each name. Visitors can compare colour and cost in one place.',
         details: 'The photographs carry most of the detail. Flower names sit underneath for people who want to look more closely before choosing an arrangement.',
@@ -91,8 +91,8 @@ export const projects: Project[] = [
       {
         src: '/images/projects/floria/arrangement.webp',
         alt: 'Floria arrangement panel with a large bouquet photograph, price, two size options, optional gift note and Add to bag button.',
-        width: 1280,
-        height: 799,
+        width: 2000,
+        height: 1084,
         title: 'Product Details',
         description: 'We kept the photograph, price and size options in the same panel. Someone choosing an arrangement can compare the two scales while keeping the flowers in view.',
         details: 'The gift note is optional and sits above the action. It makes room for a personal message while leaving the purchase choices easy to find.',
