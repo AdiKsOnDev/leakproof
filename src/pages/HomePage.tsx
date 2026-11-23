@@ -12,19 +12,17 @@ import { editorialPhotos } from '../data/editorialPhotos'
 export function HomePage() {
   return (
     <>
-      <section className="home-hero home-hero--horizon">
-        <div className="container home-hero__grid">
-          <div className="home-hero__intro">
-            <h1><span>Your website is</span> leaking customers!</h1>
+      <section className="home-hero">
+        <img className="home-hero__scene" src="/images/hero/leaking-aqueduct.webp" alt="" width="1672" height="941" fetchPriority="high" />
+        <div className="home-hero__head">
+          <h1><span>Your website is</span> <span>leaking customers!</span></h1>
+        </div>
+        <div className="container home-hero__foot">
+          <p>We use your site like a customer and find the pages, buttons and forms that get in the way.</p>
+          <div className="home-hero__actions">
+            <LeakCheckButton light />
+            <ArrowLink to="/services">See what we fix</ArrowLink>
           </div>
-
-          <div className="home-hero__content">
-            <div className="home-hero__actions">
-              <LeakCheckButton />
-              <ArrowLink to="/services">See what we fix</ArrowLink>
-            </div>
-          </div>
-
         </div>
       </section>
 
