@@ -7,11 +7,12 @@ interface PageHeroProps {
   description: string
   aside?: ReactNode
   photo?: PhotoAsset
+  illustration?: string
   backLink?: ReactNode
   actions?: ReactNode
 }
 
-export function PageHero({ title, description, aside, photo, backLink, actions }: PageHeroProps) {
+export function PageHero({ title, description, aside, photo, illustration, backLink, actions }: PageHeroProps) {
   if (photo) {
     return (
       <section className="photo-hero">
@@ -28,16 +29,18 @@ export function PageHero({ title, description, aside, photo, backLink, actions }
     )
   }
 
+  const sideContent = illustration ? <img className="page-hero__illustration" src={illustration} alt="" width="1448" height="1086" /> : aside
+
   return (
-    <section className="page-hero">
-      <div className={`container page-hero__grid ${aside ? '' : 'page-hero__grid--single'}`}>
+    <section className={`page-hero${illustration ? ' page-hero--illustrated' : ''}`}>
+      <div className={`container page-hero__grid ${sideContent ? '' : 'page-hero__grid--single'}`}>
         <div className="page-hero__content" data-reveal="left">
           {backLink}
           <h1>{title}</h1>
           <p className="page-hero__description">{description}</p>
           {actions && <div className="page-hero__actions">{actions}</div>}
         </div>
-        {aside && <div className="page-hero__aside" data-reveal="scale" data-reveal-delay="120">{aside}</div>}
+        {sideContent && <div className="page-hero__aside" data-reveal="scale" data-reveal-delay="120">{sideContent}</div>}
       </div>
     </section>
   )
