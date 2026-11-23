@@ -39,12 +39,12 @@
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
-// The peak sits 0.394 scene-widths above the bottom edge
+// The peak sits 0.404 scene-widths above the bottom edge
 .home-hero__head {
   position: absolute;
   z-index: 0;
   right: 0;
-  bottom: calc(var(--scene) * 0.394 - var(--headline) * 0.42);
+  bottom: calc(var(--scene) * 0.404 - var(--headline) * 0.62);
   left: 0;
   text-align: center;
 
@@ -60,7 +60,7 @@
   }
 }
 
-// Paragraph and actions sit beside the rock's narrow middle, about 0.15 scene-widths from centre
+// Paragraph and actions sit beside the rock, which reaches about 0.19 scene-widths left of centre at that height
 .home-hero__foot {
   position: absolute;
   z-index: 2;
@@ -73,7 +73,7 @@
   gap: 40px;
 
   p {
-    max-width: min(300px, calc(50vw - var(--scene) * 0.15 - (100vw - min(100vw - 48px, #{$container})) / 2 - 24px));
+    max-width: min(300px, calc(50vw - var(--scene) * 0.19 - (100vw - min(100vw - 48px, #{$container})) / 2 - 24px));
     margin: 0;
     line-height: 1.6;
   }
@@ -94,6 +94,32 @@
 
   .home-hero__foot {
     animation-delay: 120ms;
+  }
+}
+
+@keyframes home-hero-pin {
+  to {
+    translate: 0 100svh;
+  }
+}
+
+// The copy cancels out the first screen of scrolling, so it holds still while the
+// scene rises through it; the copy drops under the scene so the rock covers it.
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .home-hero__head,
+    .home-hero__foot {
+      z-index: 0;
+      animation:
+        home-hero-enter 800ms cubic-bezier(0.2, 0.75, 0.25, 1) backwards,
+        home-hero-pin linear both;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 100svh;
+    }
+
+    .home-hero__foot {
+      animation-delay: 120ms, 0s;
+    }
   }
 }
 
