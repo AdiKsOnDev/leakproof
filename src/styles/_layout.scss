@@ -15,8 +15,7 @@
   transition: background-color 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
 }
 
-.site-header--home,
-.site-shell:has(.photo-hero) > .site-header {
+.site-header--home {
   position: fixed;
   right: 0;
   left: 0;
@@ -30,7 +29,7 @@
   -webkit-backdrop-filter: blur(18px);
 }
 
-.site-shell:has(.photo-hero) > .site-header:not(.site-header--scrolled):not(.site-header--menu-open) {
+.site-shell:has(.home-hero) > .site-header:not(.site-header--scrolled):not(.site-header--menu-open) {
   .brand img { filter: grayscale(1) brightness(0) invert(1); }
   .site-nav__link, .menu-button { color: $white; }
   .site-nav__link::after { background: $white; }

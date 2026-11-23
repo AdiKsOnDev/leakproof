@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { ArrowUpRight, BadgeDollarSign, Gauge, MessageCircleOff, Star } from 'lucide-react'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
@@ -8,7 +8,7 @@ export function AboutPage() {
   return (
     <>
       <PageHero
-        photo={editorialPhotos.planning}
+        illustration={pageIllustrations.about}
         title="About Leakproof"
         description="Leakproof is a web agency in Dubai. Clients speak directly to the person who reviews, designs and builds their website."
       />

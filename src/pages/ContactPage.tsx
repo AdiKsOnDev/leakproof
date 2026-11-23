@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { contactIllustration } from '../data/illustrations'
 import { Photo } from '../components/ui/Photo'
 import { Mail, MapPin } from 'lucide-react'
 import { LeakCheckForm } from '../components/LeakCheckForm'
@@ -21,7 +21,7 @@ export function ContactPage() {
         </div>
 
         <LeakCheckForm />
-        <Photo photo={editorialPhotos.neighborhood} sizes="(max-width: 800px) 100vw, 40vw" className="contact-page__photo" />
+        <Photo photo={contactIllustration} sizes="(max-width: 800px) 100vw, 40vw" className="contact-page__photo" />
       </div>
     </section>
   )

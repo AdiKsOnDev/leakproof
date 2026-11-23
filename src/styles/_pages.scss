@@ -1,101 +1,126 @@
 @use 'tokens' as *;
 
+@keyframes home-hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+// Sizes and offsets are fractions of the scene's width, so the headline keeps
+// the same overlap with the peak on every screen. The scene shrinks on short,
+// wide screens so the whole composition still fits below the header.
 .home-hero {
+  --scene: min(100vw, calc((100svh - 130px) * 2));
+  --headline: calc(var(--scene) * 0.075);
+
   position: relative;
-  padding: 105px 0 0;
-  background:
-    radial-gradient(circle at 76% 18%, rgba($blue, 0.09), transparent 25%),
-    radial-gradient(circle at 8% 76%, rgba($white, 0.95), transparent 24%),
-    linear-gradient(rgba($blue, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($blue, 0.022) 1px, transparent 1px);
-  background-size: auto, auto, 40px 40px, 40px 40px;
+  isolation: isolate;
+  min-height: 100svh;
   overflow: hidden;
+  background: $ink;
+  color: $white;
+
+  .arrow-link {
+    border-color: currentColor;
+    color: inherit;
+  }
 }
 
-.home-hero__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(440px, 0.95fr);
+.home-hero__scene {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  width: var(--scene);
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+// The peak sits 0.404 scene-widths above the bottom edge
+.home-hero__head {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: calc(var(--scene) * 0.404 - var(--headline) * 0.62);
+  left: 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: var(--headline);
+    line-height: 0.92;
+  }
+
+  span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+// Paragraph and actions sit beside the rock, which reaches about 0.19 scene-widths left of centre at that height
+.home-hero__foot {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: calc(var(--scene) * 0.25 - 48px);
+  left: 0;
+  display: flex;
   align-items: center;
-  gap: clamp(55px, 7vw, 105px);
-}
+  justify-content: space-between;
+  gap: 40px;
 
-.home-hero h1 {
-  max-width: 760px;
-  margin: 24px 0 30px;
-}
-
-.home-hero__content > p {
-  max-width: 620px;
-  margin-bottom: 0;
-  color: $muted;
-  font-size: $font-size-content;
-  line-height: 1.72;
+  p {
+    max-width: min(300px, calc(50vw - var(--scene) * 0.19 - (100vw - min(100vw - 48px, #{$container})) / 2 - 24px));
+    margin: 0;
+    line-height: 1.6;
+  }
 }
 
 .home-hero__actions {
   display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-top: 38px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
 }
 
-.home-hero--horizon {
-  display: grid;
-  align-items: center;
-  min-height: 100svh;
-  padding-top: 88px;
-  background: $paper url('/hero-desktop.webp') 85% center / cover no-repeat;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__head,
+  .home-hero__foot {
+    animation: home-hero-enter 800ms cubic-bezier(0.2, 0.75, 0.25, 1) backwards;
+  }
 
-@media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
-  .home-hero--horizon {
-    background-attachment: fixed;
+  .home-hero__foot {
+    animation-delay: 120ms;
   }
 }
 
-.home-hero--horizon .home-hero__grid {
-  grid-template-columns: 1fr;
-  gap: 30px;
-  justify-items: center;
+@keyframes home-hero-pin {
+  to {
+    translate: 0 100svh;
+  }
 }
 
-.home-hero--horizon .home-hero__intro,
-.home-hero--horizon .home-hero__content {
-  grid-column: 1;
-}
+// The copy cancels out the first screen of scrolling, so it holds still while the
+// scene rises through it; the copy drops under the scene so the rock covers it.
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .home-hero__head,
+    .home-hero__foot {
+      z-index: 0;
+      animation:
+        home-hero-enter 800ms cubic-bezier(0.2, 0.75, 0.25, 1) backwards,
+        home-hero-pin linear both;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 100svh;
+    }
 
-.home-hero--horizon .home-hero__intro,
-.home-hero--horizon .home-hero__content {
-  width: 100%;
-  text-align: left;
-}
-
-.home-hero--horizon h1 {
-  max-width: min(55%, 620px);
-  margin: 0;
-}
-
-.home-hero--horizon h1 span {
-  color: $ink;
-}
-
-.home-hero--horizon h1 em {
-  display: inline;
-  margin-left: 0;
-  color: $blue;
-}
-
-.home-hero--horizon .home-hero__content > p {
-  max-width: 720px;
-  margin: 0 auto;
-  color: $muted;
-}
-
-.home-hero--horizon .home-hero__actions {
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 0;
+    .home-hero__foot {
+      animation-delay: 120ms, 0s;
+    }
+  }
 }
 
 .deliverables-section__grid,
@@ -162,35 +187,6 @@
   line-height: 1.6;
 }
 
-.what-we-fix {
-  position: relative;
-  isolation: isolate;
-  background: $ink;
-
-  &::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(90deg, rgba($ink, 0.7), rgba($ink, 0.64) 40%, rgba($ink, 0.25));
-    content: '';
-  }
-}
-
-.what-we-fix__photo {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-}
-
-@media (max-width: 800px) {
-  .what-we-fix::before { background: rgba($ink, 0.62); }
-}
-
-.what-we-fix__intro,
-.what-we-fix__intro .section-heading p {
-  color: $white;
-}
-
 .what-we-fix__layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -219,7 +215,7 @@
   padding: 30px;
   border: 1px solid $line;
   border-radius: 16px 46px 16px 16px;
-  background: $cream;
+  background: $white;
   color: $ink;
 }
 
@@ -330,11 +326,6 @@
   opacity: 1;
   transform: none;
   transition: none;
-}
-
-.what-we-fix__intro .arrow-link {
-  color: $white;
-  border-color: $white;
 }
 
 .process-section {

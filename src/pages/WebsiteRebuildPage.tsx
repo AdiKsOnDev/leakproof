@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { PageHero } from '../components/ui/PageHero'
 import { ArrowDown, ArrowLeft, BookOpen, Code2, FolderGit2, KeyRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -20,9 +20,9 @@ export function WebsiteRebuildPage() {
       <PageHero
         title="Website redesign and rebuild"
         description="If your current site is hard to update, slow or confusing, we can rebuild it around what customers need to know and do."
-        photo={editorialPhotos.building}
+        illustration={pageIllustrations.rebuild}
         backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
-        actions={<><LeakCheckButton light /><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></>}
+        actions={<><LeakCheckButton /><a className="arrow-link" href="#rebuild-comparison">See the difference <ArrowDown size={18} aria-hidden="true" /></a></>}
       />
 
       <section className="section rebuild-comparison" id="rebuild-comparison" aria-labelledby="rebuild-comparison-title">
