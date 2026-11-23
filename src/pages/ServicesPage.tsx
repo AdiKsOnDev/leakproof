@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { CheckCircle2, Code2, FolderGit2, KeyRound } from 'lucide-react'
 import { ServiceGrid } from '../components/ServiceGrid'
 import { CallToAction } from '../components/ui/CallToAction'
@@ -9,7 +9,7 @@ export function ServicesPage() {
   return (
     <>
       <PageHero
-        photo={editorialPhotos.building}
+        illustration={pageIllustrations.services}
         title="Services"
         description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
       />

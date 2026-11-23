@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { PageHero } from '../components/ui/PageHero'
 import { ArrowLeft } from 'lucide-react'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
@@ -17,9 +17,9 @@ function ImprovementsIntro() {
     <PageHero
       title="Small Patches"
       description="If most of it works, keep it. We can fix confusing pages, difficult forms and booking steps without starting again."
-      photo={editorialPhotos.mobile}
+      illustration={pageIllustrations.improvements}
       backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
-      actions={<LeakCheckButton to="/services/website-leak-check" light />}
+      actions={<LeakCheckButton to="/services/website-leak-check" />}
     />
   )
 }

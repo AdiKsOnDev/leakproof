@@ -43,7 +43,7 @@
   gap: 100px;
 }
 
-.page-hero--illustrated .page-hero__grid {
+.page-hero__grid--illustrated {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   align-items: center;
   gap: 40px;
@@ -383,6 +383,10 @@
   aspect-ratio: 16 / 7;
   background: $cream;
   overflow: hidden;
+}
+
+.industry-card__photo .photo {
+  object-fit: contain;
 }
 
 .industry-card__body {

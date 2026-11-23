@@ -1,5 +1,5 @@
-import { editorialPhotos } from '../data/editorialPhotos'
 import { PageHero } from '../components/ui/PageHero'
+import { pageIllustrations } from '../data/illustrations'
 import { ArrowLeft, ArrowRight, FileText, Mail, Plus } from 'lucide-react'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
 import { useState } from 'react'
@@ -24,9 +24,9 @@ export function WebsiteLeakCheckPage() {
       <PageHero
         title="Website leak check"
         description="Send us your website. Within 1–2 days, we’ll email a PDF report on the biggest issues we find, with an invitation to meet and discuss them."
-        photo={editorialPhotos.mobile}
+        illustration={pageIllustrations.leakCheck}
         backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
-        actions={<div><LeakCheckButton to="#request-leak-check" light /><small>No obligation to book a meeting.</small></div>}
+        actions={<div><LeakCheckButton to="#request-leak-check" /><small>No obligation to book a meeting.</small></div>}
       />
 
       <section className="leak-report-section section" aria-labelledby="leak-report-title">

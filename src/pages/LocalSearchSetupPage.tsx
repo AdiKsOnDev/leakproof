@@ -1,4 +1,4 @@
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { PageHero } from '../components/ui/PageHero'
 import {
   ArrowLeft,
@@ -62,9 +62,9 @@ export function LocalSearchSetupPage() {
       <PageHero
         title="Local search setup"
         description="We set up your Google Business Profile, improve your location pages and track the enquiries they bring in."
-        photo={editorialPhotos.neighborhood}
+        illustration={pageIllustrations.localSearch}
         backLink={<Link className="back-link" to="/services"><ArrowLeft size={17} aria-hidden="true" /> All services</Link>}
-        actions={<LeakCheckButton light />}
+        actions={<LeakCheckButton />}
       />
 
       <section className="section local-search-demo-section" aria-labelledby="search-example-title">

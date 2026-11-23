@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
 import { ProjectImage, TrafficResult } from '../components/work/ProjectEvidence'
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 import { projects } from '../data/projects'
 
 export function WorkPage() {
   return (
     <>
       <PageHero
-        photo={editorialPhotos.work}
+        illustration={pageIllustrations.work}
         title="Our work"
         description="Websites we’ve built, with a closer look at the choices behind them."
       />

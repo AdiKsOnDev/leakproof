@@ -188,27 +188,7 @@
 }
 
 .what-we-fix {
-  position: relative;
-  isolation: isolate;
   background: $ink;
-
-  &::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(90deg, rgba($ink, 0.7), rgba($ink, 0.64) 40%, rgba($ink, 0.25));
-    content: '';
-  }
-}
-
-.what-we-fix__photo {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-}
-
-@media (max-width: 800px) {
-  .what-we-fix::before { background: rgba($ink, 0.62); }
 }
 
 .what-we-fix__intro,

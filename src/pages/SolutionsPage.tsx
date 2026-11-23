@@ -1,13 +1,13 @@
 import { IndustryGrid } from '../components/IndustryGrid'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
-import { editorialPhotos } from '../data/editorialPhotos'
+import { pageIllustrations } from '../data/illustrations'
 
 export function SolutionsPage() {
   return (
     <>
       <PageHero
-        photo={editorialPhotos.industries}
+        illustration={pageIllustrations.solutions}
         title="Industries"
         description="We plan your pages and booking steps around the questions your customers ask, so they can find answers and book more easily."
       />
