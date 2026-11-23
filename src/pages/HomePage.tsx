@@ -42,7 +42,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section what-we-fix">
+      <section className="section section--soft what-we-fix">
         <div className="container what-we-fix__layout">
           <div className="what-we-fix__intro">
             <SectionHeading

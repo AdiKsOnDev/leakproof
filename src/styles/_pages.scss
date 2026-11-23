@@ -187,15 +187,6 @@
   line-height: 1.6;
 }
 
-.what-we-fix {
-  background: $ink;
-}
-
-.what-we-fix__intro,
-.what-we-fix__intro .section-heading p {
-  color: $white;
-}
-
 .what-we-fix__layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -224,7 +215,7 @@
   padding: 30px;
   border: 1px solid $line;
   border-radius: 16px 46px 16px 16px;
-  background: $cream;
+  background: $white;
   color: $ink;
 }
 
@@ -335,11 +326,6 @@
   opacity: 1;
   transform: none;
   transition: none;
-}
-
-.what-we-fix__intro .arrow-link {
-  color: $white;
-  border-color: $white;
 }
 
 .process-section {
