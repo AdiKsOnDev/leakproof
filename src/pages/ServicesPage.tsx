@@ -11,7 +11,7 @@ export function ServicesPage() {
       <PageHero
         illustration={pageIllustrations.services}
         title="Services"
-        description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
+        description="We build websites from scratch, rebuild existing sites and fix problems that get in the way of bookings and enquiries."
       />
 
       <section className="section services-list-section">

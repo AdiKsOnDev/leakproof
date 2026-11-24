@@ -7,7 +7,7 @@ export const pageIllustrations = {
   leakCheck: illustrationPath('leak-check'),
   improvements: illustrationPath('improvements'),
   rebuild: illustrationPath('rebuild'),
-  localSearch: illustrationPath('local-search'),
+  newWebsite: illustrationPath('new-website'),
   about: illustrationPath('about'),
   work: illustrationPath('work'),
 }

@@ -1,5 +1,5 @@
 import {
-  ChartNoAxesCombined,
+  PanelsTopLeft,
   Hammer,
   Layers,
   MessageCircle,
@@ -22,16 +22,18 @@ export const salonPhoto: PhotoAsset = {
   username: 'gregtrow',
 }
 
+export const newWebsite: Service = {
+  slug: 'new-website',
+  number: '01',
+  title: 'New Website',
+  illustration: 'newWebsite',
+  summary: 'Starting from scratch? We plan, design and build your first website around your brand and what your customers need to do.',
+  details: ['Page planning and copy', 'Design and development', 'Launch on your hosting'],
+  icon: PanelsTopLeft,
+}
+
 export const services: Service[] = [
-  {
-    slug: 'website-leak-check',
-    number: '01',
-    title: 'Website leak check',
-    illustration: 'leakCheck',
-    summary: 'We use the site like a customer and find the pages, buttons and forms that get in the way.',
-    details: ['Booking or enquiry route', 'Mobile speed and usability', 'Fixes ranked by importance'],
-    icon: Search,
-  },
+  newWebsite,
   {
     slug: 'website-rebuild',
     number: '02',
@@ -51,13 +53,13 @@ export const services: Service[] = [
     icon: Wrench,
   },
   {
-    slug: 'local-search-setup',
+    slug: 'website-leak-check',
     number: '04',
-    title: 'Local search setup',
-    illustration: 'localSearch',
-    summary: 'The page structure and business information Google needs to understand where you work and what you offer.',
-    details: ['Pages for real service areas', 'Titles, metadata and schema', 'Analytics and enquiry tracking'],
-    icon: ChartNoAxesCombined,
+    title: 'Website leak check',
+    illustration: 'leakCheck',
+    summary: 'We use the site like a customer and find the pages, buttons and forms that get in the way.',
+    details: ['Booking or enquiry route', 'Mobile speed and usability', 'Fixes ranked by importance'],
+    icon: Search,
   },
 ]
 

@@ -8,7 +8,7 @@ import { ContactPage } from './pages/ContactPage'
 import { CaseStudyPage } from './pages/CaseStudyPage'
 import { WorkPage } from './pages/WorkPage'
 import { HomePage } from './pages/HomePage'
-import { LocalSearchSetupPage } from './pages/LocalSearchSetupPage'
+import { NewWebsitePage } from './pages/NewWebsitePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { WebsiteLeakCheckPage } from './pages/WebsiteLeakCheckPage'
@@ -23,7 +23,7 @@ export default function App() {
         <Route element={<SiteLayout />}>
           <Route index element={<HomePage />} />
           <Route path="services" element={<ServicesPage />} />
-          <Route path="services/local-search-setup" element={<LocalSearchSetupPage />} />
+          <Route path="services/new-website" element={<NewWebsitePage />} />
           <Route path="services/website-leak-check" element={<WebsiteLeakCheckPage />} />
           <Route path="services/website-improvements" element={<WebsiteImprovementsPage />} />
           <Route path="services/website-rebuild" element={<WebsiteRebuildPage />} />
