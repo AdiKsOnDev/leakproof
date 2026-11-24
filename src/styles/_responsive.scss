@@ -19,6 +19,8 @@
 }
 
 @media (max-width: 800px) {
+  .home-hero__actions .arrow-link { display: none; }
+
   .cta-section {
     padding-block: 64px;
   }
@@ -199,7 +201,7 @@
   }
 
   .page-hero__grid,
-  .issue-review,
+  .craft-statement__layout,
   .deliverables-section__grid,
   .shared-needs-section__grid,
   .industry-hero__grid,
@@ -380,19 +382,6 @@
 
   .limits-section .section-heading p {
     padding-bottom: 0;
-  }
-
-  .process-section__layout {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .process-section h2 {
-    max-width: none;
-  }
-
-  .process-path li {
-    column-gap: 20px;
   }
 
   .page-hero {
@@ -723,4 +712,16 @@
     width: max(700px, 150vw);
     mask-image: none;
   }
+}
+
+@media (max-width: 800px) {
+  .home-hero {
+    --scene: min(max(700px, 150vw), 100svh);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-block: 88px calc(var(--scene) * 0.404 + 20px);
+  }
+
+  .home-hero__scene { width: var(--scene); }
 }

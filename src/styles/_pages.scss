@@ -22,6 +22,7 @@
 
 .home-hero__scene {
   position: absolute;
+  pointer-events: none;
   z-index: 1;
   bottom: 0;
   left: 50%;
@@ -108,139 +109,102 @@
   gap: 100px;
 }
 
-.issue-review {
+.craft-statement {
+  --craft-paper: #{$paper};
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(32px, 6vw, 80px);
-}
-
-.issue-review h2 {
-  margin: 0 0 24px;
-  font-size: clamp(30px, 3.6vw, 48px);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
-}
-
-.issue-review__status {
-  display: flex;
+  align-content: center;
+  row-gap: clamp(48px, 6vw, 80px);
   align-items: center;
-  gap: 10px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid $line;
-  font-weight: 600;
+  min-height: 100svh;
+  padding-block: clamp(72px, 10vw, 140px);
+  background: var(--craft-paper);
 }
 
-.issue-review__status::before {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: $green;
-  content: '';
-}
-
-.issue-review ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.issue-review li {
-  display: flex;
-  align-items: start;
-  gap: 18px;
-  padding: 28px 0;
-  border-bottom: 1px solid $line;
-}
-
-.issue-review li svg {
-  flex-shrink: 0;
-  margin-top: 3px;
-  color: $red;
-}
-
-.issue-review li p {
-  margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-
-.process-section {
-  background: $paper;
-  color: $ink;
-}
-
-.process-section__layout {
+.craft-statement__layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  align-items: start;
-  gap: 80px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
 }
 
-.process-section h2 {
-  max-width: 8ch;
-  margin: 0;
-  font-size: $font-size-title;
-  line-height: 1.04;
+.craft-statement__copy {
+  h2 { margin: 0 0 28px; font-size: $font-size-title; line-height: 1.02; }
+  p { margin: 0; max-width: 42ch; color: $muted; font-size: clamp(1rem, 1.55vw, 1.25rem); }
+  .craft-statement__ending { margin-top: 20px; color: $ink; }
+  h2 span { letter-spacing: normal; }
 }
 
-.process-path {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.process-path li {
-  position: relative;
+.craft-statement__visual {
+  aspect-ratio: 3 / 2;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 56px;
-  gap: 12px 32px;
-  padding-bottom: 48px;
+  align-items: center;
 }
 
-.process-path li:not(:last-child)::after {
-  position: absolute;
-  top: 56px;
-  right: 27px;
-  bottom: 0;
-  width: 1px;
-  background: rgba($blue, 0.2);
-  content: '';
-}
+.craft-statement__curve { width: 100%; overflow: visible; color: $blue; }
 
-.process-path h3 {
-  align-self: center;
-  margin: 0;
-}
-
-.process-path__icon {
-  display: grid;
-  width: 56px;
-  height: 56px;
-  border: 1px solid rgba($blue, 0.2);
-  border-radius: 50%;
-  background: $soft-blue;
-  color: $blue;
-  place-items: center;
-}
-
-.process-path p {
-  grid-column: 1;
-  max-width: 460px;
-  margin: 0;
-  color: $muted;
-  font-size: $font-size-content;
-  line-height: 1.72;
-}
-
-.process-path li:last-child {
-  padding-bottom: 0;
-
-  .process-path__icon {
-    border-color: $blue;
-    background: $blue;
-    color: $white;
+@media (prefers-reduced-motion: no-preference) {
+  .craft-statement__curve[data-moving] {
+    .craft-statement__stroke,
+    .craft-statement__arm,
+    .craft-statement__handle--top,
+    .craft-statement__handle--bottom { animation: 2s ease-in-out infinite; }
+    .craft-statement__stroke { animation-name: craft-bend; }
+    .craft-statement__arm { transform-origin: 330px 156px; animation-name: craft-arm; }
+    .craft-statement__handle--top { animation-name: craft-top; }
+    .craft-statement__handle--bottom { animation-name: craft-bottom; }
   }
+}
+
+// All four tracks use the same handle length around the fixed anchor at (330, 156).
+$craft-handle-lengths: (0%: 120, 28%: 174, 48%: 124, 62%: 134, 76%: 120, 100%: 120);
+@keyframes craft-bend {
+  @each $time, $length in $craft-handle-lengths {
+    #{$time} { d: path('M40 228 C156 228 330 #{156 - $length} 330 156 S404 238 444 178'); }
+  }
+}
+@keyframes craft-arm {
+  @each $time, $length in $craft-handle-lengths {
+    #{$time} { transform: scaleY(calc(#{$length} / 120)); }
+  }
+}
+@keyframes craft-top {
+  @each $time, $length in $craft-handle-lengths {
+    #{$time} { transform: translateY(#{120 - $length}px); }
+  }
+}
+@keyframes craft-bottom {
+  @each $time, $length in $craft-handle-lengths {
+    #{$time} { transform: translateY(#{$length - 120}px); }
+  }
+}
+
+.website-offers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(40px, 5vw, 72px) clamp(24px, 6vw, 88px);
+  padding: 0;
+  margin-block: 0;
+  list-style: none;
+  p { max-width: 25ch; margin: 16px 0 0; font-size: $font-size-content; line-height: 1.32; }
+
+  @media (max-width: 800px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.offer-mark {
+  display: block;
+  width: 96px;
+  height: 72px;
+  background: $ink;
+  border-radius: $radius-small;
+  color: $white;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+
+  &__guide { stroke-width: 1.6; opacity: 0.55; }
+  &__anchor { fill: var(--craft-paper); stroke-width: 2.4; }
 }
 
 .deliverables-list {

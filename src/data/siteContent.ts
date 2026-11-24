@@ -1,8 +1,10 @@
 import {
-  Activity,
-  CalendarCheck,
   ChartNoAxesCombined,
   Hammer,
+  Layers,
+  MessageCircle,
+  Pencil,
+  Server,
   Search,
   Wrench,
 } from 'lucide-react'
@@ -60,22 +62,9 @@ export const services: Service[] = [
 ]
 
 export const processSteps = [
-  {
-    number: '01',
-    title: 'Find the leaks',
-    text: 'We open the site on a phone and follow the main route to a booking or enquiry.',
-    icon: Activity,
-  },
-  {
-    number: '02',
-    title: 'Set the priorities',
-    text: 'We prioritise problems by how many customers they affect and the value of the bookings or enquiries involved.',
-    icon: CalendarCheck,
-  },
-  {
-    number: '03',
-    title: 'Build and measure',
-    text: 'We make the agreed changes and track whether more people reach the booking or enquiry.',
-    icon: ChartNoAxesCombined,
-  },
-]
+  ['Talk it through', 'Tell us about your business, your customers and what your site needs to do.', MessageCircle],
+  ['Compare mockups', 'We send you a few designs. You tell us what you like and what you’d change.', Layers],
+  ['Refine the design', 'Together we revise the layout and copy until you’re ready to sign off.', Pencil],
+  ['Go live', 'We build the approved site and launch it on your infrastructure. You keep control of hosting and access.', Server],
+  ['Keep it running', 'After launch, we maintain the site, apply updates and fix issues.', Wrench],
+] as const
