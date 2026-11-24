@@ -1,10 +1,12 @@
 import type { LucideIcon } from 'lucide-react'
+import type { pageIllustrations } from '../data/illustrations'
 
 export interface Service {
   slug: string
   number: string
   title: string
   summary: string
+  illustration: keyof typeof pageIllustrations
   details: string[]
   icon: LucideIcon
 }
@@ -19,29 +21,6 @@ export interface PhotoAsset {
   position: string
   photographer?: string
   username?: string
-}
-
-export interface Industry {
-  slug: string
-  name: string
-  shortName: string
-  eyebrow: string
-  headline: string
-  summary: string
-  photo: PhotoAsset
-  problems: string[]
-  outcomes: string[]
-  metric: string
-  metricLabel: string
-  icon: LucideIcon
-  journeyTitle: string
-  journeySummary: string
-  journey: Array<{
-    title: string
-    text: string
-  }>
-  principle: string
-  principleText: string
 }
 
 export type BlogThumbnailVariant = 'diagnostic' | 'local-seo' | 'checklist'

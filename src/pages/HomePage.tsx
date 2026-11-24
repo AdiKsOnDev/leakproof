@@ -1,11 +1,11 @@
-import { ArrowUpRight, CircleHelp, Smartphone, Unlink } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { CircleHelp, Smartphone, Unlink } from 'lucide-react'
+import { ServiceList } from '../components/ServiceList'
+import { SiteIntro } from '../components/SiteIntro'
+import { heroHeadlineLines } from '../data/heroIntro'
 import { LeakCheckButton } from '../components/ui/LeakCheckButton'
-import { IndustryGrid } from '../components/IndustryGrid'
-import { processSteps, services } from '../data/siteContent'
+import { processSteps } from '../data/siteContent'
 import { ArrowLink } from '../components/ui/ArrowLink'
 import { CallToAction } from '../components/ui/CallToAction'
-import { SectionHeading } from '../components/ui/SectionHeading'
 
 export function HomePage() {
   return (
@@ -13,7 +13,15 @@ export function HomePage() {
       <section className="home-hero">
         <img className="home-hero__scene" src="/images/hero/leaking-aqueduct.webp" alt="" width="1672" height="941" fetchPriority="high" />
         <div className="home-hero__head">
-          <h1><span>Your website is</span> <span>leaking customers!</span></h1>
+          <h1 aria-label={heroHeadlineLines.join(' ')} tabIndex={-1}>
+            {heroHeadlineLines.map((line) => (
+              <span className="home-hero__line" aria-hidden="true" key={line}>
+                {Array.from(line).map((character, index) => (
+                  <span className="home-hero__character" key={index}>{character}</span>
+                ))}
+              </span>
+            ))}
+          </h1>
         </div>
         <div className="container home-hero__foot">
           <p>We use your site like a customer and find the pages, buttons and forms that get in the way.</p>
@@ -22,6 +30,7 @@ export function HomePage() {
             <ArrowLink to="/services">See what we fix</ArrowLink>
           </div>
         </div>
+        <SiteIntro />
       </section>
 
       <section className="section problem-section">
@@ -42,38 +51,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--soft what-we-fix">
-        <div className="container what-we-fix__layout">
-          <div className="what-we-fix__intro">
-            <SectionHeading
-              title="Services"
-              text="Some sites need replacing. Others need a faster booking flow, clearer service pages or a form that reaches the right inbox."
-            />
-            <ArrowLink to="/services">Explore all services</ArrowLink>
-          </div>
-          <div className="home-services">
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <Link className="home-services__card" key={service.number} to={`/services/${service.slug}`} aria-labelledby={`home-service-${service.slug}`} data-reveal="clip" data-reveal-delay={String(index * 90)}>
-                  <span className="home-services__icon"><Icon size={22} aria-hidden="true" /></span>
-                  <span className="home-services__arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
-                  <h3 id={`home-service-${service.slug}`}>{service.title}</h3>
-                  <p>{service.summary}</p>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
+      <section className="section services-list-section" aria-label="Services">
         <div className="container">
-          <SectionHeading
-            title="Industries"
-            text="A patient needs treatment details and reassurance. A tourist needs timings, inclusions and a quick way to book. We build for the decision your customer is actually making."
-          />
-          <IndustryGrid />
+          <ServiceList />
         </div>
       </section>
 

@@ -1,7 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
-import { industries } from '../../data/siteContent'
 
 export function Footer() {
   return (
@@ -15,21 +14,12 @@ export function Footer() {
           <div className="site-footer__column" data-reveal="fade" data-reveal-delay="80">
             <span className="site-footer__label">Explore</span>
             <Link to="/services">Services</Link>
-            <Link to="/solutions">Solutions</Link>
             <Link to="/work">Our work</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </div>
           <div className="site-footer__column" data-reveal="fade" data-reveal-delay="160">
-            <span className="site-footer__label">Industries</span>
-            {industries.map((industry) => (
-              <Link key={industry.slug} to={`/solutions/${industry.slug}`}>
-                {industry.shortName}
-              </Link>
-            ))}
-          </div>
-          <div className="site-footer__column" data-reveal="fade" data-reveal-delay="240">
             <span className="site-footer__label">Based in</span>
             <p>Dubai, UAE</p>
             <a href="mailto:hello@leakproof.me">

@@ -21,11 +21,6 @@ export const staticPageMetadata: PageMetadataEntry[] = [
     description: 'Website design, development and conversion fixes for small businesses in Dubai.',
   },
   {
-    path: '/solutions',
-    title: 'Solutions | Leakproof',
-    description: 'Website solutions built around how clinic patients, travellers and local-service customers make decisions.',
-  },
-  {
     path: '/about',
     title: 'About | Leakproof',
     description: 'Learn how Leakproof finds and fixes the points where small-business websites lose customers.',

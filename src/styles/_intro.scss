@@ -1,86 +1,46 @@
 @use 'tokens' as *;
 
-body.intro-running .site-header .brand {
+body.intro-running .site-header {
   opacity: 0;
+  pointer-events: none;
 }
 
 .site-intro {
-  position: fixed;
-  z-index: 1000;
+  position: absolute;
+  z-index: 1;
   inset: 0;
-  overflow: hidden;
+  background: $ink;
+  pointer-events: none;
 
-  &[hidden] {
-    display: none;
+  &[hidden] { display: none; }
+}
+
+.home-hero.home-hero--intro-running {
+  .home-hero__head {
+    z-index: 2;
+    animation: none;
+    translate: none;
+    transform-origin: center;
+    will-change: transform;
   }
+
+  .home-hero__foot {
+    animation: none;
+    translate: none;
+  }
+
+  .home-hero__scene { z-index: 3; }
 }
 
-.site-intro__backdrop {
-  position: absolute;
-  inset: 0;
-  background: $paper;
-  will-change: opacity;
+.home-hero--intro-preparing {
+  .home-hero__head,
+  .home-hero__foot,
+  .home-hero__scene { visibility: hidden; }
 }
 
-.site-intro__click {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 84px;
-  height: 84px;
-  transform: translate(-50%, -50%);
-}
-
-.site-intro__dot,
-.site-intro__pulse {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.site-intro__dot {
-  background: $blue;
-  box-shadow: 0 12px 36px rgba($blue, 0.22);
-}
-
-.site-intro__pulse {
-  border: 2px solid $blue;
-  opacity: 0;
-}
-
-.site-intro__pointer {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  color: $ink;
-  fill: $paper;
-  filter: drop-shadow(0 3px 5px rgba($ink, 0.16));
-  opacity: 0;
-  transform: translate(58px, 62px) rotate(-8deg);
-  will-change: transform, opacity;
-}
-
-.site-intro__lockup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: min(650px, 76vw);
-  opacity: 0;
-  transform: translate3d(-10.39%, -48.37%, 0);
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-.site-intro__logo {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
-  clip-path: circle(0 at 10.39% 48.37%);
-  will-change: clip-path;
+@media (max-width: 800px), (max-width: 1100px) and (orientation: portrait) {
+  .home-hero.home-hero--intro-running .home-hero__head {
+    position: relative;
+    bottom: auto;
+  }
 }

@@ -2,7 +2,7 @@ import { ArrowUpRight, BookOpen, BriefcaseBusiness, ChevronDown, Menu, Users, X 
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
-import { industries, services } from '../../data/siteContent'
+import { services } from '../../data/siteContent'
 
 const navigation = [
   { label: 'Our work', path: '/work', icon: BriefcaseBusiness },
@@ -22,21 +22,10 @@ const dropdowns = {
       icon: service.icon,
     })),
   },
-  solutions: {
-    label: 'Solutions',
-    path: '/solutions',
-    summary: 'Customer journeys shaped around how your industry earns enquiries and bookings.',
-    items: industries.map((industry) => ({
-      label: industry.shortName,
-      summary: industry.headline,
-      path: `/solutions/${industry.slug}`,
-      icon: industry.icon,
-    })),
-  },
 }
 
 type DropdownKey = keyof typeof dropdowns
-const dropdownOrder: DropdownKey[] = ['services', 'solutions']
+const dropdownOrder: DropdownKey[] = ['services']
 const dropdownCloseDelay = 150
 const dropdownExitDuration = 120
 

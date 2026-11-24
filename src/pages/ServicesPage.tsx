@@ -1,6 +1,6 @@
 import { pageIllustrations } from '../data/illustrations'
 import { CheckCircle2, Code2, FolderGit2, KeyRound } from 'lucide-react'
-import { ServiceGrid } from '../components/ServiceGrid'
+import { ServiceList } from '../components/ServiceList'
 import { CallToAction } from '../components/ui/CallToAction'
 import { PageHero } from '../components/ui/PageHero'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -14,9 +14,9 @@ export function ServicesPage() {
         description="We fix website problems that get in the way of bookings and enquiries. We recommend work based on what needs fixing."
       />
 
-      <section className="section section--soft services-list-section">
+      <section className="section services-list-section">
         <div className="container">
-          <ServiceGrid />
+          <ServiceList />
         </div>
       </section>
 

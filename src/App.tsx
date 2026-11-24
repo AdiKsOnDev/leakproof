@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
 import { ScrollToTop } from './components/ScrollToTop'
-import { SiteIntro } from './components/SiteIntro'
 import { SiteLayout } from './components/layout/SiteLayout'
 import { AboutPage } from './pages/AboutPage'
 import { BlogPage } from './pages/BlogPage'
@@ -9,11 +8,9 @@ import { ContactPage } from './pages/ContactPage'
 import { CaseStudyPage } from './pages/CaseStudyPage'
 import { WorkPage } from './pages/WorkPage'
 import { HomePage } from './pages/HomePage'
-import { IndustryPage } from './pages/IndustryPage'
 import { LocalSearchSetupPage } from './pages/LocalSearchSetupPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { ServicesPage } from './pages/ServicesPage'
-import { SolutionsPage } from './pages/SolutionsPage'
 import { WebsiteLeakCheckPage } from './pages/WebsiteLeakCheckPage'
 import { WebsiteImprovementsPage } from './pages/WebsiteImprovementsPage'
 import { WebsiteRebuildPage } from './pages/WebsiteRebuildPage'
@@ -21,7 +18,6 @@ import { WebsiteRebuildPage } from './pages/WebsiteRebuildPage'
 export default function App() {
   return (
     <>
-      <SiteIntro />
       <ScrollToTop />
       <Routes>
         <Route element={<SiteLayout />}>
@@ -32,8 +28,6 @@ export default function App() {
           <Route path="services/website-improvements" element={<WebsiteImprovementsPage />} />
           <Route path="services/website-rebuild" element={<WebsiteRebuildPage />} />
           <Route path="services/:serviceSlug" element={<ServicesPage />} />
-          <Route path="solutions" element={<SolutionsPage />} />
-          <Route path="solutions/:industrySlug" element={<IndustryPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="work" element={<WorkPage />} />
           <Route path="work/:projectSlug" element={<CaseStudyPage />} />

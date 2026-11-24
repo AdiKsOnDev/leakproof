@@ -7,12 +7,8 @@
     gap: 55px;
   }
 
-  .what-we-fix__layout {
-    gap: 55px;
-  }
-
   .site-footer__top {
-    grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-template-columns: 1.5fr repeat(2, 1fr);
     gap: 35px;
   }
 
@@ -206,7 +202,6 @@
   .issue-review,
   .deliverables-section__grid,
   .shared-needs-section__grid,
-  .what-we-fix__layout,
   .industry-hero__grid,
   .contact-page__grid,
   .cta-panel {
@@ -258,10 +253,6 @@
     gap: 30px;
   }
 
-  .home-services__card:nth-child(n) {
-    margin-inline: 0;
-  }
-
   .evidence-grid {
     grid-template-columns: 1fr;
   }
@@ -271,16 +262,18 @@
   }
 
   .industry-grid,
-  .service-grid,
   .industry-detail-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-card:nth-child(n) {
-    grid-column: 1;
-    margin-top: 0;
-    transform: none;
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
+
+  .service-row h3 { margin-bottom: 16px; }
+
+  .service-row p { font-size: $font-size-content; }
 
   .industry-journey__heading {
     grid-template-columns: 1fr;
@@ -615,22 +608,9 @@
     grid-template-columns: 1fr;
   }
 
-  .home-services__card {
-    min-height: auto;
-    margin-inline: 0;
-  }
-
-  .home-services__icon {
-    margin-bottom: 0;
-  }
-
   .industry-card__body {
     min-height: auto;
     padding: 24px;
-  }
-
-  .service-card {
-    padding: 28px;
   }
 
   .ownership-panel {
@@ -708,10 +688,10 @@
     padding-inline: 24px;
 
     h1 {
-      font-size: clamp(2.5rem, 11vw, 5rem);
+      font-size: clamp(1.75rem, 8.3vw, 5rem);
     }
 
-    span {
+    .home-hero__line {
       white-space: normal;
     }
   }

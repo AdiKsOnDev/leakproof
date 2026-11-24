@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { getBlogPost } from '../data/blogPosts'
 import { staticPageMetadata } from '../data/pageMetadata'
 import { getProject } from '../data/projects'
-import { industries, services } from '../data/siteContent'
+import { services } from '../data/siteContent'
 import { updateDocumentMetadata } from '../utils/documentMetadata'
 import { getProjectMetadata } from '../utils/projectMetadata'
 
@@ -12,8 +12,6 @@ export function PageTitle() {
 
   useEffect(() => {
     const path = pathname === '/' ? pathname : pathname.replace(/\/+$/, '')
-    const industrySlug = path.match(/^\/solutions\/([^/]+)$/)?.[1]
-    const industry = industries.find(({ slug }) => slug === industrySlug)
     const serviceSlug = path.match(/^\/services\/([^/]+)$/)?.[1]
     const service = services.find(({ slug }) => slug === serviceSlug)
     const postSlug = path.match(/^\/blog\/([^/]+)$/)?.[1]
@@ -42,15 +40,6 @@ export function PageTitle() {
           publisher: { '@type': 'Organization', name: 'Leakproof', url: 'https://leakproof.me' },
           mainEntityOfPage: `https://leakproof.me${path}/`,
         },
-      })
-      return
-    }
-
-    if (industry) {
-      updateDocumentMetadata({
-        title: `${industry.name} | Leakproof`,
-        description: industry.summary,
-        path,
       })
       return
     }
